@@ -7,7 +7,7 @@ include: "rules/sceptre_power_analysis.smk"
 
 # Include all rules for benchmarking
 include: "rules/create_encode_output.smk"
-include: "rules/crispr_benchmarking.smk"
+include: "rules/combine_val_data_and_format.smk"
 
 # Perform all analyses to output benchmarked datasets
 rule all:

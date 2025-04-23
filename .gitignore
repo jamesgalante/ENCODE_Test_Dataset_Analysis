@@ -6,7 +6,9 @@ results/process_validation_datasets/*/differential_expression/sceptre_diffex_inp
 
 # Folders to ignore
 resources/create_encode_output/
-resources/sceptre_setup_genome_annotation_files/
+resources/sceptre_setup/genome_annotation_files/
+ARCHIVE/
+.snakemake/
 
 # Specific files in sceptre_setup
 resources/sceptre_setup/*/dge*

@@ -19,7 +19,7 @@ rule sceptre_differential_expression:
 rule create_sce:
   input:
     final_sceptre_object = "results/process_validation_datasets/{sample}/differential_expression/final_sceptre_object.rds",
-    guide_targets =  "resources/process_validation_datasets/sceptre_setup/{sample}/guide_targets.tsv"
+    guide_targets =  "resources/sceptre_setup/{sample}/guide_targets.tsv"
   output:
     perturb_sce = "results/process_validation_datasets/{sample}/perturb_sce.rds"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/create_sce_{sample}.log"
@@ -148,7 +148,7 @@ rule format_sceptre_output:
     discovery_results = "results/process_validation_datasets/{sample}/differential_expression/results_run_discovery_analysis.rds",
     gene_gRNA_group_pairs = "results/process_validation_datasets/{sample}/gene_gRNA_group_pairs.rds",
     distances = "results/process_validation_datasets/{sample}/distances.tsv",
-    guide_targets = "resources/process_validation_datasets/sceptre_setup/{sample}/guide_targets.tsv"
+    guide_targets = "resources/sceptre_setup/{sample}/guide_targets.tsv"
   output:
     final_output = "results/process_validation_datasets/{sample}/power_analysis/output_0.13gStd_Sceptre_perCRE.tsv"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/format_sceptre_output_{sample}.log"
