@@ -56,12 +56,12 @@ rule create_ensemble_encode:
     "../scripts/encode_datasets/create_ensemble_dataset.R"
     
 # convert ensembl CRISPR dataset from ENCODE to EPBenchmarking format file  
-# rule create_ensemble_epbenchmarking:
-#   input: "results/create_encode_output/ENCODE/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz"
-#   output: "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz"
-#   params:
-#     effect_size = "pctChange",
-#     min_pct_change = None
-#   conda: "../envs/r_process_crispr_data.yml"
-#   script:
-#     "../scripts/encode_datasets/create_ep_benchmarking_dataset.R"   
+rule create_ensemble_epbenchmarking:
+  input: "results/create_encode_output/ENCODE/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz"
+  output: "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz"
+  params:
+    effect_size = "pctChange",
+    min_pct_change = None
+  conda: "../envs/r_process_crispr_data.yml"
+  script:
+    "../scripts/encode_datasets/create_ep_benchmarking_dataset.R"
