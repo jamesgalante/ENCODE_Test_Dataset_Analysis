@@ -6,7 +6,7 @@ rule remove_training_pairs:
     combined_validation_w_train_pairs = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz",
     training_data = "resources/combine_val_data_and_format/EPCrisprBenchmark_ensemble_data_GRCh38.tsv"
   output:
-    validation = "results/combine_val_data_and_format/validation_wo_training_pairs.tsv.gz"
+    validation = "results/combine_val_data_and_format/validation_wo_training_pairs_no_dc_tap.tsv.gz"
   log: 
     "results/combine_val_data_and_format/logs/remove_training_pairs.log"
   conda: 
@@ -20,10 +20,10 @@ rule remove_training_pairs:
 # Add the results from the DC TAP Seq experiments to the other perturb-seq / flowFISH results
 rule add_DC_TAP_Seq_pairs:
   input:  
-    validation = "results/combine_val_data_and_format/validation_wo_training_pairs.tsv.gz",
+    validation = "results/combine_val_data_and_format/validation_wo_training_pairs_no_dc_tap.tsv.gz",
     dc_tap_data = "resources/combine_val_data_and_format/DC_TAP_Seq_data.tsv"
   output:
-    full_validation_dataset = "results/combine_val_data_and_format/validation.tsv.gz"
+    full_validation_dataset = "results/combine_val_data_and_format/full_validation.tsv.gz"
   log: 
     "results/combine_val_data_and_format/logs/add_DC_TAP_Seq_pairs.log"
   conda: 
@@ -37,13 +37,10 @@ rule add_DC_TAP_Seq_pairs:
 # Rule to resize and merge CRISPR elements in DC-TAP-seq datasets
 rule resize_crispr_elements:
   input:
-    crispr_data = "results/combine_val_data_and_format/validation.tsv.gz"
+    crispr_data = "results/combine_val_data_and_format/full_validation.tsv.gz"
   output:
-    combined_output = "results/combine_val_data_and_format/validation_resized_elements.tsv.gz",
-    k562_output = "results/combine_val_data_and_format/K562_DC_TAP_Seq_resized_elements.tsv.gz",
-    wtc11_output = "results/combine_val_data_and_format/WTC11_DC_TAP_Seq_resized_elements.tsv.gz"
-  log:
-    "results/combine_val_data_and_format/logs/resize_crispr_elements.log"
+    combined_output = "results/combine_val_data_and_format/full_validation_resized_elements.tsv.gz"
+  log: "results/combine_val_data_and_format/logs/resize_crispr_elements.log"
   conda:
     "../envs/analyze_crispr_screen.yml"
   resources:

@@ -1,14 +1,27 @@
 Loading in packages
-Warning messages:
-1: package ‘tidyverse’ was built under R version 4.1.3 
-2: package ‘ggplot2’ was built under R version 4.1.3 
-3: package ‘tibble’ was built under R version 4.1.3 
-4: package ‘tidyr’ was built under R version 4.1.3 
-5: package ‘readr’ was built under R version 4.1.3 
-6: package ‘purrr’ was built under R version 4.1.3 
-7: package ‘dplyr’ was built under R version 4.1.3 
-8: package ‘stringr’ was built under R version 4.1.3 
-9: package ‘forcats’ was built under R version 4.1.3 
+There were 13 warnings (use warnings() to see them)
 Loading input files
+Rows: 1271 Columns: 20
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset
+dbl (8): chromStart, chromEnd, EffectSize, startTSS, endTSS, pValueAdjusted,...
+lgl (5): Significant, PowerAtEffectSize10, PowerAtEffectSize50, ValidConnect...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 14049 Columns: 50
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (24): resized_intended_target_name_hg38, resized_targeting_chr_hg38, int...
+dbl (19): resized_targeting_start_hg38, resized_targeting_end_hg38, targetin...
+lgl  (7): significant, DistalElement_Gene, DistalPromoter_Gene, selfPromoter...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Splitting DC TAP data by cell type
+Finding overlaps between K562 datasets
+Processing overlapping regions
+Combining all datasets
 Saving output files
 Closing log file

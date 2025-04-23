@@ -41,12 +41,22 @@ resize_crispr_elements <- function(crispr, size = 500, filter_valid_connections 
                                        start.field = "chromStart", end.field = "chromEnd",
                                        keep.extra.columns = TRUE, starts.in.df.are.0based = TRUE)
   
+  # NEW: Keep a copy of the original elements for debugging
+  elements_before <- elements
+  
   # Resize elements and merge overlaps
   resize_elements <- width(elements) < size
   elements[resize_elements] <- resize(elements[resize_elements], width = size, fix = "center")
   
+  # NEW: Keep a copy of the resized elements for debugging
+  elements_after <- elements
+  
   # Get merged element uids for each resized element
   elements_merged <- reduce(elements, with.revmap = TRUE)
+  
+  # NEW: Debug step - Show detailed merging information
+  debug_element_merging(elements_before, elements_after, elements_merged)
+  
   merged_uids <- lapply(elements_merged$revmap, FUN = function(x) elements[x]$element_uid)
   elements_merged$merged_uid <- merged_uids
   
@@ -70,8 +80,7 @@ resize_crispr_elements <- function(crispr, size = 500, filter_valid_connections 
   
   # Reformat for output 
   crispr_merged <- crispr_merged %>% 
-    select(-pair_uid) %>% 
-    relocate(merged_uid, .after = last_col())
+    select(-pair_uid, -merged_uid)
   
   return(crispr_merged)
 }
@@ -88,6 +97,52 @@ resolve_merge <- function(pairs) {
     pairs %>% 
       mutate(name = pair_uid)
   }
+}
+
+# Add this new function to the FUNCTIONS section
+debug_element_merging <- function(elements_before, elements_after, elements_merged) {
+  message("DEBUG - Element merging details:")
+  
+  # For each merged element, show the elements that were merged
+  merge_count <- 0
+  
+  for (i in 1:length(elements_merged)) {
+    merged_element <- elements_merged[i]
+    original_indices <- merged_element$revmap[[1]]
+    
+    # Only print debug info if there was actually merging (more than 1 element)
+    if (length(original_indices) > 1) {
+      merge_count <- merge_count + 1
+      
+      # Get the original elements that were merged
+      original_elements <- elements_before[original_indices]
+      original_df <- original_elements %>%
+        as.data.frame() %>%
+        select(chrom = seqnames, chromStart = start, chromEnd = end, element_uid)
+      
+      # Get the resized elements before merging
+      resized_elements <- elements_after[original_indices]
+      resized_df <- resized_elements %>%
+        as.data.frame() %>%
+        select(chrom = seqnames, chromStart = start, chromEnd = end, element_uid)
+      
+      # Get the merged element
+      merged_df <- merged_element %>%
+        as.data.frame() %>%
+        select(chrom = seqnames, chromStart = start, chromEnd = end)
+      
+      message(paste0("Merged group ", merge_count, " (", merged_df$chrom, ":", merged_df$chromStart, "-", merged_df$chromEnd, ")"))
+      message("Original elements:")
+      print(original_df)
+      message("After resizing:")
+      print(resized_df)
+      message("Final merged element:")
+      print(merged_df)
+      message("------------------------------")
+    }
+  }
+  
+  message(paste0("Total merged groups: ", merge_count))
 }
 
 
@@ -119,9 +174,6 @@ merged_crispr <- bind_rows(other_crispr, k562_dc_tap, wtc11_dc_tap)
 message("Saving output files")
 # Save merged CRISPR data to output files specified by snakemake
 write_tsv(merged_crispr, file = snakemake@output$combined_output)
-write_tsv(k562_dc_tap, file = snakemake@output$k562_output)
-write_tsv(wtc11_dc_tap, file = snakemake@output$wtc11_output)
-
 message("Processing complete")
 
 

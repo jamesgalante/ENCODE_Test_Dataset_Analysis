@@ -19,8 +19,9 @@ All intermediate files are generated dynamically
 
 The main outputs to this pipeline are:
 - Full validation dataset formatted for benchmarking:
-  - results/combine_val_data_and_format/validation.tsv.gz
-- Full validation dataset with DC TAP Datasets resized
+  - results/combine_val_data_and_format/full_validation.tsv.gz
+- Full validation dataset with DC TAP Datasets resized:
+  - results/combine_val_data_and_format/full_validation_resized_elements.tsv.gz
 
 
 
