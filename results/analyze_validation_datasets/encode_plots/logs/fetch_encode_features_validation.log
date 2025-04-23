@@ -1,0 +1,34 @@
+Loading in packages
+Warning messages:
+1: package ‘data.table’ was built under R version 4.1.3 
+2: package ‘dplyr’ was built under R version 4.1.3 
+3: package ‘GenomicRanges’ was built under R version 4.1.3 
+4: package ‘S4Vectors’ was built under R version 4.1.3 
+5: package ‘IRanges’ was built under R version 4.1.3 
+6: package ‘GenomeInfoDb’ was built under R version 4.1.3 
+Reading experimental data in: results/benchmark_validation_datasets/crispr_benchmarking/validation.tsv.gz
+	Loaded experimental data with 4709 rows.
+
+Loading prediction files:
+	Loading predictions for: ABCdnase
+		Reading: resources/benchmark_validation_datasets/crispr_benchmarking/ABC_Predictions_All_Cell_Types/All_Val_Cell_Types_EnhancerPredictionsAllPutative.txt.gz
+	Loaded predictions with a total of 55716789 rows.
+	Loading predictions for: ENCODE_rE2G
+		Reading: resources/benchmark_validation_datasets/crispr_benchmarking/ENCODE_Predictions_All_Cell_Types/All_Val_Cell_Types_encode_e2g_predictions.tsv.gz
+	Loaded predictions with a total of 49845554 rows.
+Running QC on pred_config file
+Done
+Running QC on predictions:
+Done
+Running QC on experimental data:
+Filtering out 1 case(s) with Regulated == NA
+Done
+cre-gene pairs in experimental data missing from gene universe: 43
+Warning message:
+27 experimental genes missing from 'expressed_genes'. Assuming these as non-expressed. 
+Mapping cell types in predictions to cell types in experimental data
+
+Merging experimentals data and predictions:
+Overlapping predictions with experimental data for: ENCODE_rE2G
+Saving output files
+Closing log file

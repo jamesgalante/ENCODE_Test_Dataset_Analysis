@@ -1,0 +1,25 @@
+category	pair	dataset1	dataset2	comparison	p_value	prop1_pos	prop1_all	prop2_pos	prop2_all
+CTCF elements (CTCF, low H3K27ac)	4	K562 FlowFISH	K562 DC TAP Seq	Flow v K562	1.206e-01	2.3%	14.6%	29.4%	18.3%
+CTCF elements (CTCF, low H3K27ac)	5	K562 FlowFISH	WTC11 DC TAP Seq	Flow v wt11	9.433e-02	2.3%	14.6%	8.8%	7.1%
+CTCF elements (CTCF, low H3K27ac)	1	Gasperini et al., 2019	K562 FlowFISH	Gas v Flow	3.022e-01	0.8%	4.2%	2.3%	14.6%
+CTCF elements (CTCF, low H3K27ac)	2	Gasperini et al., 2019	K562 DC TAP Seq	Gas v K562	1.000e+00	0.8%	4.2%	29.4%	18.3%
+CTCF elements (CTCF, low H3K27ac)	3	Gasperini et al., 2019	WTC11 DC TAP Seq	Gas v wt11	8.527e-01	0.8%	4.2%	8.8%	7.1%
+CTCF elements (CTCF, low H3K27ac)	6	K562 DC TAP Seq	WTC11 DC TAP Seq	K562 v wt11	9.746e-01	29.4%	18.3%	8.8%	7.1%
+Polycomb elements (H3K27me3)	4	K562 FlowFISH	K562 DC TAP Seq	Flow v K562	1.000e+00	0.0%	2.2%	5.9%	6.9%
+Polycomb elements (H3K27me3)	5	K562 FlowFISH	WTC11 DC TAP Seq	Flow v wt11	7.693e-01	0.0%	2.2%	14.7%	25.1%
+Polycomb elements (H3K27me3)	1	Gasperini et al., 2019	K562 FlowFISH	Gas v Flow	NaN	0.0%	2.1%	0.0%	2.2%
+Polycomb elements (H3K27me3)	2	Gasperini et al., 2019	K562 DC TAP Seq	Gas v K562	1.000e+00	0.0%	2.1%	5.9%	6.9%
+Polycomb elements (H3K27me3)	3	Gasperini et al., 2019	WTC11 DC TAP Seq	Gas v wt11	6.189e-01	0.0%	2.1%	14.7%	25.1%
+Polycomb elements (H3K27me3)	6	K562 DC TAP Seq	WTC11 DC TAP Seq	K562 v wt11	1.000e+00	5.9%	6.9%	14.7%	25.1%
+Strongly acetylated elements (High H3K27ac)	4	K562 FlowFISH	K562 DC TAP Seq	Flow v K562	4.793e-02	56.8%	12.9%	23.5%	6.3%
+Strongly acetylated elements (High H3K27ac)	5	K562 FlowFISH	WTC11 DC TAP Seq	Flow v wt11	2.512e-02	56.8%	12.9%	44.1%	14.5%
+Strongly acetylated elements (High H3K27ac)	1	Gasperini et al., 2019	K562 FlowFISH	Gas v Flow	4.983e-01	51.4%	30.2%	56.8%	12.9%
+Strongly acetylated elements (High H3K27ac)	2	Gasperini et al., 2019	K562 DC TAP Seq	Gas v K562	1.805e-02	51.4%	30.2%	23.5%	6.3%
+Strongly acetylated elements (High H3K27ac)	3	Gasperini et al., 2019	WTC11 DC TAP Seq	Gas v wt11	2.636e-03	51.4%	30.2%	44.1%	14.5%
+Strongly acetylated elements (High H3K27ac)	6	K562 DC TAP Seq	WTC11 DC TAP Seq	K562 v wt11	6.789e-01	23.5%	6.3%	44.1%	14.5%
+Weakly acetylated elements (Low H3K27ac, no CTCF)	4	K562 FlowFISH	K562 DC TAP Seq	Flow v K562	5.885e-02	40.9%	70.3%	41.2%	68.5%
+Weakly acetylated elements (Low H3K27ac, no CTCF)	5	K562 FlowFISH	WTC11 DC TAP Seq	Flow v wt11	5.776e-01	40.9%	70.3%	32.4%	53.3%
+Weakly acetylated elements (Low H3K27ac, no CTCF)	1	Gasperini et al., 2019	K562 FlowFISH	Gas v Flow	6.106e-15	47.8%	63.5%	40.9%	70.3%
+Weakly acetylated elements (Low H3K27ac, no CTCF)	2	Gasperini et al., 2019	K562 DC TAP Seq	Gas v K562	1.770e-11	47.8%	63.5%	41.2%	68.5%
+Weakly acetylated elements (Low H3K27ac, no CTCF)	3	Gasperini et al., 2019	WTC11 DC TAP Seq	Gas v wt11	2.204e-08	47.8%	63.5%	32.4%	53.3%
+Weakly acetylated elements (Low H3K27ac, no CTCF)	6	K562 DC TAP Seq	WTC11 DC TAP Seq	K562 v wt11	3.301e-01	41.2%	68.5%	32.4%	53.3%
