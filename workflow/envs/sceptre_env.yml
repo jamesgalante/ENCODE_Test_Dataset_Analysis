@@ -1,0 +1,20 @@
+name: sceptre_env
+channels:
+  - jgalante
+  - conda-forge
+  - bioconda
+  - defaults
+  - r
+dependencies:
+  - conda-forge::glpk
+  - conda-forge::libxml2
+  - conda-forge::openssl
+  - conda-forge::gcc
+  - jgalante::r-sceptre
+  - bioconductor-rtracklayer
+  - bioconductor-genomicranges
+  - conda-forge::r-data.table
+  - conda-forge::r-r.utils
+  - r-base=4.4
+  - r-tidyverse
+  - conda-forge::r-cowplot
