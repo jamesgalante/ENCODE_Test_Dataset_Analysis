@@ -1,0 +1,200 @@
+
+process_validation_datasets:
+  differential_expression:
+    padj_threshold: 0.1
+
+  power_simulations:
+    n_batches:
+      Klann: 300
+      Morrisv1: 60
+      Morrisv2: 100
+      Xie: 100
+    n_reps: 100
+    guide_sd: 0.13
+    
+benchmark_validation_datasets:
+  create_encode_output:
+    download_urls:
+      gencode.v29lift37: "http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/GRCh37_mapping/gencode.v29lift37.annotation.gtf.gz"
+      gencode.v29: "http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.annotation.gtf.gz"
+      liftover_chain: "https://hgdownload.cse.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz"
+      RefSeq_tss: "https://raw.githubusercontent.com/broadinstitute/ABC-Enhancer-Gene-Prediction/master/reference/RefSeqCurated.170308.bed.CollapsedGeneBounds.TSS500bp.bed"
+    encode_datasets:
+      ignore_transcripts:
+        Xie: NULL
+        Morrisv1: NULL
+        Morrisv2: NULL
+        Klann: NULL
+        K562_DC_TAP_Seq: NULL
+        HCT116: NULL
+        WTC11_DC_TAP_Seq: NULL
+        Jurkat: NULL
+        GM12878: NULL
+      dist_to_TSS: [1000, 1e6]
+      annot:
+        Xie: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        Morrisv1: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        Morrisv2: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        Klann: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        K562_DC_TAP_Seq: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29lift37.annotation.gtf.gz"
+        HCT116: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        WTC11_DC_TAP_Seq: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29lift37.annotation.gtf.gz"
+        Jurkat: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        GM12878: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+      genome_build:
+        Xie: "GRCh38"
+        Morrisv1: "GRCh38"
+        Morrisv2: "GRCh38"
+        Klann: "GRCh38"
+        K562_DC_TAP_Seq: "hg19"
+        HCT116: "GRCh38"
+        WTC11_DC_TAP_Seq: "hg19"
+        Jurkat: "GRCh38"
+        GM12878: "GRCh38"
+    metadata:
+      Xie:
+        cell_type: "K562"
+        reference: "Xie et al., 2019"
+        gene_ids: "ensembl"
+        tss_ctrl_tag: "TSSCtrl"
+      Morrisv2:
+        cell_type: "K562"
+        reference: "Morris et al., 2023"
+        gene_ids: "ensembl"
+        tss_ctrl_tag: "TSSCtrl"
+      Morrisv1:
+        cell_type: "K562"
+        reference: "Morris et al., 2023"
+        gene_ids: "ensembl"
+        tss_ctrl_tag: "TSSCtrl"
+      Klann:
+        cell_type: "K562"
+        reference: "Klann et al., 2021"
+        gene_ids: "ensembl"
+        tss_ctrl_tag: "TSSCtrl"
+      K562_DC_TAP_Seq: 
+        cell_type: "K562"
+        reference: "NNFC_K56_DC_TAP"
+        gene_ids: "ensembl"
+        tss_ctrl_tag: "TSSCtrl"
+      HCT116:
+        cell_type: "HCT116"
+        reference: "Guckelberger et al., inPrep"
+        gene_ids: "symbol"
+        tss_ctrl_tag: "TSSCtrl"
+      WTC11_DC_TAP_Seq:
+        cell_type: "WTC11"
+        reference: "WTC11_DC_TAP"
+        gene_ids: "ensembl"
+        tss_ctrl_tag: "TSSCtrl"
+      Jurkat:
+        cell_type: "Jurkat"
+        reference: "Nasser 2021"
+        gene_ids: "symbol"
+        tss_ctrl_tag: "TSSCtrl"
+      GM12878:
+        cell_type: "GM12878"
+        reference: "Nasser 2021"
+        gene_ids: "symbol"
+        tss_ctrl_tag: "TSSCtrl"
+  crispr_benchmarking:
+    comparisons:
+      validation:
+        pred:
+          ABCdnase: "resources/benchmark_validation_datasets/crispr_benchmarking/ABC_Predictions_All_Cell_Types/All_Val_Cell_Types_EnhancerPredictionsAllPutative.txt.gz"
+          ENCODE_rE2G: "resources/benchmark_validation_datasets/crispr_benchmarking/ENCODE_Predictions_All_Cell_Types/All_Val_Cell_Types_encode_e2g_predictions.tsv.gz"
+        tss_universe: "resources/benchmark_validation_datasets/crispr_benchmarking/genome_annotations/CollapsedGeneBounds.hg38.TSS500bp.bed"
+        gene_universe: "resources/benchmark_validation_datasets/crispr_benchmarking/genome_annotations/CollapsedGeneBounds.hg38.bed"
+        pred_config: "resources/benchmark_validation_datasets/crispr_benchmarking/pred_config/NewModel_alpha_test_benchmarking_pred_config.tsv"
+        cell_type_mapping:
+          ABCdnase: "resources/benchmark_validation_datasets/crispr_benchmarking/cell_mappings/ABC_cell_type_mappings.txt"
+          ENCODE_rE2G: "resources/benchmark_validation_datasets/crispr_benchmarking/cell_mappings/NewModel_ENCODE-rE2G_cell_type_mappings.txt"
+        expressed_genes: "resources/benchmark_validation_datasets/crispr_benchmarking/expressed/expressed_genes_for_all_val_cell_types.tsv"
+        
+      # Training config is only needed for extracting encode features in encode_plots.smk
+      # The input file is originally from "/oak/stanford/groups/engreitz/Projects/Benchmarking/Revisions/CRISPR_data/EPCrisprBenchmark_ensemble_data_GRCh38.tsv.gz"
+      # In the main predictors crispr comparison pipeline, but can also be found in resources/ as a copy
+      training:
+        pred:
+          ABCdnase: "resources/benchmark_validation_datasets/crispr_benchmarking/ABC_Predictions_All_Cell_Types/All_Val_Cell_Types_EnhancerPredictionsAllPutative.txt.gz"
+          ENCODE_rE2G: "resources/benchmark_validation_datasets/crispr_benchmarking/ENCODE_Predictions_All_Cell_Types/All_Val_Cell_Types_encode_e2g_predictions.tsv.gz"
+        tss_universe: "resources/benchmark_validation_datasets/crispr_benchmarking/genome_annotations/CollapsedGeneBounds.hg38.TSS500bp.bed"
+        gene_universe: "resources/benchmark_validation_datasets/crispr_benchmarking/genome_annotations/CollapsedGeneBounds.hg38.bed"
+        pred_config: "resources/benchmark_validation_datasets/crispr_benchmarking/pred_config/NewModel_alpha_test_benchmarking_pred_config.tsv"
+        cell_type_mapping:
+          ABCdnase: "resources/benchmark_validation_datasets/crispr_benchmarking/cell_mappings/ABC_cell_type_mappings.txt"
+          ENCODE_rE2G: "resources/benchmark_validation_datasets/crispr_benchmarking/cell_mappings/NewModel_ENCODE-rE2G_cell_type_mappings.txt"
+        expressed_genes: "resources/benchmark_validation_datasets/crispr_benchmarking/expressed/expressed_genes_for_all_val_cell_types.tsv"
+
+
+# # All post processing of validation datasets will go here
+# analyze_validation_datasets:
+#   process_bam_files_and_combined_w_EG_results:
+#     download_and_index_hg38:
+#       hg38: "rsync://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/latest/hg38.fa.gz" # 2023-02-22 16:20
+#     process_jurkat_ctcf_chip:
+#       srr_ids: ["SRR8939164", "SRR8939165", "SRR8939166", "SRR8939167"]
+#     process_jurkat_h3k27ac_chip:
+#       srr_ids: ["SRR12368298", "SRR12368299"] # rep1
+#       #srr_ids: ["SRR12368300", "SRR12368301"] # rep2
+#     process_jurkat_h3k27me3_chip:
+#       srr_id: "SRR4031399"
+#     #The following (download_bam_files) was for the "OLD_process" pipeline, but left in for reference
+#     download_bam_files:
+#       h3k27ac:
+#         k562: "https://www.encodeproject.org/files/ENCFF600THN/@@download/ENCFF600THN.bam"
+#         wtc11: "https://www.encodeproject.org/files/ENCFF738QRT/@@download/ENCFF738QRT.bam"
+#         hct116: "https://www.encodeproject.org/files/ENCFF340TPS/@@download/ENCFF340TPS.bam"
+#         gm12878: "https://www.encodeproject.org/files/ENCFF804NCH/@@download/ENCFF804NCH.bam"
+#       ctcf:
+#         k562: "https://www.encodeproject.org/files/ENCFF265ZSP/@@download/ENCFF265ZSP.bam"
+#         wtc11: "https://www.encodeproject.org/files/ENCFF493IHL/@@download/ENCFF493IHL.bam"
+#         hct116: "https://www.encodeproject.org/files/ENCFF172XLC/@@download/ENCFF172XLC.bam"
+#         gm12878: "https://www.encodeproject.org/files/ENCFF747TJH/@@download/ENCFF747TJH.bam"
+#       h3k27me3:
+#         k562: "https://www.encodeproject.org/files/ENCFF508LLH/@@download/ENCFF508LLH.bam"
+#         wtc11: "https://www.encodeproject.org/files/ENCFF962OVD/@@download/ENCFF962OVD.bam"
+#         hct116: "https://www.encodeproject.org/files/ENCFF318AWP/@@download/ENCFF318AWP.bam"
+#         gm12878: "https://www.encodeproject.org/files/ENCFF824VSE/@@download/ENCFF824VSE.bam"
+#       dnase:
+#         k562: "https://www.encodeproject.org/files/ENCFF205FNC/@@download/ENCFF205FNC.bam"
+#         wtc11: "https://www.encodeproject.org/files/ENCFF715YXX/@@download/ENCFF715YXX.bam"
+#         hct116: "https://www.encodeproject.org/files/ENCFF304MDQ/@@download/ENCFF304MDQ.bam"
+#         gm12878: "https://www.encodeproject.org/files/ENCFF729UYK/@@download/ENCFF729UYK.bam"
+#         jurkat: "https://www.encodeproject.org/files/ENCFF361WBN/@@download/ENCFF361WBN.bam"
+#     download_bed_files:
+#       h3k27me3:
+#         k562: "https://www.encodeproject.org/files/ENCFF801AHF/@@download/ENCFF801AHF.bed.gz"
+#         wtc11: "https://www.encodeproject.org/files/ENCFF801DJK/@@download/ENCFF801DJK.bed.gz"
+#         hct116: "https://www.encodeproject.org/files/ENCFF294LZM/@@download/ENCFF294LZM.bed.gz"
+#         gm12878: "https://www.encodeproject.org/files/ENCFF695ETB/@@download/ENCFF695ETB.bed.gz"
+#       ctcf:
+#         k562: "https://www.encodeproject.org/files/ENCFF660GHM/@@download/ENCFF660GHM.bed.gz"
+#         wtc11: "https://www.encodeproject.org/files/ENCFF112GJQ/@@download/ENCFF112GJQ.bed.gz"
+#         hct116: "https://www.encodeproject.org/files/ENCFF463FGL/@@download/ENCFF463FGL.bed.gz"
+#         gm12878: "https://www.encodeproject.org/files/ENCFF796WRU/@@download/ENCFF796WRU.bed.gz"
+#     # The following was for the "OLD_process" pipeline, but left in for reference
+#     # combine_overlapped_bam_enhancer_files_and_format:
+#     #   model_threshold: 0.201
+#     combine_all_tracks:
+#       model_threshold: 0.201
+#   duplicate_pairs_analysis:
+#     download_gasperini_annotation_file:
+#       annot: "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gtf.gz"
+#   subset_upsampling_analysis:
+#     create_enhancer_subsets:
+#       # These subsets are hardcoded into the subset creation script, but are here for conciseness in creating rules
+#       subsets: ["full_validation_dataset", "k562_validation_dataset", "k562_validation_wo_dc_tap", 
+#                 "training_dataset", "other_cell_types", "validation_without_dc_tap", 
+#                 "k562_dc_tap", "wtc11_dc_tap", "wtc11_k562_validation", "both_dc_tap_only", 
+#                 "other_cell_types_wo_dc_tap", "validation_wo_wtc11", "validation_wo_k562_dc_tap"]
+#       subset_names: ["Full Validation Dataset", "K562 Validation Dataset", "K562 Validation w/o DC TAP-Seq",
+#                      "Training Dataset", "Other Cell Types", "Validation w/o DC TAP-Seq",
+#                      "K562 DC TAP-Seq", "WTC11 DC TAP-Seq", "K562 & WTC11 Validation", "Both DC TAP-Seq Only",
+#                      "Other Cell Types w/o DC TAP-Seq", "Validation w/o WTC11", "Validation w/o K562 DC TAP-Seq"]
+#     auprc:
+#       pred_config: "resources/analyze_validation_datasets/subset_upsampling_analysis/NewModel_alpha_test_benchmarking_pred_config.tsv"
+#       replicates: 10
+                
+                
+                
