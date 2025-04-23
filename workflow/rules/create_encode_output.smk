@@ -45,7 +45,7 @@ rule create_encode_dataset:
     time = "2:00:00",
     mem = "32G"
   script:
-    "../scripts/benchmark_validation_datasets/encode_datasets/create_encode_dataset.R"
+    "../scripts/encode_datasets/create_encode_dataset.R"
     
 ## Liftover CRISPRi datasets -----------------------------------------------------------------------
 
@@ -82,7 +82,7 @@ rule liftover_crispr_dataset:
     time = "1:00:00",
     mem = "64G"
   script:
-    "../scripts/benchmark_validation_datasets/encode_datasets/liftover_crispr_dataset.R"    
+    "../scripts/encode_datasets/liftover_crispr_dataset.R"    
 
 ## Create EPBenchmarking CRISPR data files ---------------------------------------------------------
 
@@ -95,7 +95,7 @@ rule filter_crispr_dataset:
     remove_filtered_pairs = False
   conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../scripts/benchmark_validation_datasets/encode_datasets/filter_crispr_dataset.R"
+    "../scripts/encode_datasets/filter_crispr_dataset.R"
 
 # convert ENCODE format files to EPBenchmarking format files
 rule create_ep_benchmarking_dataset:
@@ -107,7 +107,7 @@ rule create_ep_benchmarking_dataset:
     cell_type = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["metadata"][wildcards.sample]["cell_type"]
   conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../scripts/benchmark_validation_datasets/encode_datasets/create_ep_benchmarking_dataset.R"
+    "../scripts/encode_datasets/create_ep_benchmarking_dataset.R"
 
 ## Create ensemble dataset -------------------------------------------------------------------------
 
@@ -128,7 +128,7 @@ rule create_ensemble_encode:
     cell_types = {"Morrisv1": "K562", "Morrisv2": "K562", "Klann": "K562", "Xie": "K562", "HCT116": "HCT116", "Jurkat": "Jurkat", "GM12878": "GM12878", "Reilly":"K562"}
   conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../scripts/benchmark_validation_datasets/encode_datasets/create_ensemble_dataset.R"
+    "../scripts/encode_datasets/create_ensemble_dataset.R"
     
 # convert ensembl CRISPR dataset from ENCODE to EPBenchmarking format file  
 rule create_ensemble_epbenchmarking:
@@ -139,4 +139,4 @@ rule create_ensemble_epbenchmarking:
     min_pct_change = None
   conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../scripts/benchmark_validation_datasets/encode_datasets/create_ep_benchmarking_dataset.R"   
+    "../scripts/encode_datasets/create_ep_benchmarking_dataset.R"   

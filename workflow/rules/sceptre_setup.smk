@@ -34,7 +34,7 @@ rule create_sceptre_diffex_input_Morrisv1:
     mem = "64G",
     time = "2:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_setup/create_sceptre_diffex_input_Morrisv1.R"
+    "../scripts/sceptre_setup/create_sceptre_diffex_input_Morrisv1.R"
     
 rule create_sceptre_diffex_input_Morrisv2:
   input:
@@ -55,7 +55,7 @@ rule create_sceptre_diffex_input_Morrisv2:
     mem = "64G",
     time = "2:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_setup/create_sceptre_diffex_input_Morrisv2.R"
+    "../scripts/sceptre_setup/create_sceptre_diffex_input_Morrisv2.R"
   
 rule create_sceptre_diffex_input_Xie:
   input:
@@ -76,7 +76,7 @@ rule create_sceptre_diffex_input_Xie:
     mem = "108G",
     time = "2:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_setup/create_sceptre_diffex_input_Xie.R"
+    "../scripts/sceptre_setup/create_sceptre_diffex_input_Xie.R"
   
 rule create_sceptre_diffex_input_Klann:
   input:
@@ -97,7 +97,7 @@ rule create_sceptre_diffex_input_Klann:
     mem = "108G",
     time = "2:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_setup/create_sceptre_diffex_input_Klann.R"
+    "../scripts/sceptre_setup/create_sceptre_diffex_input_Klann.R"
   
   
   

@@ -14,7 +14,7 @@ rule sceptre_differential_expression:
     mem = "32G",
     time = "12:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_power_analysis/sceptre_differential_expression.R"
+    "../scripts/sceptre_power_analysis/sceptre_differential_expression.R"
 
 rule create_sce:
   input:
@@ -28,7 +28,7 @@ rule create_sce:
     mem = "196G",
     time = "4:00:00"
   script:
-     "../scripts/process_validation_datasets/sceptre_power_analysis/create_sce_object.R"
+     "../scripts/sceptre_power_analysis/create_sce_object.R"
     
 
 # Define a function to get the number of batches for a given sample
@@ -58,7 +58,7 @@ checkpoint split_target_response_pairs:
     done
     
     # Run the R script, passing the list of files as output
-    Rscript workflow/scripts/process_validation_datasets/sceptre_power_analysis/split_target_response_pairs_checkpoint.R \
+    Rscript workflow/scripts/sceptre_power_analysis/split_target_response_pairs_checkpoint.R \
       --input={input.gene_gRNA_group_pairs} \
       --output=$(cat {output}/split_files_list.txt | tr '\\n' ' ') \
       --params.batches={params.batches} \
@@ -97,7 +97,7 @@ rule sceptre_power_analysis:
     mem = "32G",
     time = "2:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_power_analysis/sceptre_power_analysis.R"
+    "../scripts/sceptre_power_analysis/sceptre_power_analysis.R"
 
 
 # Function to get power analysis output files
@@ -122,7 +122,7 @@ rule combine_sceptre_power_analysis:
     mem = "32G",
     time = "2:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_power_analysis/combine_sceptre_power_analysis.R"
+    "../scripts/sceptre_power_analysis/combine_sceptre_power_analysis.R"
 
 
 # Compute the power from the power simulations
@@ -139,7 +139,7 @@ rule compute_power_from_simulations:
     mem = "24G",
     time = "1:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_power_analysis/compute_power_from_simulations.R"
+    "../scripts/sceptre_power_analysis/compute_power_from_simulations.R"
 
 # format sceptre output for compatibility with ENCODE pipelines
 rule format_sceptre_output:
@@ -157,4 +157,4 @@ rule format_sceptre_output:
     mem = "32G",
     time = "5:00:00"
   script:
-    "../scripts/process_validation_datasets/sceptre_power_analysis/format_sceptre_output.R"
+    "../scripts/sceptre_power_analysis/format_sceptre_output.R"
