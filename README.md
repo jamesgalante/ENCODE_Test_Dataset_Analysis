@@ -23,5 +23,17 @@ The main outputs to this pipeline are:
 - Full validation dataset with DC TAP Datasets resized:
   - results/combine_val_data_and_format/full_validation_resized_elements.tsv.gz
 
+NOTE: Not all files needed to rerun the pipeline are on github - as some are too large (>50Mb)
+- # Specific files in process_validation_datasets
+  - results/process_validation_datasets/-/power_analysis/combined_power*
+  - results/process_validation_datasets/-/perturb_sce.rds
+  - results/process_validation_datasets/-/differential_expression/final_sceptre_object.rds
+  - results/process_validation_datasets/-/differential_expression/sceptre_diffex_input.rds
+- # Folders to ignore
+  - results/genome_annotation_files/
+- # Specific files in sceptre_setup
+  - resources/sceptre_setup/-/dge*
+  - resources/sceptre_setup/-/metatdata*
+  - resources/sceptre_setup/-/perturb*
 
 
