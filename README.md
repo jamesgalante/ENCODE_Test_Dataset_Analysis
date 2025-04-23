@@ -2,7 +2,7 @@
 
 This repository collects and processes validation datasets to test ENCODE_rE2G performance on predicting held-out enhancer-gene pairs. It first runs differential expression using SCEPTRE. A power analysis is run on the negative pairs, selecting for pairs that pass a power threshold of 80% with a 15% simulated decrease in expression. The results are formatted, passed through filters for ENCODE, and formatted for EPBenchmarking. Finally, two datasets from the DC TAP experiments are added to the resulting validation dataset.
 
-The inputs to this pipeline are:
+## Inputs
 - DC TAP Seq results: 
   - resources/combine_val_data_and_format/DC_TAP_Seq_data.tsv
 - Training Dataset results: 
@@ -15,15 +15,16 @@ The inputs to this pipeline are:
   - resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_GM12878_GRCh38.tsv.gz
   - resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_Jurkat_GRCh38.tsv.gz
 
-All intermediate files are generated dynamically
+## All intermediate files are generated dynamically
 
-The main outputs to this pipeline are:
+## Outputs
 - Full validation dataset formatted for benchmarking:
   - results/combine_val_data_and_format/full_validation.tsv.gz
 - Full validation dataset with DC TAP Datasets resized:
   - results/combine_val_data_and_format/full_validation_resized_elements.tsv.gz
 
-NOTE: Not all files needed to rerun the pipeline are on github - as some are too large (>50Mb)
+## NOTE
+Not all files needed to rerun the pipeline are on github - as some are too large (>50Mb)
 - Specific files in process_validation_datasets
   - results/process_validation_datasets/-/power_analysis/combined_power*
   - results/process_validation_datasets/-/perturb_sce.rds
