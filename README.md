@@ -9,21 +9,14 @@ This repository processes validation datasets to test ENCODE_rE2G performance on
 5. Incorporates two DC TAP experiment datasets
 
 ## Inputs
-
-### DC TAP Seq Data
-- `resources/combine_val_data_and_format/DC_TAP_Seq_data.tsv`
-
-### Training Dataset
-- `resources/combine_val_data_and_format/EPCrisprBenchmark_ensemble_data_GRCh38.tsv`
-
-### Validation Raw Data
-- `resources/sceptre_setup/*` (contains count matrices, guide matrices, metadata, guide targets)
-
-### ENCODE Validation Datasets
-- `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCRFlowFISH_perCRE_filt.tsv.gz`
-- `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCT116_FlowFISH_GRCh38.tsv.gz`
-- `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_GM12878_GRCh38.tsv.gz`
-- `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_Jurkat_GRCh38.tsv.gz`
+- DC TAP Seq Data: `resources/combine_val_data_and_format/DC_TAP_Seq_data.tsv`
+- Training Dataset: `resources/combine_val_data_and_format/EPCrisprBenchmark_ensemble_data_GRCh38.tsv`
+- Validation Raw Data: `resources/sceptre_setup/*` (contains count matrices, guide matrices, metadata, guide targets)
+- ENCODE Validation Datasets:
+  - `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCRFlowFISH_perCRE_filt.tsv.gz`
+  - `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCT116_FlowFISH_GRCh38.tsv.gz`
+  - `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_GM12878_GRCh38.tsv.gz`
+  - `resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_Jurkat_GRCh38.tsv.gz`
 
 ## Intermediate Files
 All intermediate files are generated dynamically during pipeline execution.
@@ -37,16 +30,13 @@ All intermediate files are generated dynamically during pipeline execution.
 ## Important Notes
 Some large files (>50MB) are not included in the GitHub repository:
 
-### Excluded Files in `process_validation_datasets/`
-- `results/process_validation_datasets/-/power_analysis/combined_power*`
-- `results/process_validation_datasets/-/perturb_sce.rds`
-- `results/process_validation_datasets/-/differential_expression/final_sceptre_object.rds`
-- `results/process_validation_datasets/-/differential_expression/sceptre_diffex_input.rds`
-
-### Excluded Folders
-- `results/genome_annotation_files/`
-
-### Excluded Files in `sceptre_setup/`
-- `resources/sceptre_setup/-/dge*`
-- `resources/sceptre_setup/-/metadata*`
-- `resources/sceptre_setup/-/perturb*`
+- Excluded files in `process_validation_datasets/`:
+  - `results/process_validation_datasets/-/power_analysis/combined_power*`
+  - `results/process_validation_datasets/-/perturb_sce.rds`
+  - `results/process_validation_datasets/-/differential_expression/final_sceptre_object.rds`
+  - `results/process_validation_datasets/-/differential_expression/sceptre_diffex_input.rds`
+- Excluded folder: `results/genome_annotation_files/`
+- Excluded files in `sceptre_setup/`:
+  - `resources/sceptre_setup/-/dge*`
+  - `resources/sceptre_setup/-/metadata*`
+  - `resources/sceptre_setup/-/perturb*`
