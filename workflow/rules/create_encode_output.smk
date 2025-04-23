@@ -1,6 +1,6 @@
 ## Create input files for ENCODE and distal regulation CRISPR benchmarking pipeline
 
-ruleorder: liftover_crispr_dataset > create_encode_dataset
+# ruleorder: liftover_crispr_dataset > create_encode_dataset
 
 # function to get samples that require liftover from hg19 to GRCh38
 def liftover_samples(config):
@@ -49,40 +49,40 @@ rule create_encode_dataset:
     
 ## Liftover CRISPRi datasets -----------------------------------------------------------------------
 
-# lift enhancer coordinates from hg19 to hg38 using UCSC's liftOver software    
-rule liftover_enhancers:
-  input:
-    results = "results/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_hg19.tsv.gz", 
-    chain = "resources/create_encode_output/hg19ToHg38.over.chain.gz"
-  output:
-    hg19 = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg19.bed",
-    hg38 = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg38.bed",
-    unlifted = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_unlifted.bed"
-  conda: "../envs/r_process_crispr_data.yml"
-  resources:
-    time = "1:00:00",
-    mem = "64G"
-  shell:
-    "zcat {input.results} | "
-    """awk 'BEGIN {{OFS = "\\t"}} (NR>1) {{print $1, $2, $3, $1":"$2"-"$3, 0, "."}}' | """
-    "sort | uniq > {output.hg19} ; "
-    "liftOver {output.hg19} {input.chain} {output.hg38} {output.unlifted}"
-    
-# liftover EP benchmarking dataset from hg19 to hg38
-rule liftover_crispr_dataset:
-  input:
-    results = "results/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_hg19.tsv.gz",
-    enh_hg38 = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg38.bed",
-    annot_hg38 = "resources/create_encode_output/gencode.v29.annotation.gtf.gz"
-  output: "results/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_GRCh38.tsv.gz"
-  wildcard_constraints:
-    sample = "|".join(liftover_samples(config))
-  conda: "../envs/r_process_crispr_data.yml"
-  resources:
-    time = "1:00:00",
-    mem = "64G"
-  script:
-    "../scripts/encode_datasets/liftover_crispr_dataset.R"    
+# # lift enhancer coordinates from hg19 to hg38 using UCSC's liftOver software    
+# rule liftover_enhancers:
+#   input:
+#     results = "results/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_hg19.tsv.gz", 
+#     chain = "resources/create_encode_output/hg19ToHg38.over.chain.gz"
+#   output:
+#     hg19 = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg19.bed",
+#     hg38 = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg38.bed",
+#     unlifted = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_unlifted.bed"
+#   conda: "../envs/r_process_crispr_data.yml"
+#   resources:
+#     time = "1:00:00",
+#     mem = "64G"
+#   shell:
+#     "zcat {input.results} | "
+#     """awk 'BEGIN {{OFS = "\\t"}} (NR>1) {{print $1, $2, $3, $1":"$2"-"$3, 0, "."}}' | """
+#     "sort | uniq > {output.hg19} ; "
+#     "liftOver {output.hg19} {input.chain} {output.hg38} {output.unlifted}"
+#     
+# # liftover EP benchmarking dataset from hg19 to hg38
+# rule liftover_crispr_dataset:
+#   input:
+#     results = "results/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_hg19.tsv.gz",
+#     enh_hg38 = "results/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg38.bed",
+#     annot_hg38 = "resources/create_encode_output/gencode.v29.annotation.gtf.gz"
+#   output: "results/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_GRCh38.tsv.gz"
+#   wildcard_constraints:
+#     sample = "|".join(liftover_samples(config))
+#   conda: "../envs/r_process_crispr_data.yml"
+#   resources:
+#     time = "1:00:00",
+#     mem = "64G"
+#   script:
+#     "../scripts/encode_datasets/liftover_crispr_dataset.R"    
 
 ## Create EPBenchmarking CRISPR data files ---------------------------------------------------------
 
@@ -97,17 +97,17 @@ rule filter_crispr_dataset:
   script:
     "../scripts/encode_datasets/filter_crispr_dataset.R"
 
-# convert ENCODE format files to EPBenchmarking format files
-rule create_ep_benchmarking_dataset:
-  input: "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_{sample}_{sd}gStd_Sceptre_perCRE_{pwr}pwrAt{es}effect_{genome}.tsv.gz"
-  output: "results/create_encode_output/ENCODE/EPCrisprBenchmark/EPCrisprBenchmark_{sample}_{sd}gStd_{pwr}pwrAt{es}effect_{genome}.tsv.gz"
-  params:
-    effect_size = "log2FC", # Sceptre specific
-    min_pct_change = None,
-    cell_type = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["metadata"][wildcards.sample]["cell_type"]
-  conda: "../envs/r_process_crispr_data.yml"
-  script:
-    "../scripts/encode_datasets/create_ep_benchmarking_dataset.R"
+# # convert ENCODE format files to EPBenchmarking format files
+# rule create_ep_benchmarking_dataset:
+#   input: "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_{sample}_{sd}gStd_Sceptre_perCRE_{pwr}pwrAt{es}effect_{genome}.tsv.gz"
+#   output: "results/create_encode_output/ENCODE/EPCrisprBenchmark/EPCrisprBenchmark_{sample}_{sd}gStd_{pwr}pwrAt{es}effect_{genome}.tsv.gz"
+#   params:
+#     effect_size = "log2FC", # Sceptre specific
+#     min_pct_change = None,
+#     cell_type = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["metadata"][wildcards.sample]["cell_type"]
+#   conda: "../envs/r_process_crispr_data.yml"
+#   script:
+#     "../scripts/encode_datasets/create_ep_benchmarking_dataset.R"
 
 ## Create ensemble dataset -------------------------------------------------------------------------
 

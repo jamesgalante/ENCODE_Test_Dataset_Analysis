@@ -3,7 +3,7 @@
 # Rule to remove the training pairs from all K562 Validation Datasets & create unfiltered_k562_dc_tap file for analysis
 rule remove_training_pairs:
   input:
-    combined_validation_w_train_pairs = "results/benchmark_validation_datasets/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz",
+    combined_validation_w_train_pairs = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz",
     training_data = "resources/combine_val_data_and_format/EPCrisprBenchmark_ensemble_data_GRCh38.tsv"
   output:
     validation = "results/combine_val_data_and_format/validation_wo_training_pairs.tsv.gz"

@@ -82,7 +82,7 @@ rule create_sceptre_diffex_input_Klann:
   input:
     dge = "resources/sceptre_setup/Klann/dge.txt.gz",
     perturb_status = "resources/sceptre_setup/Klann/perturb_status.txt.gz",
-    guide_targets = "resources/targets.tsv",
+    guide_targets = "resources/sceptre_setup/Klann/guide_targets.tsv",
     annot = "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
   output:
     gene_gRNA_group_pairs = "results/process_validation_datasets/Klann/gene_gRNA_group_pairs.rds",
