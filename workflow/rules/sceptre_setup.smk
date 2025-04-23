@@ -1,9 +1,10 @@
+# sceptre_setup.smk
 
-
-rule download_gencode_v29:
-  output: "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+# download gencode annotations
+rule download_gencode_annotations:
+  output: "results/genome_annotation_files/{annot}.annotation.gtf.gz"
   params:
-    url = "http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.annotation.gtf.gz"
+    url = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["download_urls"][wildcards.annot]
   conda: "../envs/r_process_crispr_data.yml"
   shell:
     "wget -O {output} {params.url}"
@@ -13,7 +14,7 @@ rule create_sceptre_diffex_input_Morrisv1:
     dge = "resources/sceptre_setup/Morrisv1/dge.txt.gz",
     perturb_status = "resources/sceptre_setup/Morrisv1/perturb_status.txt.gz",
     guide_targets = "resources/sceptre_setup/Morrisv1/guide_targets.tsv",
-    annot = "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+    annot = "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
   output:
     gene_gRNA_group_pairs = "results/process_validation_datasets/Morrisv1/gene_gRNA_group_pairs.rds",
     gRNA_groups_table = "results/process_validation_datasets/Morrisv1/gRNA_groups_table.rds",
@@ -33,7 +34,7 @@ rule create_sceptre_diffex_input_Morrisv2:
     dge = "resources/sceptre_setup/Morrisv2/dge.txt.gz",
     perturb_status = "resources/sceptre_setup/Morrisv2/perturb_status.txt.gz",
     guide_targets = "resources/sceptre_setup/Morrisv2/guide_targets.tsv",
-    annot = "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+    annot = "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
   output:
     gene_gRNA_group_pairs = "results/process_validation_datasets/Morrisv2/gene_gRNA_group_pairs.rds",
     gRNA_groups_table = "results/process_validation_datasets/Morrisv2/gRNA_groups_table.rds",
@@ -54,7 +55,7 @@ rule create_sceptre_diffex_input_Xie:
     dge = "resources/sceptre_setup/Xie/dge.txt.gz",
     perturb_status = "resources/sceptre_setup/Xie/perturb_status.txt.gz",
     guide_targets = "resources/sceptre_setup/Xie/guide_targets.tsv",
-    annot = "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+    annot = "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
   output:
     gene_gRNA_group_pairs = "results/process_validation_datasets/Xie/gene_gRNA_group_pairs.rds",
     gRNA_groups_table = "results/process_validation_datasets/Xie/gRNA_groups_table.rds",
@@ -75,7 +76,7 @@ rule create_sceptre_diffex_input_Klann:
     dge = "resources/sceptre_setup/Klann/dge.txt.gz",
     perturb_status = "resources/sceptre_setup/Klann/perturb_status.txt.gz",
     guide_targets = "resources/sceptre_setup/Klann/guide_targets.tsv",
-    annot = "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+    annot = "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
   output:
     gene_gRNA_group_pairs = "results/process_validation_datasets/Klann/gene_gRNA_group_pairs.rds",
     gRNA_groups_table = "results/process_validation_datasets/Klann/gRNA_groups_table.rds",

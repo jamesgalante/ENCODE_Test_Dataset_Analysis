@@ -1,14 +1,5 @@
 ## Create input files for ENCODE and distal regulation CRISPR benchmarking pipeline
 
-# download gencode annotations
-rule download_gencode_annotations:
-  output: "resources/create_encode_output/{annot}.annotation.gtf.gz"
-  params:
-    url = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["download_urls"][wildcards.annot]
-  conda: "../envs/r_process_crispr_data.yml"
-  shell:
-    "wget -O {output} {params.url}"
-
 # compile output files in ENCODE format
 rule create_encode_dataset:
   input:

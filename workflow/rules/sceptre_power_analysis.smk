@@ -30,7 +30,6 @@ rule create_sce:
   script:
      "../scripts/sceptre_power_analysis/create_sce_object.R"
     
-
 # Define a function to get the number of batches for a given sample
 def get_n_batches(wildcards):
     return config["process_validation_datasets"]["power_simulations"]["n_batches"].get(wildcards.sample, 50)
@@ -76,7 +75,6 @@ def get_split_files(wildcards):
     pattern = os.path.join(checkpoint_output, "gene_gRNA_group_pairs_{split}.txt")
     split_nums = glob_wildcards(pattern).split
     return expand(pattern, split=split_nums)
-
     
 # Run the power simulation with sceptre for each split
 rule sceptre_power_analysis:
@@ -98,7 +96,6 @@ rule sceptre_power_analysis:
     time = "2:00:00"
   script:
     "../scripts/sceptre_power_analysis/sceptre_power_analysis.R"
-
 
 # Function to get power analysis output files
 def get_power_analysis_outputs(wildcards):
@@ -123,7 +120,6 @@ rule combine_sceptre_power_analysis:
     time = "2:00:00"
   script:
     "../scripts/sceptre_power_analysis/combine_sceptre_power_analysis.R"
-
 
 # Compute the power from the power simulations
 rule compute_power_from_simulations:

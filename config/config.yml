@@ -15,10 +15,7 @@ process_validation_datasets:
 benchmark_validation_datasets:
   create_encode_output:
     download_urls:
-      gencode.v29lift37: "http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/GRCh37_mapping/gencode.v29lift37.annotation.gtf.gz"
       gencode.v29: "http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.annotation.gtf.gz"
-      liftover_chain: "https://hgdownload.cse.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz"
-      RefSeq_tss: "https://raw.githubusercontent.com/broadinstitute/ABC-Enhancer-Gene-Prediction/master/reference/RefSeqCurated.170308.bed.CollapsedGeneBounds.TSS500bp.bed"
     encode_datasets:
       ignore_transcripts:
         Xie: NULL
@@ -30,13 +27,13 @@ benchmark_validation_datasets:
         GM12878: NULL
       dist_to_TSS: [1000, 1e6]
       annot:
-        Xie: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        Morrisv1: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        Morrisv2: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        Klann: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        HCT116: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        Jurkat: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        GM12878: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
+        Xie: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+        Morrisv1: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+        Morrisv2: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+        Klann: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+        HCT116: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+        Jurkat: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
+        GM12878: "results/genome_annotation_files/gencode.v29.annotation.gtf.gz"
       genome_build:
         Xie: "GRCh38"
         Morrisv1: "GRCh38"
