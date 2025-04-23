@@ -1,22 +1,5 @@
 ## Create input files for ENCODE and distal regulation CRISPR benchmarking pipeline
 
-# ruleorder: liftover_crispr_dataset > create_encode_dataset
-
-# function to get samples that require liftover from hg19 to GRCh38
-def liftover_samples(config):
-  genome_builds = config["benchmark_validation_datasets"]["create_encode_output"]["encode_datasets"]["genome_build"].items()
-  liftover_samples = list(dict(filter(lambda x: x[1] == "hg19", genome_builds)).keys())
-  return(liftover_samples)
-
-# download UCSC hg19 to hg38 liftover chain file
-rule download_chain_file:
-  output: "resources/create_encode_output/hg19ToHg38.over.chain.gz"
-  params:
-    url = config["benchmark_validation_datasets"]["create_encode_output"]["download_urls"]["liftover_chain"]
-  conda: "../envs/r_process_crispr_data.yml"
-  shell:
-    "wget -O {output} {params.url}"
-
 # download gencode annotations
 rule download_gencode_annotations:
   output: "resources/create_encode_output/{annot}.annotation.gtf.gz"
