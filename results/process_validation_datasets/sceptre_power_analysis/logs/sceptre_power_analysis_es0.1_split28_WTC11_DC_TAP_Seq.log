@@ -1,0 +1,2013 @@
+Loading in packages
+There were 14 warnings (use warnings() to see them)
+Loading Sceptre
+Installed Sceptre
+Loaded Sceptre
+Reading in snakemake variables
+Rows: 65 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (2): grna_group, response_id
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr1:3550466-3550767'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000157916 (1 of 2)
+Analyzing pairs containing gRNA group chr1:3550466-3550767 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr1:199432683-199432984'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000162702 (1 of 1)
+Analyzing pairs containing gRNA group chr1:199432683-199432984 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr11:35640802-35641103'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179431 (1 of 1)
+Analyzing pairs containing gRNA group chr11:35640802-35641103 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr11:66079655-66079956'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000168066 (1 of 21)
+Running precomputation on response ENSG00000174276 (5 of 21)
+Running precomputation on response ENSG00000172500 (10 of 21)
+Running precomputation on response ENSG00000174851 (15 of 21)
+Running precomputation on response ENSG00000173933 (20 of 21)
+Analyzing pairs containing gRNA group chr11:66079655-66079956 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr16:31021295-31021596'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000179918 (1 of 8)
+Running precomputation on response ENSG00000103510 (5 of 8)
+Analyzing pairs containing gRNA group chr16:31021295-31021596 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr19:9903333-9903634'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000099783 (1 of 11)
+Running precomputation on response ENSG00000130810 (5 of 11)
+Running precomputation on response ENSG00000105401 (10 of 11)
+Analyzing pairs containing gRNA group chr19:9903333-9903634 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr2:75092625-75092926'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000005448 (1 of 8)
+Running precomputation on response ENSG00000115307 (5 of 8)
+Analyzing pairs containing gRNA group chr2:75092625-75092926 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr20:48574312-48574613'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000124226 (1 of 6)
+Running precomputation on response ENSG00000000419 (5 of 6)
+Analyzing pairs containing gRNA group chr20:48574312-48574613 (1 of 1)
+Returning discovery results
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr6:28737556-28737857'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Running precomputation on response ENSG00000198315 (1 of 3)
+Analyzing pairs containing gRNA group chr6:28737556-28737857 (1 of 1)
+Returning discovery results
+Saving output to file.
+Closing log file

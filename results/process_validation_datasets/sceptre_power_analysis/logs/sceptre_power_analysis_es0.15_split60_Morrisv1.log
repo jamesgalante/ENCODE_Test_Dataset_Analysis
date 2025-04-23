@@ -1,0 +1,2514 @@
+Loading in packages
+There were 14 warnings (use warnings() to see them)
+Reading in snakemake variables
+Rows: 100 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (2): grna_group, response_id
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Assigning pert_input_function with n_ctrl value
+Creating input for perturbation 'chr9:136644321-136647073'.
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Simulating Counts
+Simulating tapseq counts
+Setting up sceptre object for Disovery Analysis
+The class of what's being assigned to the response matrix
+Running discovery analysis
+Note: If you are on a Mac laptop or desktop, consider setting `parallel = TRUE` to improve speed. Otherwise, keep `parallel = FALSE`.
+
+Warning: The calibration check (`run_calibration_check()`) should be run before the discovery analysis.
+
+Running precomputation on response ENSG00000165643 (1 of 65)
+Running precomputation on response ENSG00000148411 (5 of 65)
+Running precomputation on response ENSG00000213221 (10 of 65)
+Running precomputation on response ENSG00000148384 (15 of 65)
+Running precomputation on response ENSG00000169692 (20 of 65)
+Running precomputation on response ENSG00000196642 (25 of 65)
+Running precomputation on response ENSG00000127191 (30 of 65)
+Running precomputation on response ENSG00000169583 (35 of 65)
+Running precomputation on response ENSG00000268996 (40 of 65)
+Running precomputation on response ENSG00000176101 (45 of 65)
+Running precomputation on response ENSG00000212864 (50 of 65)
+Running precomputation on response ENSG00000198435 (55 of 65)
+Running precomputation on response ENSG00000182154 (60 of 65)
+Running precomputation on response ENSG00000181090 (65 of 65)
+Analyzing pairs containing gRNA group chr9:136644321-136647073 (1 of 1)
+Returning discovery results
+Saving output to file.
+Closing log file

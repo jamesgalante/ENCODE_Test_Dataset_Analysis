@@ -1,0 +1,280 @@
+Loading in packages
+Loading input files
+Rows: 14968 Columns: 12
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (8): chr, name, strand, spacer, target_chr, target_name, target_strand, ...
+dbl (4): start, end, target_start, target_end
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Preparing gene and perturbation coordinates
+Calculating distances efficiently by chromosome
+Processing chromosome: chr1
+Processing chromosome: chr2
+Processing chromosome: chr3
+Processing chromosome: chr6
+Processing chromosome: chr7
+Processing chromosome: chr8
+Processing chromosome: chr11
+Processing chromosome: chr14
+Processing chromosome: chr16
+Processing chromosome: chr17
+Processing chromosome: chr18
+Processing chromosome: chr19
+Processing chromosome: chr20
+Processing chromosome: chr21
+Combining all pairs
+Adding target type information
+Saving distance information for filtered pairs
+Reporting all missing pairs
+Found 104 targets without any genes within 1MB:
+
+Breakdown by target type:
+
+enh 
+104 
+
+Full list of targets without genes:
+                 target_name target_type
+1   chr1:152199836-152200137         enh
+2   chr1:152370000-152370301         enh
+3   chr1:152423791-152424092         enh
+4   chr1:152430911-152431212         enh
+5    chr14:33679569-33679870         enh
+6    chr14:33749122-33749423         enh
+7    chr14:57325203-57325504         enh
+8    chr16:87604693-87604994         enh
+9    chr17:39573797-39574098         enh
+10   chr17:39649148-39649449         enh
+11   chr17:39662376-39662677         enh
+12   chr17:39666562-39666863         enh
+13   chr17:39686468-39687049         enh
+14   chr17:39697389-39697690         enh
+15   chr17:39715929-39716230         enh
+16   chr17:39739332-39739633         enh
+17   chr17:39834551-39834852         enh
+18   chr17:39835465-39835766         enh
+19   chr17:39937950-39938251         enh
+20   chr17:39941423-39941724         enh
+21   chr17:39956901-39957202         enh
+22   chr17:39967839-39968140         enh
+23   chr17:40073629-40073930         enh
+24   chr17:40076126-40076640         enh
+25   chr17:40087338-40087639         enh
+26   chr17:40108533-40108834         enh
+27   chr17:43980173-43980730         enh
+28   chr17:44026405-44026706         enh
+29   chr17:44055633-44055934         enh
+30   chr17:44056643-44056944         enh
+31   chr17:44068255-44068556         enh
+32   chr17:44088188-44088489         enh
+33   chr17:44116974-44117275         enh
+34   chr17:44193123-44193424         enh
+35   chr17:44265375-44265676         enh
+36   chr17:44271278-44271579         enh
+37   chr17:44344247-44344548         enh
+38   chr17:44848439-44848740         enh
+39   chr17:44863113-44863414         enh
+40   chr17:55824952-55825253         enh
+41   chr17:55926529-55926830         enh
+42   chr17:55926851-55927152         enh
+43   chr17:55929024-55929325         enh
+44   chr17:55930323-55930624         enh
+45   chr17:55938344-55938645         enh
+46   chr17:55969870-55970171         enh
+47   chr17:56024158-56024459         enh
+48   chr17:56070191-56070492         enh
+49   chr17:56214088-56214389         enh
+50   chr17:56295221-56295522         enh
+51   chr17:56295870-56296171         enh
+52   chr17:56354528-56354829         enh
+53   chr17:56407935-56408236         enh
+54   chr17:56414016-56414317         enh
+55   chr17:56416841-56417142         enh
+56   chr17:56492011-56492312         enh
+57   chr17:56514310-56514611         enh
+58   chr17:56524888-56525189         enh
+59   chr17:56665043-56665344         enh
+60   chr17:56672842-56673143         enh
+61   chr17:67231630-67231931         enh
+62   chr17:67234979-67235280         enh
+63   chr17:67242972-67243273         enh
+64   chr17:67322574-67322875         enh
+65   chr17:67331238-67331539         enh
+66   chr17:67363366-67363667         enh
+67   chr17:67390890-67391191         enh
+68   chr17:67459022-67459323         enh
+69   chr17:67522172-67522473         enh
+70   chr17:67565217-67565518         enh
+71   chr17:67659176-67659477         enh
+72   chr17:67719935-67720236         enh
+73   chr17:67853575-67853876         enh
+74   chr17:67870459-67870760         enh
+75   chr17:67890295-67890596         enh
+76   chr17:67903713-67904014         enh
+77   chr17:67904910-67905211         enh
+78   chr17:67943556-67943857         enh
+79   chr17:67947253-67947554         enh
+80   chr17:68055227-68055528         enh
+81   chr17:68124965-68125266         enh
+82   chr17:68164209-68164510         enh
+83   chr17:68164876-68165177         enh
+84   chr17:68401888-68402189         enh
+85   chr17:68479726-68480027         enh
+86   chr17:68520338-68520639         enh
+87   chr17:68548610-68548911         enh
+88   chr17:68626103-68626404         enh
+89   chr17:68632711-68633012         enh
+90   chr17:68763295-68763596         enh
+91   chr17:69007586-69007887         enh
+92   chr17:69080402-69080703         enh
+93   chr17:69081431-69081732         enh
+94   chr21:47294973-47295274         enh
+95   chr21:47460622-47460923         enh
+96   chr21:47486465-47486766         enh
+97   chr21:47563880-47564181         enh
+98   chr21:47593125-47593426         enh
+99   chr21:47593624-47593925         enh
+100  chr21:47604848-47605149         enh
+101  chr21:47608337-47608638         enh
+102  chr21:47630374-47630675         enh
+103  chr21:47673675-47673976         enh
+104  chr21:47705629-47705930         enh
+
+Found 98 genes without any targets within 1MB:
+              gene gene_name gene_chr gene_start  gene_end
+1  ENSG00000235169     SMIM1     chr1    3689325   3692546
+2  ENSG00000130764    LRRC47     chr1    3695123   3713062
+3  ENSG00000116198    CEP104     chr1    3728650   3773778
+4  ENSG00000159023     EPB41     chr1   29213603  29446558
+5  ENSG00000121900    TMEM54     chr1   33360195  33367039
+6  ENSG00000174574   AKIRIN1     chr1   39456948  39471731
+7  ENSG00000159596    TMEM69     chr1   46153853  46160108
+8  ENSG00000163399    ATP1A1     chr1  116915290 116952883
+9  ENSG00000132680     KHDC4     chr1  155882836 155904204
+10 ENSG00000134371     CDC73     chr1  193091088 193223945
+11 ENSG00000163811     WDR43     chr2   29117533  29171085
+12 ENSG00000188010     MORN2     chr2   39103103  39156213
+13 ENSG00000132182    NUP210     chr3   13357735  13461822
+14 ENSG00000131368    MRPS25     chr3   15083967  15106824
+15 ENSG00000144848      ATG3     chr3  112251357 112280893
+16 ENSG00000121579     NAA50     chr3  113435305 113465147
+17 ENSG00000168884     TNIP2     chr4    2743375   2758069
+18 ENSG00000109519    GRPEL1     chr4    7060622   7069791
+19 ENSG00000182552     RWDD4     chr4  184560788 184580356
+20 ENSG00000062194     GPBP1     chr5   56469775  56560506
+21 ENSG00000113522     RAD50     chr5  131891711 131982041
+22 ENSG00000137193      PIM1     chr6   37137928  37143204
+23 ENSG00000136247    ZDHHC4     chr7    6617065   6629005
+24 ENSG00000136270     TBRG4     chr7   45139699  45151646
+25 ENSG00000196313    POM121     chr7   72349936  72421979
+26 ENSG00000005486    RHBDD2     chr7   75471920  75518244
+27 ENSG00000133739    LRRCC1     chr8   86019450  86058315
+28 ENSG00000176731      RBIS     chr8   86126283  86132650
+29 ENSG00000104517      UBR5     chr8  103264501 103424987
+30 ENSG00000155096     AZIN1     chr8  103838536 103906092
+31 ENSG00000155097  ATP6V1C1     chr8  104033291 104085279
+32 ENSG00000147689    FAM83A     chr8  124191200 124222319
+33 ENSG00000156831    NSMCE2     chr8  126103921 126379362
+34 ENSG00000136997       MYC     chr8  128747680 128755197
+35 ENSG00000229140    CCDC26     chr8  129646445 130696016
+36 ENSG00000129292   PHF20L1     chr8  133787604 133861052
+37 ENSG00000160932      LY6E     chr8  144099399 144105249
+38 ENSG00000188229    TUBB4B     chr9  140135739 140138159
+39 ENSG00000108179      PPIF    chr10   81107225  81115090
+40 ENSG00000138182    KIF20B    chr10   91461367  91534696
+41 ENSG00000148688     RPP30    chr10   92631473  92668310
+42 ENSG00000108055      SMC3    chr10  112327449 112364394
+43 ENSG00000188690      UROS    chr10  127473549 127511827
+44 ENSG00000148773     MKI67    chr10  129894923 129924687
+45 ENSG00000099849    RASSF7    chr11     560404    564025
+46 ENSG00000117984      CTSD    chr11    1773985   1785803
+47 ENSG00000205531    NAP1L4    chr11    2965661   3013607
+48 ENSG00000223609       HBD    chr11    5253908   5264887
+49 ENSG00000132286   TIMM10B    chr11    6502731   6505911
+50 ENSG00000132275      RRP8    chr11    6616302   6624846
+51 ENSG00000166333       ILK    chr11    6624938   6632105
+52 ENSG00000158042    MRPL17    chr11    6701616   6704571
+53 ENSG00000166471   TMEM41B    chr11    9302201   9336183
+54 ENSG00000198730      CTR9    chr11   10772793  10823172
+55 ENSG00000109854   HTATIP2    chr11   20385231  20405329
+56 ENSG00000198168      SVIP    chr11   22835345  22851845
+57 ENSG00000149485     FADS1    chr11   61567099  61596790
+58 ENSG00000171202  TMEM126A    chr11   85359011  85367591
+59 ENSG00000165526    RPUSD4    chr11  126071991 126081587
+60 ENSG00000123405      NFE2    chr12   54685895  54694799
+61 ENSG00000100814  CCNB1IP1    chr14   20779527  20801471
+62 ENSG00000125952       MAX    chr14   65472892  65569413
+63 ENSG00000198668     CALM1    chr14   90862846  90874612
+64 ENSG00000168101  NUDT16L1    chr16    4743695   4745860
+65 ENSG00000103550     KNOP1    chr16   19713259  19729557
+66 ENSG00000132581      SDF2    chr17   26975364  26989207
+67 ENSG00000076604     TRAF4    chr17   27071023  27077974
+68 ENSG00000108256    NUFIP2    chr17   27582857  27621166
+69 ENSG00000006042    TMEM98    chr17   31254928  31272124
+70 ENSG00000108312      UBTF    chr17   42282401  42298994
+71 ENSG00000013306  SLC25A39    chr17   42396993  42402238
+72 ENSG00000030582       GRN    chr17   42422614  42430474
+73 ENSG00000136436  CALCOCO2    chr17   46908350  46943884
+74 ENSG00000159199   ATP5MC1    chr17   46970127  46973233
+75 ENSG00000159210      SNF8    chr17   47006678  47022204
+76 ENSG00000159217   IGF2BP1    chr17   47074747  47133507
+77 ENSG00000167085       PHB    chr17   47481411  47492267
+78 ENSG00000121067      SPOP    chr17   47676246  47755525
+79 ENSG00000121073   SLC35B1    chr17   47778296  47786376
+80 ENSG00000133193   FAM104A    chr17   71203492  71232892
+81 ENSG00000108479     GALK1    chr17   73747675  73761317
+82 ENSG00000204237     OXLD1    chr17   79632066  79633665
+83 ENSG00000099804     CDC34    chr19     531760    542092
+84 ENSG00000171223      JUNB    chr19   12902300  12904129
+85 ENSG00000105612    DNASE2    chr19   12986023  12992280
+86 ENSG00000179115     FARSA    chr19   13033293  13044851
+87 ENSG00000104903      LYL1    chr19   13209847  13213975
+88 ENSG00000125995     ROMO1    chr20   34287194  34288906
+89 ENSG00000101146      RAE1    chr20   55926279  55954267
+90 ENSG00000132819     RBM38    chr20   55966452  55984389
+91 ENSG00000160194    NDUFV3    chr21   44299754  44333414
+92 ENSG00000160200       CBS    chr21   44473301  44497053
+93 ENSG00000160201     U2AF1    chr21   44513066  44527697
+94 ENSG00000128294     TPST2    chr22   26917962  26992681
+95 ENSG00000102145     GATA1     chrX   48644962  48652718
+96 ENSG00000102096      PIM2     chrX   48770459  48776301
+97 ENSG00000102007      PLP2     chrX   49028245  49031584
+98 ENSG00000158578     ALAS2     chrX   55035488  55057410
+Warning messages:
+1: In obtain_pointer_vector(i = dt$i, dim = n_responses) :
+  subscript out of bounds (index 20595029 >= vector size 20595029)
+2: In obtain_pointer_vector(i = dt$i, dim = n_responses) :
+  subscript out of bounds (index 5983236 >= vector size 5983236)
+An object of class sceptre_object.
+
+Attributes of the data:
+	• 95997 cells
+	• 303 responses
+	• High multiplicity-of-infection 
+	• 11482 targeting gRNAs (distributed across 815 targets) 
+	• 0 non-targeting gRNAs 
+	• 5 covariates (batch, grna_n_nonzero, grna_n_umis, response_n_nonzero, response_n_umis)
+
+Analysis status:
+	✓ import_data()
+	✓ set_analysis_parameters()
+	✗ assign_grnas()
+	✗ run_qc()
+	✗ run_calibration_check()
+	✗ run_power_check()
+	✗ run_discovery_analysis()
+
+Analysis parameters: 
+	• Discovery pairs: data frame with 4292 pairs
+	• Positive control pairs: data frame with 0 pairs
+	• Sidedness of test: both
+	• Resampling mechanism: conditional resampling
+	• gRNA integration strategy: union
+	• Resampling approximation: skew normal
+	• Multiple testing adjustment: BH at level 0.1
+	• N nonzero treatment cells threshold: not specified
+	• N nonzero control cells threshold: not specified
+	• Formula object: log(response_n_nonzero) + log(response_n_umis) + log(grna_n_nonzero + 1) + log(grna_n_umis + 1) + batchSaving output files
+Closing log file

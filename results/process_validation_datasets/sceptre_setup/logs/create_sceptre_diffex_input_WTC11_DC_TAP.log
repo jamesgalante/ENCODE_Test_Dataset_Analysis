@@ -1,0 +1,267 @@
+Loading in packages
+Loading input files
+Rows: 16207 Columns: 12
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (8): chr, name, strand, spacer, target_chr, target_name, target_strand, ...
+dbl (4): start, end, target_start, target_end
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Preparing gene and perturbation coordinates
+Calculating distances efficiently by chromosome
+Processing chromosome: chr1
+Processing chromosome: chr10
+Processing chromosome: chr11
+Processing chromosome: chr12
+Processing chromosome: chr15
+Processing chromosome: chr16
+Processing chromosome: chr17
+Processing chromosome: chr18
+Processing chromosome: chr19
+Processing chromosome: chr2
+Processing chromosome: chr20
+Processing chromosome: chr3
+Processing chromosome: chr5
+Processing chromosome: chr6
+Processing chromosome: chr7
+Processing chromosome: chr8
+Combining all pairs
+Adding target type information
+Saving distance information for filtered pairs
+Reporting all missing pairs
+Found 147 targets without any genes within 1MB:
+
+Breakdown by target type:
+
+        DE        enh    tss_pos tss_random 
+         1        140          4          2 
+
+Full list of targets without genes:
+                  target_name target_type
+1    chr1:198392893-198393194         enh
+2    chr1:198441350-198441651         enh
+3    chr1:198570089-198570390         enh
+4    chr1:198668607-198668908         enh
+5    chr1:198710922-198711223         enh
+6    chr1:198757893-198758194         enh
+7    chr1:198799187-198799786         enh
+8    chr1:199187184-199187485         enh
+9    chr1:199212619-199212920         enh
+10   chr1:199241808-199242109         enh
+11   chr1:199306507-199306808         enh
+12       chr1:3369705-3370006         enh
+13       chr1:3381784-3382085         enh
+14       chr1:3382615-3382916         enh
+15       chr1:3384115-3384416         enh
+16       chr1:3385015-3385316         enh
+17       chr1:3450059-3450360         enh
+18       chr1:3527152-3527453         enh
+19       chr1:3535611-3535912         enh
+20       chr1:3549354-3549655         enh
+21       chr1:3550466-3550767         enh
+22       chr1:3561824-3562125         enh
+23       chr1:3568018-3568319         enh
+24       chr1:3573145-3573446         enh
+25       chr1:3574114-3574415         enh
+26       chr1:3579574-3579875         enh
+27       chr1:3583869-3584170         enh
+28       chr1:3591385-3591686         enh
+29       chr1:3634607-3634908         enh
+30       chr1:3636649-3636950         enh
+31       chr1:3816148-3816449         enh
+32       chr1:3817808-3818109         enh
+33    chr10:25463420-25463721         enh
+34    chr10:25516041-25516342         enh
+35    chr10:25738980-25739281         enh
+36    chr10:25864252-25864553         enh
+37    chr10:25971122-25971423         enh
+38    chr10:25971571-25971872         enh
+39    chr10:25985000-25985301         enh
+40    chr10:25990599-25990991         enh
+41    chr10:26014877-26015178         enh
+42    chr10:26046915-26047216         enh
+43    chr10:26107741-26108042         enh
+44    chr10:26164530-26164831         enh
+45    chr10:26201735-26202036         enh
+46    chr10:26223823-26224124         enh
+47    chr10:26374515-26374816         enh
+48    chr11:36766170-36766471         enh
+49    chr11:36768669-36768970         enh
+50    chr11:37025100-37025401         enh
+51                 MYBPC3_TSS     tss_pos
+52  chr12:125248959-125249260         enh
+53  chr12:125383075-125383376         enh
+54  chr12:125398523-125398824         enh
+55                    UBC_TSS  tss_random
+56  chr12:125405704-125406005         enh
+57  chr12:125412909-125413210         enh
+58  chr12:125423590-125423891         enh
+59  chr12:125424404-125424705         enh
+60  chr12:125425205-125425506         enh
+61  chr12:125624900-125625201         enh
+62  chr12:125667730-125668031         enh
+63  chr12:125669833-125670378         enh
+64  chr12:125672729-125673030         enh
+65  chr12:125683245-125683546         enh
+66  chr12:125813895-125814196         enh
+67  chr12:125817479-125817780         enh
+68  chr12:126002673-126002974         enh
+69                  MESP1_TSS     tss_pos
+70   chr2:218578246-218578547         enh
+71   chr2:218650209-218650510         enh
+72   chr2:218653949-218654250         enh
+73   chr2:218664684-218664985         enh
+74   chr2:218665249-218665550         enh
+75   chr2:218665921-218666222         enh
+76   chr2:218666468-218666769         enh
+77   chr2:218701955-218702256         enh
+78   chr2:218751486-218751787         enh
+79   chr2:218764304-218764605         enh
+80   chr2:218782989-218783290         enh
+81   chr2:218812680-218812981         enh
+82   chr2:218853281-218853582         enh
+83   chr2:218858617-218858918         enh
+84   chr2:218886503-218886804         enh
+85   chr2:218886823-218887124         enh
+86   chr2:218890176-218890477         enh
+87   chr2:218891066-218891367         enh
+88   chr2:218891407-218892001         enh
+89   chr2:218938696-218938997         enh
+90     chr2:68546414-68546715         enh
+91     chr2:68547538-68547839         enh
+92     chr2:68589204-68589505         enh
+93     chr2:68645898-68646199         enh
+94     chr2:68870556-68870857         enh
+95     chr2:68949955-68950256         enh
+96     chr2:68978897-68979198         enh
+97    chr20:31879690-31879991         enh
+98    chr20:31886960-31887261         enh
+99    chr20:32030986-32031287         enh
+100   chr20:32032751-32033052         enh
+101   chr20:32045016-32045317         enh
+102   chr20:32250958-32251259         enh
+103   chr20:32251375-32251676         enh
+104   chr20:32255749-32256050         enh
+105   chr20:32272856-32273343         enh
+106   chr20:32319874-32320175         enh
+107   chr20:32420044-32420345         enh
+108   chr20:32450457-32450758         enh
+109   chr20:32450855-32451156         enh
+110                EIF2S2_TSS  tss_random
+111   chr20:32700662-32700963         enh
+112   chr20:32778443-32778744         enh
+113   chr20:32803896-32804197         enh
+114   chr20:32856722-32857023         enh
+115   chr20:32857166-32857467         enh
+116   chr20:32888873-32889174         enh
+117   chr20:33061127-33061428         enh
+118   chr20:33064109-33064410         enh
+119   chr20:33124835-33125136         enh
+120   chr20:33126479-33126780         enh
+121   chr20:33150483-33150784         enh
+122   chr20:33292647-33292948         enh
+123   chr20:33293220-33293521         enh
+124   chr20:33412219-33412520         enh
+125   chr20:33412870-33413171         enh
+126   chr20:33539434-33539735         enh
+127   chr20:33542714-33543015         enh
+128   chr20:33548638-33548939         enh
+129   chr20:33586228-33586529         enh
+130   chr20:33590784-33591085         enh
+131   chr20:33592563-33592864         enh
+132   chr20:33593303-33593604         enh
+133   chr20:33595320-33595621         enh
+134   chr20:33796219-33796520         enh
+135   chr20:33814855-33815156         enh
+136   chr20:33857109-33857410         enh
+137   chr20:33861282-33861583         enh
+138    chr6:22737654-22737955         enh
+139    chr6:22828722-22829023         enh
+140    chr6:23002513-23002814         enh
+141    chr6:23177214-23177515         enh
+142    chr6:27017780-27018081         enh
+143    chr6:27059424-27059725         enh
+144    chr6:27064626-27065225         enh
+145 KCNH2_DE_1_AND_KCNH2_DE_2          DE
+146               KCNH2_TSS_1     tss_pos
+147               KCNH2_TSS_2     tss_pos
+
+Found 30 genes without any targets within 1MB:
+              gene gene_name gene_chr gene_start  gene_end
+1  ENSG00000120948    TARDBP     chr1   11072401  11086477
+2  ENSG00000197956    S100A6     chr1  153507075 153508720
+3  ENSG00000196504   PRPF40A     chr2  153508107 153574511
+4  ENSG00000174695  TMEM167A     chr5   82348665  82373682
+5  ENSG00000135597     REPS1     chr6  139224630 139309398
+6  ENSG00000105835     NAMPT     chr7  105888744 105926772
+7  ENSG00000128610     FEZF1     chr7  121941357 121950745
+8  ENSG00000104529     EEF1D     chr8  144661867 144681711
+9  ENSG00000187866   FAM122A     chr9   71394981  71400482
+10 ENSG00000156017   CARNMT1     chr9   77595706  77643339
+11 ENSG00000148634     HERC4    chr10   69681656  69835105
+12 ENSG00000095564     BTAF1    chr10   93683527  93790082
+13 ENSG00000166452     AKIP1    chr11    8932686   8941631
+14 ENSG00000165905    LARGE2    chr11   45943172  45950647
+15 ENSG00000168496      FEN1    chr11   61560383  61564710
+16 ENSG00000135679      MDM2    chr12   69201957  69244466
+17 ENSG00000125245     GPR18    chr13   99906968  99913998
+18 ENSG00000179409    GEMIN4    chr17     647661    657239
+19 ENSG00000178691     SUZ12    chr17   30264026  30328057
+20 ENSG00000134758    RNF138    chr18   29671837  29711524
+21 ENSG00000141646     SMAD4    chr18   48554764  48611415
+22 ENSG00000074657    ZNF532    chr18   56529832  56653712
+23 ENSG00000141682    PMAIP1    chr18   57567180  57571538
+24 ENSG00000129951    PLPPR3    chr19     812488    821977
+25 ENSG00000198521     ZNF43    chr19   21987752  22034927
+26 ENSG00000128626    MRPS12    chr19   39421188  39423802
+27 ENSG00000105323  HNRNPUL1    chr19   41768401  41813692
+28 ENSG00000124222     STX16    chr20   57226309  57254582
+29 ENSG00000100372  SLC25A17    chr22   41165634  41215403
+30 ENSG00000182195     LDOC1     chrX  140205784 140271314
+Guides in the guide_targets file that aren't in perturb_status matrix: 
+# A tibble: 6 × 2
+  grna_id                        grna_target              
+  <chr>                          <chr>                    
+1 WTC11_Random_Screen_Crop_2422  BAG3_TSS                 
+2 WTC11_Random_Screen_Crop_7289  ROCK1_TSS                
+3 WTC11_Random_Screen_Crop_14743 KCNH2_DE_1_AND_KCNH2_DE_2
+4 WTC11_Random_Screen_Crop_14745 KCNH2_DE_1_AND_KCNH2_DE_2
+5 WTC11_Random_Screen_Crop_14747 KCNH2_DE_1_AND_KCNH2_DE_2
+6 WTC11_Random_Screen_Crop_14749 KCNH2_DE_1_AND_KCNH2_DE_2
+Warning messages:
+1: In obtain_pointer_vector(i = dt$i, dim = n_responses) :
+  subscript out of bounds (index 23718114 >= vector size 23718114)
+2: In obtain_pointer_vector(i = dt$i, dim = n_responses) :
+  subscript out of bounds (index 5519876 >= vector size 5519876)
+An object of class sceptre_object.
+
+Attributes of the data:
+	• 180116 cells
+	• 198 responses
+	• High multiplicity-of-infection 
+	• 16201 targeting gRNAs (distributed across 1045 targets) 
+	• 0 non-targeting gRNAs 
+	• 5 covariates (batch, grna_n_nonzero, grna_n_umis, response_n_nonzero, response_n_umis)
+
+Analysis status:
+	✓ import_data()
+	✓ set_analysis_parameters()
+	✗ assign_grnas()
+	✗ run_qc()
+	✗ run_calibration_check()
+	✗ run_power_check()
+	✗ run_discovery_analysis()
+
+Analysis parameters: 
+	• Discovery pairs: data frame with 5183 pairs
+	• Positive control pairs: data frame with 0 pairs
+	• Sidedness of test: both
+	• Resampling mechanism: conditional resampling
+	• gRNA integration strategy: union
+	• Resampling approximation: skew normal
+	• Multiple testing adjustment: BH at level 0.1
+	• N nonzero treatment cells threshold: not specified
+	• N nonzero control cells threshold: not specified
+	• Formula object: log(response_n_nonzero) + log(response_n_umis) + log(grna_n_nonzero + 1) + log(grna_n_umis + 1)Saving output files
+Closing log file
