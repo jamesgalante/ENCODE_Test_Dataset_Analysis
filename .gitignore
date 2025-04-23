@@ -5,8 +5,7 @@ results/process_validation_datasets/*/differential_expression/final_sceptre_obje
 results/process_validation_datasets/*/differential_expression/sceptre_diffex_input.rds
 
 # Folders to ignore
-resources/create_encode_output/
-resources/sceptre_setup/genome_annotation_files/
+results/genome_annotation_files/
 ARCHIVE/
 .snakemake/
 
