@@ -1,12 +1,4 @@
 
-# download gencode annotations
-rule download_gencode_v32lift37_K562_DC_TAP:
-  output: "resources/process_validation_datasets/sceptre_setup/genome_annotation_files/gencode.v32lift37.annotation.gtf.gz"
-  params:
-    url = "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh37_mapping/gencode.v32lift37.annotation.gtf.gz"
-  conda: "../envs/r_process_crispr_data.yml"
-  shell:
-    "wget -O {output} {params.url}"
 
 rule download_gencode_v29:
   output: "resources/sceptre_setup/genome_annotation_files/gencode.v29.annotation.gtf.gz"
