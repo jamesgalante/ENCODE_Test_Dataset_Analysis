@@ -2,12 +2,12 @@
 configfile: "config/config.yml"
 
 # Include all rules for processing validation datasets
-include: "rules/process_validation_datasets/sceptre_setup.smk"
-include: "rules/process_validation_datasets/sceptre_power_analysis.smk"
+include: "rules/sceptre_setup.smk"
+include: "rules/sceptre_power_analysis.smk"
 
 # Include all rules for benchmarking
-include: "rules/benchmark_validation_datasets/create_encode_output.smk"
-include: "rules/benchmark_validation_datasets/crispr_benchmarking.smk"
+include: "rules/create_encode_output.smk"
+include: "rules/crispr_benchmarking.smk"
 
 # Perform all analyses to output benchmarked datasets
 rule all:

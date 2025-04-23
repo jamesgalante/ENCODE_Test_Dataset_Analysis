@@ -26,8 +26,6 @@ rule download_gencode_annotations:
   shell:
     "wget -O {output} {params.url}"
 
-# Need to add a rule here to copy the guide targets over from the previous outputs into the benchmarking resources directory
-
 # compile output files in ENCODE format
 rule create_encode_dataset:
   input:
@@ -42,12 +40,12 @@ rule create_encode_dataset:
     tss_ctrl_tag = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["metadata"][wildcards.sample]["tss_ctrl_tag"],
     padj_threshold = config["process_validation_datasets"]["differential_expression"]["padj_threshold"],
     reference = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["metadata"][wildcards.sample]["reference"]
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   resources:
     time = "2:00:00",
     mem = "32G"
   script:
-    "../../scripts/benchmark_validation_datasets/encode_datasets/create_encode_dataset.R"
+    "../scripts/benchmark_validation_datasets/encode_datasets/create_encode_dataset.R"
     
 ## Liftover CRISPRi datasets -----------------------------------------------------------------------
 
@@ -60,7 +58,7 @@ rule liftover_enhancers:
     hg19 = "results/benchmark_validation_datasets/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg19.bed",
     hg38 = "results/benchmark_validation_datasets/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_hg38.bed",
     unlifted = "results/benchmark_validation_datasets/create_encode_output/ENCODE/liftover/{sample}_{sd}gStd_{method}_{strategy}/enh_unlifted.bed"
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   resources:
     time = "1:00:00",
     mem = "64G"
@@ -79,12 +77,12 @@ rule liftover_crispr_dataset:
   output: "results/benchmark_validation_datasets/create_encode_output/ENCODE/ENCODE_{sample}_{sd}gStd_{method}_{strategy}_GRCh38.tsv.gz"
   wildcard_constraints:
     sample = "|".join(liftover_samples(config))
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   resources:
     time = "1:00:00",
     mem = "64G"
   script:
-    "../../scripts/benchmark_validation_datasets/encode_datasets/liftover_crispr_dataset.R"    
+    "../scripts/benchmark_validation_datasets/encode_datasets/liftover_crispr_dataset.R"    
 
 ## Create EPBenchmarking CRISPR data files ---------------------------------------------------------
 
@@ -95,9 +93,9 @@ rule filter_crispr_dataset:
   params:
     tss_to_dist = config["benchmark_validation_datasets"]["create_encode_output"]["encode_datasets"]["dist_to_TSS"],
     remove_filtered_pairs = False
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../../scripts/benchmark_validation_datasets/encode_datasets/filter_crispr_dataset.R"
+    "../scripts/benchmark_validation_datasets/encode_datasets/filter_crispr_dataset.R"
 
 # convert ENCODE format files to EPBenchmarking format files
 rule create_ep_benchmarking_dataset:
@@ -107,9 +105,9 @@ rule create_ep_benchmarking_dataset:
     effect_size = "log2FC", # Sceptre specific
     min_pct_change = None,
     cell_type = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["metadata"][wildcards.sample]["cell_type"]
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../../scripts/benchmark_validation_datasets/encode_datasets/create_ep_benchmarking_dataset.R"
+    "../scripts/benchmark_validation_datasets/encode_datasets/create_ep_benchmarking_dataset.R"
 
 ## Create ensemble dataset -------------------------------------------------------------------------
 
@@ -128,9 +126,9 @@ rule create_ensemble_encode:
   params:
     effect_size = {"Morrisv2":"log2FC", "Klann":"log2FC", "Xie":"log2FC", "Morrisv1":"log2FC", "HCT116":"logFC", "Jurkat":"pctChange", "GM12878":"pctChange", "Reilly":"logFC"},
     cell_types = {"Morrisv1": "K562", "Morrisv2": "K562", "Klann": "K562", "Xie": "K562", "HCT116": "HCT116", "Jurkat": "Jurkat", "GM12878": "GM12878", "Reilly":"K562"}
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../../scripts/benchmark_validation_datasets/encode_datasets/create_ensemble_dataset.R"
+    "../scripts/benchmark_validation_datasets/encode_datasets/create_ensemble_dataset.R"
     
 # convert ensembl CRISPR dataset from ENCODE to EPBenchmarking format file  
 rule create_ensemble_epbenchmarking:
@@ -139,6 +137,6 @@ rule create_ensemble_epbenchmarking:
   params:
     effect_size = "pctChange",
     min_pct_change = None
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   script:
-    "../../scripts/benchmark_validation_datasets/encode_datasets/create_ep_benchmarking_dataset.R"   
+    "../scripts/benchmark_validation_datasets/encode_datasets/create_ep_benchmarking_dataset.R"   

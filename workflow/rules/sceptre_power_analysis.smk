@@ -9,12 +9,12 @@ rule sceptre_differential_expression:
     final_sceptre_object = "results/process_validation_datasets/{sample}/differential_expression/final_sceptre_object.rds"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/sceptre_differential_expression_{sample}.log"
   conda:
-    "../../envs/sceptre_env.yml"
+    "../envs/sceptre_env.yml"
   resources:
     mem = "32G",
     time = "12:00:00"
   script:
-    "../../scripts/process_validation_datasets/sceptre_power_analysis/sceptre_differential_expression.R"
+    "../scripts/process_validation_datasets/sceptre_power_analysis/sceptre_differential_expression.R"
 
 rule create_sce:
   input:
@@ -23,12 +23,12 @@ rule create_sce:
   output:
     perturb_sce = "results/process_validation_datasets/{sample}/perturb_sce.rds"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/create_sce_{sample}.log"
-  conda: "../../envs/analyze_crispr_screen.yml"
+  conda: "../envs/analyze_crispr_screen.yml"
   resources:
     mem = "196G",
     time = "4:00:00"
   script:
-     "../../scripts/process_validation_datasets/sceptre_power_analysis/create_sce_object.R"
+     "../scripts/process_validation_datasets/sceptre_power_analysis/create_sce_object.R"
     
 
 # Define a function to get the number of batches for a given sample
@@ -46,7 +46,7 @@ checkpoint split_target_response_pairs:
     batches = lambda wildcards: get_n_batches(wildcards)
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/split_target_response_pairs_{sample}.log"
   conda:
-    "../../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_power_simulations.yml"
   shell:
     """
     # Create the output directory
@@ -92,12 +92,12 @@ rule sceptre_power_analysis:
     guide_sd = config["process_validation_datasets"]["power_simulations"]["guide_sd"]
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/sceptre_power_analysis_es{effect_size}_split{split}_{sample}.log"
   conda:
-    "../../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_power_simulations.yml"
   resources:
     mem = "32G",
     time = "2:00:00"
   script:
-    "../../scripts/process_validation_datasets/sceptre_power_analysis/sceptre_power_analysis.R"
+    "../scripts/process_validation_datasets/sceptre_power_analysis/sceptre_power_analysis.R"
 
 
 # Function to get power analysis output files
@@ -117,12 +117,12 @@ rule combine_sceptre_power_analysis:
     combined_power_analysis_output = "results/process_validation_datasets/{sample}/power_analysis/combined_power_analysis_output_es_{effect_size}.tsv"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/combine_sceptre_power_analysis_es{effect_size}_{sample}.log"
   conda:
-    "../../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_power_simulations.yml"
   resources:
     mem = "32G",
     time = "2:00:00"
   script:
-    "../../scripts/process_validation_datasets/sceptre_power_analysis/combine_sceptre_power_analysis.R"
+    "../scripts/process_validation_datasets/sceptre_power_analysis/combine_sceptre_power_analysis.R"
 
 
 # Compute the power from the power simulations
@@ -134,12 +134,12 @@ rule compute_power_from_simulations:
     power_analysis_results = "results/process_validation_datasets/{sample}/power_analysis/power_analysis_results_es_{effect_size}.tsv"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/compute_power_from_simulations_es{effect_size}_{sample}.log"
   conda:
-    "../../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_power_simulations.yml"
   resources:
     mem = "24G",
     time = "1:00:00"
   script:
-    "../../scripts/process_validation_datasets/sceptre_power_analysis/compute_power_from_simulations.R"
+    "../scripts/process_validation_datasets/sceptre_power_analysis/compute_power_from_simulations.R"
 
 # format sceptre output for compatibility with ENCODE pipelines
 rule format_sceptre_output:
@@ -152,9 +152,9 @@ rule format_sceptre_output:
   output:
     final_output = "results/process_validation_datasets/{sample}/power_analysis/output_0.13gStd_Sceptre_perCRE.tsv"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/format_sceptre_output_{sample}.log"
-  conda: "../../envs/analyze_crispr_screen.yml"
+  conda: "../envs/analyze_crispr_screen.yml"
   resources:
     mem = "32G",
     time = "5:00:00"
   script:
-    "../../scripts/process_validation_datasets/sceptre_power_analysis/format_sceptre_output.R"
+    "../scripts/process_validation_datasets/sceptre_power_analysis/format_sceptre_output.R"

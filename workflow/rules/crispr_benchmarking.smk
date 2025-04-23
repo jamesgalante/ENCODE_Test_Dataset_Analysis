@@ -10,12 +10,12 @@ rule remove_training_pairs:
   log: 
     "results/benchmark_validation_datasets/crispr_benchmarking/logs/remove_training_pairs.log"
   conda: 
-    "../../envs/r_crispr_comparison.yml"
+    "../envs/r_crispr_comparison.yml"
   resources:
     mem = "8G",
     time = "1:00:00"
   script:
-    "../../scripts/benchmark_validation_datasets/crispr_benchmarking/remove_training_pairs.R"
+    "../scripts/benchmark_validation_datasets/crispr_benchmarking/remove_training_pairs.R"
     
 # Add the results from the DC TAP Seq experiments to the other perturb-seq / flowFISH results
 rule add_DC_TAP_Seq_pairs:
@@ -27,12 +27,12 @@ rule add_DC_TAP_Seq_pairs:
   log: 
     "results/benchmark_validation_datasets/crispr_benchmarking/logs/add_DC_TAP_Seq_pairs.log"
   conda: 
-    "../../envs/r_crispr_comparison.yml"
+    "../envs/r_crispr_comparison.yml"
   resources:
     mem = "8G",
     time = "1:00:00"
   script:
-    "../../scripts/benchmark_validation_datasets/crispr_benchmarking/add_DC_TAP_Seq_pairs.R"  
+    "../scripts/benchmark_validation_datasets/crispr_benchmarking/add_DC_TAP_Seq_pairs.R"  
 
 # Rule to resize and merge CRISPR elements in DC-TAP-seq datasets
 rule resize_crispr_elements:
@@ -45,12 +45,12 @@ rule resize_crispr_elements:
   log:
     "results/benchmark_validation_datasets/crispr_benchmarking/logs/resize_crispr_elements.log"
   conda:
-    "../../envs/analyze_crispr_screen.yml"
+    "../envs/analyze_crispr_screen.yml"
   resources:
     mem = "8G",
     time = "1:00:00"
   script:
-    "../../scripts/benchmark_validation_datasets/crispr_benchmarking/resize_crispr_elements.R"
+    "../scripts/benchmark_validation_datasets/crispr_benchmarking/resize_crispr_elements.R"
     
     
     
