@@ -25,9 +25,7 @@ benchmark_validation_datasets:
         Morrisv1: NULL
         Morrisv2: NULL
         Klann: NULL
-        K562_DC_TAP_Seq: NULL
         HCT116: NULL
-        WTC11_DC_TAP_Seq: NULL
         Jurkat: NULL
         GM12878: NULL
       dist_to_TSS: [1000, 1e6]
@@ -36,9 +34,7 @@ benchmark_validation_datasets:
         Morrisv1: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
         Morrisv2: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
         Klann: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        K562_DC_TAP_Seq: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29lift37.annotation.gtf.gz"
         HCT116: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
-        WTC11_DC_TAP_Seq: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29lift37.annotation.gtf.gz"
         Jurkat: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
         GM12878: "resources/benchmark_validation_datasets/create_encode_output/gencode.v29.annotation.gtf.gz"
       genome_build:
@@ -46,9 +42,7 @@ benchmark_validation_datasets:
         Morrisv1: "GRCh38"
         Morrisv2: "GRCh38"
         Klann: "GRCh38"
-        K562_DC_TAP_Seq: "hg19"
         HCT116: "GRCh38"
-        WTC11_DC_TAP_Seq: "hg19"
         Jurkat: "GRCh38"
         GM12878: "GRCh38"
     metadata:
@@ -72,20 +66,10 @@ benchmark_validation_datasets:
         reference: "Klann et al., 2021"
         gene_ids: "ensembl"
         tss_ctrl_tag: "TSSCtrl"
-      K562_DC_TAP_Seq: 
-        cell_type: "K562"
-        reference: "NNFC_K56_DC_TAP"
-        gene_ids: "ensembl"
-        tss_ctrl_tag: "TSSCtrl"
       HCT116:
         cell_type: "HCT116"
         reference: "Guckelberger et al., inPrep"
         gene_ids: "symbol"
-        tss_ctrl_tag: "TSSCtrl"
-      WTC11_DC_TAP_Seq:
-        cell_type: "WTC11"
-        reference: "WTC11_DC_TAP"
-        gene_ids: "ensembl"
         tss_ctrl_tag: "TSSCtrl"
       Jurkat:
         cell_type: "Jurkat"
