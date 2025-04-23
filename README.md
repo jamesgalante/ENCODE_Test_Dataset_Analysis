@@ -28,7 +28,7 @@ All intermediate files are generated dynamically during pipeline execution.
   `results/combine_val_data_and_format/full_validation_resized_elements.tsv.gz`
 
 ## Important Notes
-Some large files (>50MB) are not included in the GitHub repository:
+Some large files (>50MB) are not included in the GitHub repository. These files are listed here, but can be found in the following directory on oak if needed `/oak/stanford/groups/engreitz/Users/jgalante/ENCODE_Sceptre_Analysis`:
 
 - Excluded files in `process_validation_datasets/`:
   - `results/process_validation_datasets/-/power_analysis/combined_power*`
