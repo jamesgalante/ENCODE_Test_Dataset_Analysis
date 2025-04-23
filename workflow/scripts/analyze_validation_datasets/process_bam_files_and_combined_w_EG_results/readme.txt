@@ -1,1 +1,0 @@
-Files with "OLD" indicate the files used for processing the bam files of epigenetic features, and overlapping these features with enhancers. This was done for dnase, ctcf, h3k27ac, and h3k27me3 separately. The pipeline was changed to use the dnase and h3k27ac values calculated from the abc pipeline, so the old scripts were properly renamed
