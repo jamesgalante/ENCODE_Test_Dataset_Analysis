@@ -43,10 +43,10 @@ rule create_ensemble_encode:
     Morrisv2 = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Morrisv2_0.13gStd_Sceptre_perCRE_0.8pwrAt15effect_GRCh38.tsv.gz",
     Klann = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Klann_0.13gStd_Sceptre_perCRE_0.8pwrAt15effect_GRCh38.tsv.gz",
     Xie = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Xie_0.13gStd_Sceptre_perCRE_0.8pwrAt15effect_GRCh38.tsv.gz",
-    HCT116 = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCT116_FlowFISH_GRCh38.tsv.gz",
-    Jurkat = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_Jurkat_GRCh38.tsv.gz",
-    GM12878 = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_GM12878_GRCh38.tsv.gz",
-    Reilly = "results/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCRFlowFISH_perCRE_filt.tsv.gz" # Taken from Andreas' pipeline output 
+    HCT116 = "resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCT116_FlowFISH_GRCh38.tsv.gz",
+    Jurkat = "resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_Jurkat_GRCh38.tsv.gz",
+    GM12878 = "resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_Nasser2021_GM12878_GRCh38.tsv.gz",
+    Reilly = "resources/create_encode_output/ENCODE/EPCrisprBenchmark/ENCODE_HCRFlowFISH_perCRE_filt.tsv.gz"
   output: "results/create_encode_output/ENCODE/ENCODE_Combined_Validation_Datasets_GRCh38.tsv.gz"
   params:
     effect_size = {"Morrisv2":"log2FC", "Klann":"log2FC", "Xie":"log2FC", "Morrisv1":"log2FC", "HCT116":"logFC", "Jurkat":"pctChange", "GM12878":"pctChange", "Reilly":"logFC"},
