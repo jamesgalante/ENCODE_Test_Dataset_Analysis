@@ -13,7 +13,7 @@ rule download_chain_file:
   output: "resources/benchmark_validation_datasets/create_encode_output/hg19ToHg38.over.chain.gz"
   params:
     url = config["benchmark_validation_datasets"]["create_encode_output"]["download_urls"]["liftover_chain"]
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   shell:
     "wget -O {output} {params.url}"
 
@@ -22,7 +22,7 @@ rule download_gencode_annotations:
   output: "resources/benchmark_validation_datasets/create_encode_output/{annot}.annotation.gtf.gz"
   params:
     url = lambda wildcards: config["benchmark_validation_datasets"]["create_encode_output"]["download_urls"][wildcards.annot]
-  conda: "../../envs/r_process_crispr_data.yml"
+  conda: "../envs/r_process_crispr_data.yml"
   shell:
     "wget -O {output} {params.url}"
 
