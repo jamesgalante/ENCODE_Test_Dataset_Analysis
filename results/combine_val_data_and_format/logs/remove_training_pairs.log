@@ -1,12 +1,12 @@
 Loading packages
 There were 13 warnings (use warnings() to see them)
 Loading training and validation data
-Rows: 1387 Columns: 20
+Rows: 4705 Columns: 21
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "\t"
-chr (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset
-dbl (8): chromStart, chromEnd, EffectSize, startTSS, endTSS, pValueAdjusted,...
-lgl (5): Significant, PowerAtEffectSize10, PowerAtEffectSize50, ValidConnect...
+chr  (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset
+dbl (11): chromStart, chromEnd, EffectSize, startTSS, endTSS, pValueAdjusted...
+lgl  (3): Significant, ValidConnection, Regulated
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -23,18 +23,18 @@ Creating GRanges objects
 Finding Overlaps
 Summarizing overlaps
 Original Validation Dataset:
-- Total pairs: 1387
-- Positive pairs: 235
-- Negative pairs: 1152
+- Total pairs: 4705
+- Positive pairs: 322
+- Negative pairs: 4383
 
 Filtered Validation Dataset:
-- Total pairs: 1271
-- Positive pairs: 196
-- Negative pairs: 1075
+- Total pairs: 4540
+- Positive pairs: 266
+- Negative pairs: 4274
 
 Changes Due to K562 Filtering:
-- Removed K562 pairs: 116
-- Removed K562 positives: 39
-- Removed K562 negatives: 77
+- Removed K562 pairs: 165
+- Removed K562 positives: 56
+- Removed K562 negatives: 109
 Saving output files
 Closing log file

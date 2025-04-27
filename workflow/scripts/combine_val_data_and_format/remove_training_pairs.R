@@ -24,7 +24,7 @@ suppressPackageStartupMessages({
 
 # Load in the datasets
 message("Loading training and validation data")
-val_pairs <- read_tsv(snakemake@input$combined_validation_w_train_pairs)
+val_pairs <- read_tsv(snakemake@input$full_validation_dataset_w_dc_tap_seq)
 train_pairs <- read_tsv(snakemake@input$training_data)
 
 
@@ -117,7 +117,7 @@ message("- Removed K562 negatives: ", removed_k562_negatives)
 ### SAVE OUTPUT ==============================================================
 
 message("Saving output files")
-write_tsv(filtered_val_pairs, snakemake@output$validation)
+write_tsv(filtered_val_pairs, snakemake@output$full_validation_dataset_w_dc_tap_seq_wo_training_pairs)
 
 
 ### CLEAN UP ==================================================================

@@ -1,1 +1,1 @@
-This file is the direct output of the DC TAP Seq pipeline after resizing and adding categories.
+This file is the direct output of the DC TAP Seq pipeline: results_with_element_gene_pair_categories_modified.tsv

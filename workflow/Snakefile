@@ -11,4 +11,4 @@ include: "rules/combine_val_data_and_format.smk"
 
 # Perform all analyses to output benchmarked datasets
 rule all:
-  input: "results/combine_val_data_and_format/full_validation_resized_elements.tsv.gz"
+  input: "results/combine_val_data_and_format/Final_Validation_Dataset.tsv.gz"
