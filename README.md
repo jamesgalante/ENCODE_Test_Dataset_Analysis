@@ -8,6 +8,8 @@ This repository processes validation datasets to test ENCODE_rE2G performance on
 4. Formats data for EPBenchmarking
 5. Incorporates two DC TAP experiment datasets
 
+## COPY or LINK DETAILED METHODS FROM GOOGLE DOC
+
 ## Inputs
 - DC TAP Seq Data: `resources/combine_val_data_and_format/DC_TAP_Seq_data.tsv`
 - Training Dataset: `resources/combine_val_data_and_format/EPCrisprBenchmark_ensemble_data_GRCh38.tsv`
