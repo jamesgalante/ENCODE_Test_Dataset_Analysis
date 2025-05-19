@@ -10,9 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # About
 
-This file is for downloading and re-analyzing the data from the STING-Seq v1 dataset in the Morris et al. 2023 paper: "Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens". The data will be used with Andreas' MAST power analysis pipeline for determining the effects of the guides in each cell. The data was retrieved from [GSE171452](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171452).
-
-The filtering done in this Rmd can be skipped if just want to trust the exact cells used in the paper Table S3C. There seemed to be some discrepancy (unless I made a mistake) between the filtering they employed in methods and the final number of filtered cells.
+This file is for downloading and re-analyzing the data from the STING-Seq v1 dataset in the Morris et al. 2023 paper: "Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens". The data was retrieved from [GSE171452](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171452).
 
 # Getting Data
 
@@ -212,11 +210,9 @@ rownames(GDO_UMI) <- NULL
 
 ### Modifying cDNA row names for MT QC compatibility
 
-There is currently no way to keep ENS id's as the row names for the matrix and use the gene symbols in a corresponding dataframe to filter mitochondrial genes, so we have to make the row names of the Seurat object the gene symbol
-
 ```{r}
 # Make the rownames of the cDNA matrix the unique gene symbols
-# Most of the genes are already `uniquified`, but some are not (row 3236,3238)
+# Most of the genes are already unique, but some are not (row 3236,3238)
 rownames(cDNA_matrix) <- make.unique(cDNA_feature$V2)
 
 # Store these unique gene symbols in another column in the feature table
@@ -224,8 +220,6 @@ cDNA_feature$V4 <- make.unique(cDNA_feature$V2)
 ```
 
 ### Create the Object and Add GDO/HTO Assays
-
-Completing this step now avoids having to re-filter the HTO and GDO matrices when we want to incorporate
 
 ```{r}
 # Create Seurat object
@@ -283,58 +277,6 @@ Idents(cDNA_seurat) <- "HTO_classification.global"
 VlnPlot(cDNA_seurat, features = "nCount_RNA", pt.size = 0.1, log = TRUE)
 ```
 
-## GDO Filtering
-
-"We used then processed the GDO UMI count matrix, keeping cells between the 1st and 99th percentiles for total GDO count and used 10x Cell Ranger predicted GDO thresholds per cell, but required at least three UMIs per GDO to assign a GDO to a given cell. This resulted in a high-confidence set of 7667 single cells for the STING-seq v1 experiment." (Morris et al. 2023)
-
-### Create the Binary Guide Matrix dependent on thresholds
-
-There were some issues in time with using the sparse matrix to do this part, so I turned the GDO_matrix into a dense matrix then proceeded to do everything with vector operations, so it was faster. Going row by row and column by column would take forever
-
-```{r}
-# Convert into a dense matrix for faster operations
-GDO_matrix_dense <- as.matrix(GDO_matrix)
-
-# Generate UMI_threshold_vector in the same order as the rownames of GDO_matrix_dense
-# For each rowname in GDO_matrix_dense, find the corresponding GDO_UMI "UMI threshold"
-UMI_threshold_vector <- sapply(rownames(GDO_matrix_dense), 
-                               function(x) {
-                                 GDO_UMI[GDO_UMI$Protospacer == x, "UMI threshold"]
-                                 }
-                               )
-
-# Generate a matrix with the same dimensions as GDO_matrix_dense,
-# where each row contains the corresponding UMI threshold for that row
-UMI_threshold_matrix <- matrix(
-  as.numeric(rep(UMI_threshold_vector, each=ncol(GDO_matrix_dense))),
-  nrow = nrow(GDO_matrix_dense),
-  ncol = ncol(GDO_matrix_dense),
-  byrow = TRUE)
-
-
-# Generate a binary matrix based on conditions.
-perturb_status <- as.integer(
-  (GDO_matrix_dense >= UMI_threshold_matrix) & 
-    (GDO_matrix_dense >= 3)
-  )
-
-# Turn the `perturb_status` vector into a matrix
-# as.integer turns it into a vector
-perturb_status <- matrix(perturb_status, nrow = 210, ncol = 15156)
-```
-
-### Create Assay Object with Perturb_Status data
-
-```{r}
-# Add column and rownames to perturb_status
-colnames(perturb_status) <- colnames(cDNA_seurat)
-rownames(perturb_status) <- rownames(GDO_matrix)
-
-# Format `perturb_status` to incorporate into seurat object
-# Add perturb status assay
-cDNA_seurat[["Perturb_Status"]] <- CreateAssayObject(counts = perturb_status)
-```
-
 ## Sub-setting
 
 "For STING-seq v1, we processed cDNA UMI count matrices and retained cells between the 15th to 99th percentiles for unique gene count, between the 20th and 99th percentiles for total cDNA UMI count, and between the 5th and 90th percen tile for mitochondrial percentage. Next, we center-log-ratio (CLR) transformed the HTO UMI counts and demultiplexed cells by their transformed HTO counts to identify singlets. We used the HTODemux function implemented in Seurat v.4.0.0 to maximize the number of singlets detected. We used then processed the GDO UMI count matrix, keeping cells between the 1st and 99th percentiles for total GDO count and used 10x Cell Ranger predicted GDO thresholds per cell, but required at least three UMIs per GDO to assign a GDO to a given cell. This resulted in a high-confidence set of 7667 single cells for the STING-seq v1 experiment." (Morris et al. 2023)
@@ -356,18 +298,6 @@ cDNA_seurat_filtered <- subset(cDNA_seurat,
 ```
 
 ## Checking
-
-Something to keep in mind: The paper states they have 7667 cells left after all filtering. However, after `HTODemux` we only have 7578 singlets, so we're already less than them and we haven't even done guide filtering. After guide filtering (final) we're at 7525 cells. They might have included negatives in this sub-setting and then did guide filtering based off of that. Another thing I did was interpret `between` in their paper as \>= or \<=. This should technically leave us with more cells..
-
--   Tried including 'Negative' doublets, and had over 9000 cells at the end
-
--   Perhaps the `HTODemux` function has changed or they used something other than 0.99 as a parameter in that function with this new Seurat version
-
--   **They have the cell barcodes for the final set of cells they used in table S3C rows [38920-46586]. I can always intersect that list in the beginning and just not filter anything, however, I'm wondering why the filtering led to different outcomes.**
-
-```{r}
-dim(cDNA_seurat_filtered)
-```
 
 ```{r}
 # Group cells based on the max HTO signal
@@ -394,7 +324,7 @@ VlnPlot(cDNA_seurat_filtered, features = c("nFeature_RNA", "nCount_RNA", "percen
 
 # Guide Mapping
 
-For the MAST pipeline, genomic coordinates are needed. Because only the protospacer and the rsid of the SNP were provided, we need to map these to the genome
+For the pipeline, genomic coordinates are needed. Because only the protospacer and the rsid of the SNP were provided, we need to map these to the genome
 
 ## BLAT
 
@@ -402,7 +332,7 @@ For the MAST pipeline, genomic coordinates are needed. Because only the protospa
 
 ```{r}
 # Path to the excel file of insterest
-excel_file_path <- "supplementary_tables/science.adh7699_table_s3.xlsx"
+excel_file_path <- "../supplementary_tables/science.adh7699_table_s3.xlsx"
 
 # This file has our protospacer info for each gRNA along with the SNP name
 guide_info <- read_excel(excel_file_path, sheet = 1)
@@ -411,7 +341,7 @@ colnames(guide_info) <- guide_info[2,]
 guide_info <- guide_info[-(1:2),]
 # Only interested in v1
 guide_info <- guide_info[guide_info$`gRNA Library` == "v1",]
-guide_info$`gRNA ID` <- rownames(cDNA_seurat[["Perturb_Status"]])
+guide_info$`gRNA ID` <- rownames(cDNA_seurat@assays$GDO)
 
 
 # This file has all the cell barcodes kept after filtering
@@ -693,130 +623,22 @@ for (i in seq_len(nrow(all_guide_info))) {
 ```
 
 In summary:
-
--   There were a few rsIDs that didn't get mapped - I looked some of these up and it seems like these IDs were merged with other IDs. In these cases, the genomic coordinates were picked up from BLAT.
-
--   There were a few gRNA guide sequences that didn't align to the genome with BLAT. Both of these samples seemed to have a low Hsu-Scott score.
-
--   Both of these problems aren't that big of an issue. The rsid coordinates were purely for matching to the BLAT to confirm that worked. For the instances where the gRNA sequence didn't align to the genome with BLAT, we know there are two gRNAs for each SNP, so we can possibly use the other SNP's coordinates.
-
--   We can also align the one SNP gRNA to a DHS element that *did* get mapped and then do a targeted search for the gRNA that didn't get mapped on the DHS element
-
--   Just need to align the coordinates of each gRNA to DHS peaks, so we can get target_start and target_end.
+-   There were a few rsIDs that didn't get mapped. In these cases, the genomic coordinates were picked up from BLAT.
+-   There were a few gRNA guide sequences that didn't align to the genome with BLAT.
 
 # Guide Matching with ABC CREs
 
-In the ABC pipeline, we take DNAse-seq data and define CRE sites based off that. We want to make sure that the gRNAs in the Morris et al. 2023 paper are aligned to the CREs specified in our DNAse-seq pipeline. For instance, perhaps two SNPs defined in the Morris paper lie on the same enhancer. We want to make sure that those perturbations are recorded as being on the same enhancer rather than on two separate enhancers.
-
-------------------------------------------------------------------------
-
-Disregard the following and see `Troubleshooting snakemake`. I ended up not really using snakemake. It can definitely be done, but there were too many little modifications I needed to make to the files that I decided to run them all separately.
-
-------------------------------------------------------------------------
-
-We can do this with a pipeline Andreas created in `/oak/stanford/groups/engreitz/Users/agschwin/distal_regulation_paper/ENCODE_CRISPR_data/workflow/rules/gasperini_dataset.smk`. I modified this pipeline and stored it in `/oak/stanford/groups/larsms/Users/jgalante/External_Encode_E2G_Val/Morris/Andreas_Gasperini_Workflow/workflow`. The only differences I really made were make the `gasperini_dataset.smk` file the main snakemake file, remove the bam URL step and directly downloaded the following DNAse-seq data in hg38 before running snakemake: <https://www.encodeproject.org/files/ENCFF205FNC/>, and add the following file for sorting the chromosomes: <https://www.encodeproject.org/files/GRCh38_EBV.chrom.sizes/>. I also made the script use 1 sample instead of 2.
-
-I use tmux in this Sherlock node: `@ln21.sherlock.stanford.edu` to run the file. Snakemake will go through your rules and submit each rule as a job to Sherlock automatically, so you don't need to do any job submitting.
-
--   login to `username@ln21.sherlock.stanford.edu`
-
-    -   Using this specific node isn't necessary, but if you want to use tmux, you should take note of what node you're using because you won't be able to locate your tmux session otherwise. The login node `@login.sherlock.stanford.edu` pushes you to a specific node to make sure there's an even amount of users on each node, but doesn't tell you which one.
-
--   move into the workflow directory `cd /oak/stanford/groups/larsms/Users/jgalante/External_Encode_E2G_Val/Morris/Andreas_Gasperini_Workflow/workflow`
-
--   run `snakemake --use–conda -np all` to do a dry run and make sure everything is working
-
-    -   `-np` is the dry-run flag
-
-    -   `--use-conda` tells snakemake to use specified conda environments for each rule
-
--   start a tmux session with `tmux`
-
-    -   detach from session: `ctrl + b` then `d`
-
-    -   find out session number (outside of tmux session): `tmux ls`
-
-    -   attach to session: `tmux attach`
-
-    -   kill session: `tmux kill-session`
-
--   Indicate the number of cores you will use and run the pipeline. I couldn't find any explicit parallelization in any of the rules, so I'm assuming each uses 1 core. I also don't think the rules of this specific snakemake file can be parallelized, so I just used 1 core. Given this, you can run the following command:
-
-    -   `snakemake —-use-conda —-cores 1 all`
-
-## Troubleshooting snakemake
-
-So I had a lot of trouble running this snakemake file and ended up just running each command individually. I also decided to run most of this on my local computer.
-
--   I downloaded the bam file in a tmux session with the link above:
-
-    -   `wget https://www.encodeproject.org/files/ENCFF205FNC/@@download/ENCFF205FNC.bam`
-
--   I was getting an error when indexing the bam file, so I had to sort it first
-
--   I ran `sambamba_sort_slurm` in `/oak/stanford/groups/larsms/Users/jgalante/External_Encode_E2G_Val/Morris/Andreas_Gasperini_Workflow/workflow/resources/DNase/sample1/` and got `sample1.sorted.bam` + `sample1.sorted.bam.bai`
-
-    -   I moved this file into a directory, and changed the name of the input file, so have to modify that to run
-
-    -   This link goes over sambamba in terms of speed and multithreading <https://bioinformatics.stackexchange.com/questions/18538/samtools-sort-most-efficient-memory-and-thread-settings-for-many-samples-on-a-c>
-
--   I then changed both of those output sorted file names from `sample1.sorted.bam` and `sample1.sorted.bam.bai` to `sample1.bam` and `sample1.bam.bai`
-
-    -   Subsequently changing the original `sample1.bam` from `wget` to `unsorted_original_sample1_from_link.bam` , which is now stored in the sambamba directory
-
--   I then ran this command with the three rules I kept in the Snakefile: `snakemake --use-conda --cores 1 --jobs 20 --cluster "sbatch --cpus-per-task={threads} --mem={resources.mem_mb}M --time={resources.runtime_min} --partition=normal" all`
-
-    -   The only rule that didn't give an error was the `call peaks` rule. The output of that rule is the `.narrowPeak` file, so `call peaks` was run with snakemake
-
--   I then tried to run the `quantify dnase` rule and ran into a bunch of problems.
-
-    -   The `GRCh38_EBV.chrom.sizes.tsv` file can be downloaded with:
-
-        -   `wget https://www.encodeproject.org/files/GRCh38_EBV.chrom.sizes/@@download/GRCh38_EBV.chrom.sizes.tsv`
-
-    -   It turns out the `GRCh38_EBV.chrom.sizes.tsv` file is not sorted correctly as I found out when running `bedtools coverage`. I sorted `GRCh38_EBV.chrom.sizes.tsv` based on the chromosome head output from the `sample1.bam` file.
-
-        -   First I extracted the chromosome names from the header of the bam file:
-
-        -   `samtools view -H sample1.bam | grep '^@SQ' | awk -F'\t' '{for(i=1;i<=NF;i++) if($i ~ /^SN:/) print substr($i, 4)}' > bam_chroms.txt`
-
-        -   I then sorted `GRCh38_EBV.chrom.sizes.tsv` based on the output file `bam_chroms.txt` and only included chromosomes that were in `bam_chroms`:
-
-        -   `awk 'NR==FNR{a[$1]=NR; next} {if (a[$1]!="") print a[$1] "\t" $0}' bam_chroms.txt GRCh38_EBV.chrom.sizes.tsv | sort -k1,1n | cut -f2- > sorted_GRCh38_EBV.chrom.sizes.tsv`
-
-    -   I was not able to run the quantify DNAse command in slurm because it still hangs for a while and I think slurm kills it. I was able to run this on my local computer then scp'ed the file back to slurm:
-
-        -   `bedtools sort -faidx sorted_GRCh38_EBV.chrom.sizes.tsv -i sample1_peaks.narrowPeak | bedtools coverage -sorted -a stdin -b sample1.bam -g sorted_GRCh38_EBV.chrom.sizes.tsv -counts > sample1_peaks.counts`
-
--   I then had to create the candidate CREs. I took the last rule from that snakemake pipeline and created this command
-
-    -   `bedtools sort -i sample1_peaks.counts -faidx sorted_GRCh38_EBV.chrom.sizes.tsv | \`
-
-        `bedtools merge -i stdin -c 11 -o max | \`
-
-        `sort -nr -k 4 | awk '(NR <= 150000)' | \`
-
-        `bedtools intersect -b stdin -a sample1_peaks.counts -wa | \`
-
-        `awk 'BEGIN {OFS="\t"} {print $1, $2 + $10, $2 + $10}' | \`
-
-        `bedtools slop -i stdin -b 250 -g sorted_GRCh38_EBV.chrom.sizes.tsv | \`
-
-        `bedtools sort -i stdin -faidx sorted_GRCh38_EBV.chrom.sizes.tsv | \`
-
-        `bedtools merge -i stdin | \`
-
-        `awk 'BEGIN {OFS="\t"} {print $1, $2, $3, $1":"$2"-"$3, "0", "."}' > sample1_candidate_cres.bed`
+In the ABC pipeline, we use DNase-seq data to define cCREs. We want to make sure that the gRNAs in the Morris et al. 2023 paper are aligned to the CREs specified in our DNase-seq pipeline. For instance, perhaps two elements defined in the Morris paper lie on the same element in our DNase-seq definition of a cCRE. We import the file with all DNase peaks as `sample1_candidate_cres.bed`.
 
 ## Combining `all_guide_info` with `sample1_candidate_cres.bed`
 
-Now that we have a bed file of all locations in the genome where there's a DHS, we can see if the genomic coordinates of all the guides in our `all_guide_info` file align with these DHS peaks. From this, for each guide, we will now have a target genomic coordinate. This will allow us to run the power analysis.
+Now that we have a bed file of all locations in the genome where there's a DHS, we align our guides with these DHS peaks.
 
 ### Import the bed file
 
 ```{r}
 # Import the bed file of DHS sites
-candidate_cres <- read.table("candidate_cre_data/sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
+candidate_cres <- read.table("../../candidate_cre_data/sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
 # Keep the first four columns
 candidate_cres <- candidate_cres[,c(1:4)]
 # Rename the columns
@@ -835,31 +657,13 @@ Here I subset the dataframe with all the guide information, and I remove any row
 
 I also remove the positive control guides, which are targeting the TSS.
 
-For the protospacer, I used the BLAT sequence, which is the guide sequence + NGG. The genomic coordinates matched up with the BLAT sequence rather than the guide sequence.
-
-```{r}
-# Subset the columns needed from all_guides_info to run the power analysis pipeline
-guides_to_be_merged <- all_guide_info[1:176,c("tName", "tStart", "tEnd", "gRNA ID", "strand", "BLAT sequence")]
-
-# I think remove any rows with NA values - specified above
-guides_to_be_merged <- na.omit(guides_to_be_merged)
-# Renumber the rows
-rownames(guides_to_be_merged) <- NULL
-
-# Create the `name` column, which is used for the power analysis pipeline and replace the gRNA ID with this name column
-guides_to_be_merged$`gRNA ID` <- paste(guides_to_be_merged$tName, ":", 
-                                       guides_to_be_merged$tStart, "-", 
-                                       guides_to_be_merged$tEnd, sep="")
-
-# Rename the columns to match with the required power analysis column names
-colnames(guides_to_be_merged) <- c("chr", "start", "end", "name", "strand", "spacer")
-```
+For the protospacer, I used the BLAT sequence, which is the guide sequence + NGG.
 
 ```{r}
 # Remove the two guides that didn't return hits
 guides_to_be_merged <- all_guide_info %>% 
   filter(!(startsWith(`gRNA ID`, "SNP") & is.na(matches)) &
-         `gRNA ID` %in% rownames(cDNA_seurat_filtered@assays$Perturb_Status) &
+         `gRNA ID` %in% rownames(cDNA_seurat_filtered@assays$GDO) &
            !startsWith(`gRNA ID`, "NTC-"))
 
 
@@ -884,8 +688,7 @@ targets_gr <- makeGRangesFromDataFrame(
 
 ### Find overlaps of guides and DHSs
 
-Some of the guides didn't overlap with DHS. Interestingly with some SNPs that are perturbed in pairs, only one of the guides mapped to coordinates. I'm wondering if this is a result of using the seq + NGG. Even if it is, I would assume that CRISPRi would need the PAM sequence to be accessible, so that seems necessary.
-
+Some of the guides didn't overlap with DHS.
 -   Specifically, there are 115 hits from 174 queries (176 total SNP guides minus the 2, which did not have BLAT hits). This means that 59 guides did not qualify as targeting a DHS.
 
 ```{r}
@@ -920,25 +723,17 @@ guide_targets_TSS_target_name <- guide_targets %>%
                   target_name))
 ```
 
-# Prepare Data for MAST pipeline
-
-Things to do:
-
--   Figure out if should re-filter cell barcodes kept because 2 of the guides didn't have a BLAT hit and 59 of the guides didn't overlap with a DHS
-
--   If cell barcodes change, fix `counts matrix` and `perturb status`
-
--   For guides that aren't used, take them out of `perturb status`
-
--   Rename the rows for `perturb status` to match the `"name"` column in `guide targets`
+# Prepare Data
 
 ## Set all Filepaths
 
 ```{r}
-guide_targets_wo_nt_file_path <- "results/guide_targets_wo_NT.tsv"
-guide_targets_with_nt_file_path <- "results/guide_targets_with_NT.tsv"
+guide_targets_wo_nt_file_path <- "results/guide_targets.tsv"
 counts_matrix_file_path <- 'results/dge.txt.gz'
 perturb_status_file_path <- 'results/perturb_status.txt.gz'
+
+# Create the results directory if needed
+if (!exists("results/")) {dir.create("results/")}
 ```
 
 ## Guide Information
@@ -950,31 +745,6 @@ We want to save the `guide_targets` table into a .tsv
 ```{r}
 # Save the guide targets without NT controls
 write_tsv(guide_targets_TSS_target_name, guide_targets_wo_nt_file_path)
-#write_tsv(guide_targets, guide_targets_wo_nt_file_path)
-```
-
-### Save the guide targets table with NT
-
-```{r}
-# Create a dataframe that can be used to bind to the `guide_targets_TSS_target_name` dataframe
-nt_rows <- data.frame(matrix(ncol = ncol(guide_targets_TSS_target_name), 
-                             nrow = sum(all_guide_info$Target == "nt")))
-
-# Format the df with the relevant information
-colnames(nt_rows) <- colnames(guide_targets_TSS_target_name)
-nt_rows$name <- all_guide_info[all_guide_info$`Target` == "nt", "gRNA ID"]
-nt_rows$spacer <- all_guide_info[all_guide_info$`Target` == "nt", "BLAT sequence"]
-
-# Bind these into a new dataframe
-guide_targets_w_nt <- rbind(guide_targets_TSS_target_name[1:127,], 
-                            nt_rows, 
-                            guide_targets_TSS_target_name[
-                              128:nrow(guide_targets_TSS_target_name),
-                              ])
-rownames(guide_targets_w_nt) <- NULL
-
-# Save the file
-write_tsv(guide_targets_w_nt, guide_targets_with_nt_file_path)
 ```
 
 ## Counts Matrix
