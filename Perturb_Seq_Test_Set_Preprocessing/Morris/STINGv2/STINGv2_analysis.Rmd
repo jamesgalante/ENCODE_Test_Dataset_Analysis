@@ -9,9 +9,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # About
 
-This file is for downloading and re-analyzing the data from the STING-seq v2 dataset in the Morris et al. 2023 paper: "Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens". The data will be used with Andreas' MAST power analysis pipeline for determining the effects of the guides in each cell. The data was retrieved from [GSE171452](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171452).
+This file is for downloading and re-analyzing the data from the STING-seq v2 dataset in the Morris et al. 2023 paper: "Discovery of target genes and pathways at GWAS loci by pooled single-cell CRISPR screens". The data was retrieved from [GSE171452](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171452).
 
-The code in this notebook is based off my previous analysis with the STING-seq v1 dataset, which is smaller and was all processed in one lane as opposed to four different lanes in STING-seq v2.
+The code in this notebook is based off my previous analysis with the STING-seq v1 dataset.
 
 # Getting Data
 
@@ -42,13 +42,14 @@ library(GenomicRanges)
 library(rtracklayer)
 # Write table to tsv file
 library(readr)
+# For writing the tables efficiently
+library(data.table)
 # For plotting in a grid
 library(gridExtra)
 library(grid)
 # For mapping SYMBOLs to ENSEMBL IDs for TSSCtrls
 library(org.Hs.eg.db)
 ```
-
 
 ## Retrieve list of File Names
 
@@ -65,7 +66,6 @@ The data for STING-seq v2 is a bit different from STING-seq v1. Particularly, th
 | GSM7108123 | STINGseq-v2_GDO-C  | GSM7108131 | STINGseq-v2_ADT-C |
 | GSM7108124 | STINGseq-v2_GDO-D  | GSM7108132 | STINGseq-v2_ADT-D |
 
-getGEO isn't working with RStudio on the cluster. I don't know why. I'm going to download the data separately, and work with it that way. All the data is in : "/oak/stanford/groups/larsms/Users/jgalante/External_Encode_E2G_Val/Morris/Data_Wrangling/STING-Seq_v2/data"
 
 ```{r}
 # This is for STING-seq v2 only
@@ -88,7 +88,30 @@ sample_names <- c(
 
 ## Download files and read them into objects
 
-All these files were already downloaded from the GSE link above. The data in the `data` directory are only the STINGv2 files. For some reason, the files were named incorrectly when unzipped; in that, there was a `.mtx` extension instead of a `.tsv` extension for the barcodes and features files. I just changed the extension names within terminal.
+I ran the following on CLI
+`wget -O data/GSE171452_RAW.tar "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE171452&format=file"`
+`tar -xf data/GSE171452_RAW.tar -C data`
+`find data/ -type f \( -name "*BeeSTINGseq*" -o -name "*STINGseq-v1*" -o -name "GSE171452_RAW.tar" \) -delete`
+
+All these files were already downloaded from the GSE link above. The data in the `data` directory are only the STINGv2 files. For some reason, the files were named incorrectly when unzipped; in that, there was a `.mtx` extension instead of a `.tsv` extension for the barcodes and features files.
+
+```{r}
+fix_extensions <- function(data_dir="data") {
+  # Fix barcodes files
+  barcodes_files <- list.files(data_dir, pattern="barcodes\\.mtx\\.gz$", full.names=TRUE)
+  for(file in barcodes_files) {
+    file.rename(file, sub("barcodes\\.mtx\\.gz$", "barcodes.tsv.gz", file))
+  }
+  
+  # Fix features files
+  features_files <- list.files(data_dir, pattern="features\\.mtx\\.gz$", full.names=TRUE)
+  for(file in features_files) {
+    file.rename(file, sub("features\\.mtx\\.gz$", "features.tsv.gz", file))
+  }
+}
+fix_extensions()
+```
+
 
 ```{r}
 # Function to read existing files with GSM numbers
@@ -148,7 +171,7 @@ read_existing_files_with_GSM <- function(GSM_sample_numbers, sample_names, data_
 }
 
 # Use the function
-data_dir <- "/oak/stanford/groups/larsms/Users/jgalante/External_Encode_E2G_Val/Morris/Data_Wrangling/STING-Seq_v2/data"
+data_dir <- "data/"
 samples_data <- read_existing_files_with_GSM(GSM_sample_numbers, sample_names, data_dir)
 ```
 
@@ -354,385 +377,6 @@ for (lane in c("A", "B", "C", "D")) {
 }
 ```
 
-## GDO filtering
-```{r}
-
-# Let's create a perturb_status matrix based off the thresholds in the paper and in the umi datatable
-# This sections gets a bit weird -- we create a dense matrix, so that R can do faster calculations; otherwise, this is really slow
-for (lane in c("A", "B", "C", "D")) {
-  
-  # Print what lane we're currently processing
-  print(paste0("Currently processing lane ", lane))
-  
-  # Convert into a dense matrix for faster operations
-  GDO_matrix_dense <- as.matrix(seurat_lanes[[lane]][["GDO"]]@counts)
-  
-  # Get the GDO_UMI table
-  GDO_UMI <- get_file_by_keyword(samples_data[[paste0("STINGseq-v2_GDO-", lane)]], "umi")
-  
-  
-  # Generate UMI_threshold_vector in the same order as the rownames of GDO_matrix_dense
-  # For each rowname in GDO_matrix_dense, find the corresponding GDO_UMI "UMI threshold"
-  UMI_threshold_vector <- sapply(rownames(GDO_matrix_dense), 
-                                 function(x) {
-                                   GDO_UMI[GDO_UMI$Protospacer == x, "UMI threshold"]
-                                   }
-                                 )
-  
-  # Generate a matrix with the same dimensions as GDO_matrix_dense,
-  # where each row contains the corresponding UMI threshold for that row
-  UMI_threshold_matrix <- matrix(
-    as.numeric(rep(UMI_threshold_vector, each=ncol(GDO_matrix_dense))),
-    nrow = nrow(GDO_matrix_dense),
-    ncol = ncol(GDO_matrix_dense),
-    byrow = TRUE)
-  
-  # Generate a binary matrix based on conditions.
-  perturb_status <- as.integer(
-    (GDO_matrix_dense >= UMI_threshold_matrix) & 
-      (GDO_matrix_dense >= 3)
-    )
-  
-  # Turn the `perturb_status` vector into a matrix
-  # as.integer turns it into a vector
-  perturb_status <- matrix(perturb_status, nrow = nrow(GDO_matrix_dense), ncol = ncol(GDO_matrix_dense))
-
-  # Now we can create an assay with this perturb_status object
-  # Add column and rownames to perturb_status
-  colnames(perturb_status) <- colnames(seurat_lanes[[lane]])
-  rownames(perturb_status) <- rownames(seurat_lanes[[lane]][["GDO"]]@counts)
-  
-  # Format `perturb_status` to incorporate into seurat object
-  # Add perturb status assay
-  seurat_lanes[[lane]][["Perturb_Status"]] <- CreateAssayObject(counts = perturb_status)
-  
-}
-```
-
-### Visualizing guide stats
-
-```{r}
-# For each guide, how many cells is that guide in
-  # Let's do two graphs, one where it's how many cells that guides in above the threshold in perturb_status
-    # Perturb status matrix can be accessed with seurat_lanes[[lane]][["Perturb_Status"]]@counts
-  # And one where it's how many cells that guide's in where there's at least one of that guide in the cell
-    # rowSums(seurat_lanes[["A"]][["GDO"]]@counts > 0)
-# So we want one bar for each guide and the y-axis we want num_cells
-# We can also color these based on type of guide, so if they start with ["NTC", "SNP", `neither`]
-cells_per_guide_at_least_one_pre_filtering <- list()
-cells_per_guide_per_gtype_vln_at_least_one_pre_filtering <- list()
-cells_per_guide_per_gtype_distr_at_least_one_pre_filtering <- list()
-
-cells_per_guide_above_thresh_pre_filtering <- list()
-cells_per_guide_per_gtype_vln_above_thresh_pre_filtering <- list()
-cells_per_guide_per_gtype_distr_above_thresh_pre_filtering <- list()
-
-# Add new lists
-# Change the previous lists names (per_gtype_vln)
-  # Do this in the assignment for both above thresh and above one plots
-# Add plot for above one distr
-# Add plot for above thres distr
-# Maybe changed `at least one` to `above one`
-
-for (lane in c("A", "B", "C", "D")) {
-  
-  # From the GDO matrix, count how many guides have a value above 0
-  cell_counts <- rowSums(seurat_lanes[[lane]][["GDO"]]@counts > 0)
-  
-  # Compute the total number of cells in the dataset
-  total_cells <- ncol(seurat_lanes[[lane]][["GDO"]]@counts)
-  
-  # From the perturb status matrix, just get the rowsums and add them to the dataframe
-  cell_counts_thresh <- rowSums(seurat_lanes[[lane]][["Perturb_Status"]]@counts)
-  
-  # Convert this to a dataframe for plotting
-  df <- data.frame(
-    Guide = names(cell_counts),
-    Count = cell_counts,
-    Count_thresh = cell_counts_thresh
-  )
-  
-  # Sort the data frame based on 'Count' column from greatest to smallest
-  df <- df[order(-df$Count), ]
-  
-  # Convert guide to a factor after sorting the dataframe
-  df$Guide <- factor(df$Guide, levels = df$Guide)
-  
-  # Assign colors based on guide names
-  df$Color <- ifelse(grepl("^SNP", df$Guide), "blue",
-                     ifelse(grepl("^NTC", df$Guide), "red", 
-                            "green"))
-  
-  # Assign categories based on guide names
-  df$Category <- ifelse(grepl("^SNP", df$Guide), "SNP",
-                        ifelse(grepl("^NTC", df$Guide), "Neg.Ctrl", 
-                               "Pos.Ctrl"))
-
-  # Create the bar plot for cells_per_guide_at_least_one_pre_filtering
-  temp <- ggplot(df, aes(x = Guide, y = Count, fill = Color)) +
-    geom_bar(stat="identity", position="dodge") +
-    scale_fill_identity() +
-    theme(axis.text.x = element_blank()) + # Remove x-axis labels
-    labs(title = paste("Cells per guide (at least one guide)", lane), x = "Guides", y = "Cell Counts") +
-    annotate("text", x = Inf, y = Inf, label = paste("Total cells:", total_cells), hjust = 1, vjust = 1)
-  
-  # Save ggplot to list
-  cells_per_guide_at_least_one_pre_filtering[[lane]] <- temp
-  
-  # Create the vln plot cells_per_guide_per_gtype_vln_at_least_one_pre_filtering
-  temp <- ggplot(df, aes(x = Category, y = Count, fill = Category)) +
-    geom_violin(scale="width") +
-    labs(title = paste("Distribution of cell counts per guide category (at least one guide)", lane), 
-         x = "Guide Categories", 
-         y = "Cell Counts") +
-    scale_fill_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    annotate("text", 
-             x = 3, 
-             y = max(df$Count) * 0.95, 
-             label = paste("Total cells:", total_cells), 
-             hjust = 1)
-
-  # Save the ggplot to list
-  cells_per_guide_per_gtype_vln_at_least_one_pre_filtering[[lane]] <- temp
-  
-  
-  # Create the density plot for cells_per_guide_per_gtype_distr_at_least_one_pre_filtering
-  temp <- ggplot(df, aes(x = Count, fill = Category, color = Category)) +
-    geom_density(alpha = 0.5) +
-    labs(title = paste("Distribution of cell counts per guide category (at least one guide)", lane),
-         x = "Cell Counts", 
-         y = "Density") +
-    scale_fill_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    scale_color_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    theme_minimal() +
-    annotate("text", 
-             x = max(df$Count) * 0.8, 
-             y = Inf, 
-             label = paste("Total cells:", total_cells), 
-             hjust = 1, vjust = 1)
-  
-  # Save to this list
-  cells_per_guide_per_gtype_distr_at_least_one_pre_filtering[[lane]] <- temp
-  
-  
-  
-  ## >>> DIVIDER FOR ABOVE THRESHOLD AND ONLY GREATER THAN ONE >>>
-  
-  
-  
-  # Create the bar plot for cells_per_guide_at_least_one_pre_filtering
-  temp <- ggplot(df, aes(x = Guide, y = Count_thresh, fill = Color)) +
-    geom_bar(stat="identity", position="dodge") +
-    scale_fill_identity() +
-    theme(axis.text.x = element_blank()) + # Remove x-axis labels
-    labs(title = paste("Cells per guide (above threshold)", lane), x = "Guides", y = "Cell Counts") +
-    annotate("text", x = Inf, y = Inf, label = paste("Total cells:", total_cells), hjust = 1, vjust = 1)
-  
-  # Save ggplot to list
-  cells_per_guide_above_thresh_pre_filtering[[lane]] <- temp
-  
-  # Create the vln plot cells_per_guide_per_gtype_vln_above_thresh_pre_filtering
-  temp <- ggplot(df, aes(x = Category, y = Count_thresh, fill = Category)) +
-    geom_violin(scale="width") +
-    labs(title = paste("Distribution of cell counts per guide category (above threshold)", lane), 
-         x = "Guide Categories", 
-         y = "Cell Counts") +
-    scale_fill_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    annotate("text", 
-             x = 3, 
-             y = max(df$Count_thresh) * 0.95, 
-             label = paste("Total cells:", total_cells), 
-             hjust = 1)
-
-  # Save the ggplot to list
-  cells_per_guide_per_gtype_vln_above_thresh_pre_filtering[[lane]] <- temp
-  
-  
-  # Create the density plot for cells_per_guide_per_gtype_distr_above_thresh_pre_filtering
-  temp <- ggplot(df, aes(x = Count_thresh, fill = Category, color = Category)) +
-    geom_density(alpha = 0.5) +
-    scale_x_log10() +
-    labs(title = paste("Distribution of cell counts per guide category (above threshold)", lane),
-         x = "Cell Counts", 
-         y = "Density") +
-    scale_fill_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    scale_color_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    theme_minimal() +
-    annotate("text", 
-             x = max(df$Count) * 0.8, 
-             y = Inf, 
-             label = paste("Total cells:", total_cells), 
-             hjust = 1, vjust = 1)
-  
-  # Save ggplot to list
-  cells_per_guide_per_gtype_distr_above_thresh_pre_filtering[[lane]] <- temp
-  
-}
-```
-
-```{r}
-# How many guide UMIs each cell has - should be some type of normal distribution
-# For each cell, just add up the columns of the GDO matrix, and plot those counts on y-axis
-guide_umis_per_cell_pre_filtering <- list()
-
-for (lane in c("A", "B", "C", "D")) {
-  
-  # Sum the guide UMIs for each cell (i.e., sum across the rows of the GDO matrix)
-  umis_per_cell <- colSums(seurat_lanes[[lane]][["GDO"]]@counts)
-  
-  # Convert this to a dataframe for plotting
-  df <- data.frame(Cell = names(umis_per_cell), UMI_Count = umis_per_cell)
-  
-  # Create a histogram with a logarithmic x-axis
-  temp <- ggplot(df, aes(x = UMI_Count)) +
-    geom_histogram(fill="skyblue", color="black", alpha=0.7, bins=50) + 
-    labs(title = paste("Distribution of guide UMIs per cell for lane", lane),
-         x = "Number of UMIs (Log Scale)", y = "Number of Cells") +
-    scale_x_log10() +
-    theme_minimal()
-  
-  guide_umis_per_cell_pre_filtering[[lane]] <- temp
-  
-}
-```
-
-```{r}
-# How many umis there are per guide, so for each guide just count the number of appearances in the GDO (rowsum)
-# Plot guides on the x-axis and umi count on the y-axis
-umis_per_guide_pre_filtering <- list()
-umis_per_guide_per_gtype_vln_pre_filtering <- list()
-umis_per_guide_per_gtype_distr_pre_filtering <- list()
-
-
-for (lane in c("A", "B", "C", "D")) {
-  
-  # From the GDO matrix, count how many guides
-  cell_counts <- rowSums(seurat_lanes[[lane]][["GDO"]]@counts)
-  
-  # Compute the total number of cells in the dataset
-  total_cells <- ncol(seurat_lanes[[lane]][["GDO"]]@counts)
-  
-  # Convert this to a dataframe for plotting
-  df <- data.frame(
-    Guide = names(cell_counts),
-    Count = cell_counts
-  )
-  
-  # Sort the data frame based on 'Count' column from greatest to smallest
-  df <- df[order(-df$Count), ]
-  
-  # Convert guide to a factor after sorting the dataframe
-  df$Guide <- factor(df$Guide, levels = df$Guide)
-  
-  # Assign colors based on guide names
-  df$Color <- ifelse(grepl("^SNP", df$Guide), "blue",
-                     ifelse(grepl("^NTC", df$Guide), "red", 
-                            "green"))
-  
-  # Assign categories based on guide names
-  df$Category <- ifelse(grepl("^SNP", df$Guide), "SNP",
-                        ifelse(grepl("^NTC", df$Guide), "Neg.Ctrl", 
-                               "Pos.Ctrl"))
-
-  # Create the bar plot for umis_per_guide_pre_filtering
-  temp <- ggplot(df, aes(x = Guide, y = Count, fill = Color)) +
-    geom_bar(stat="identity", position="dodge") +
-    scale_fill_identity() +
-    theme(axis.text.x = element_blank()) + # Remove x-axis labels
-    labs(title = paste("UMIs per guide", lane), x = "Guides", y = "Cell Counts") +
-    annotate("text", x = Inf, y = Inf, label = paste("Total cells:", total_cells), hjust = 1, vjust = 1)
-  
-  # Save ggplot to list
-  umis_per_guide_pre_filtering[[lane]] <- temp
-  
-  # Create the vln plot umis_per_guide_per_gtype_vln_pre_filtering
-  temp <- ggplot(df, aes(x = Category, y = Count, fill = Category)) +
-    geom_violin(scale="width") +
-    labs(title = paste("Distribution of UMIs per guide category", lane), 
-         x = "Guide Categories", 
-         y = "Cell Counts") +
-    scale_fill_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    annotate("text", 
-             x = 3, 
-             y = max(df$Count) * 0.95, 
-             label = paste("Total cells:", total_cells), 
-             hjust = 1)
-
-  # Save the ggplot to list
-  umis_per_guide_per_gtype_vln_pre_filtering[[lane]] <- temp
-  
-  # Create the density plot for umis_per_guide_per_gtype_distr_pre_filtering
-  temp <- ggplot(df, aes(x = Count, fill = Category, color = Category)) +
-    geom_density(alpha = 0.5) +
-    scale_x_log10() +
-    labs(title = paste("Distribution of UMIs per guide type for lane", lane),
-         x = "UMI Counts (Log Scale)", y = "Density") +
-    scale_fill_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    scale_color_manual(values = c("SNP" = "blue", "Neg.Ctrl" = "red", "Pos.Ctrl" = "green")) +
-    theme_minimal()
-  
-  # Save the ggplot to list
-  umis_per_guide_per_gtype_distr_pre_filtering[[lane]] <- temp
-}
-
-```
-
-
-
-
-## ADT Filtering
-The paper stated that they filtered based on `total ADT count, and unique ADTs detected`, however, they only provided: `We further applied quality control filters for ADTs, retaining cells with between the 1st and 99th percentiles for total ADT count`, but didn't mention a cutoff for the amount of unique ADTs detected. Let's plot some thangs. Here we filter between the 1st and 99th percentile for total ADT count and plot the total ADT count and unique ADTs detected. 
-```{r}
-for (lane in c("A", "B", "C", "C")) {
-  # Extract the ADT counts matrix
-  adt_counts <- seurat_lanes[[lane]][["ADT"]]@counts
-  
-  # Calculate the total ADT count for each cell
-  total_adt_counts <- colSums(adt_counts)
-  
-  # Calculate the 1st and 99th percentile for total ADT count
-  lower_bound <- quantile(total_adt_counts, 0.01)
-  upper_bound <- quantile(total_adt_counts, 0.99)
-  
-  # Filter cells based on the percentiles
-  filtered_cells <- names(total_adt_counts[total_adt_counts >= lower_bound & total_adt_counts <= upper_bound])
-  
-  # Subset the adt_counts matrix to only include filtered cells
-  adt_counts_filtered <- adt_counts[, filtered_cells]
-  
-  # Calculate the total ADT count for each filtered cell
-  total_adt_counts_filtered <- colSums(adt_counts_filtered)
-  
-  # Calculate the number of unique ADTs detected for each filtered cell
-  unique_adts_detected <- apply(adt_counts_filtered, 2, function(x) sum(x > 0))
-  
-  # Density plot for total ADT counts of filtered cells
-  temp <- ggplot(data = data.frame(TotalADTCounts = total_adt_counts_filtered), 
-         aes(x = TotalADTCounts)) +
-    geom_density(fill = "skyblue", alpha = 0.5) +
-    theme_minimal() +
-    labs(title = paste("Density Plot of Total ADT Counts for Lane", lane),
-         x = "Total ADT Count", 
-         y = "Density")
-  
-  print(temp)
-  
-  # Density plot for unique ADTs detected in filtered cells
-  temp <- ggplot(data = data.frame(UniqueADTsDetected = unique_adts_detected), 
-         aes(x = UniqueADTsDetected)) +
-    geom_density(fill = "lightpink", alpha = 0.5) +
-    theme_minimal() +
-    labs(title = paste("Density Plot of Unique ADTs Detected for Lane", lane),
-         x = "Number of Unique ADTs", 
-         y = "Density")
-    
-  print(temp)
-}
-
-```
 
 ## Subsetting the Data based on the filters
 "For STING-seq v2, we uniformly processed all four cDNA UMI count matrices and retained cells between the 1st and 99th percentile for unique gene count, between the 10th and 99th
@@ -779,29 +423,7 @@ merged_seurat <- merge(seurat_lanes_filtered[["A"]],
 
 # Display basic information about the merged Seurat object
 print(merged_seurat)
-
-# Optional: Check the first few and last few column names of the merged Seurat object
-head(colnames(merged_seurat))
-tail(colnames(merged_seurat))
-
-# Optional: Check the unique identifiers in the merged Seurat object
-unique(sapply(X = strsplit(colnames(merged_seurat), split = "_"), FUN = "[", 1))
-
-# Optional: Check the number of cells from each original Seurat object in the merged Seurat object
-table(merged_seurat$orig.ident)
-
 ```
-
-## Checking
-Replicate all of the plots made for the previous lanes, so we can see what those plots look like when all of the lanes are merged together
-```{r}
-# Violin plot of basic features
-Idents(merged_seurat) <- "orig.ident"
-VlnPlot(merged_seurat, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
-
-
-```
-
 
 # Guide Mapping
 
@@ -812,7 +434,7 @@ For the MAST pipeline, genomic coordinates are needed. Because only the protospa
 ### Get protospacer/cell metadata information
 ```{r}
 # Path to the excel file of insterest
-excel_file_path <- "science.adh7699_table_s3.xlsx"
+excel_file_path <- "../supplementary_tables/science.adh7699_table_s3.xlsx"
 
 # This file has our protospacer info for each gRNA along with the SNP name
 guide_info <- read_excel(excel_file_path, sheet = 1)
@@ -821,9 +443,6 @@ colnames(guide_info) <- guide_info[2,]
 guide_info <- guide_info[-(1:2),]
 # Only interested in v1
 guide_info <- guide_info[guide_info$`gRNA Library` == "v2",]
-
-
-# Cell Metadata is in sheet 3 of the same file if needed, but really only need the lanes, so can just extract that from barcodes
 ```
 
 ### Add a Column in `guide_info` for sgRNA + NGG
@@ -835,7 +454,7 @@ guide_info$`BLAT sequence` <- sapply(guide_info$`sgRNA guide sequence`,
 
 ```
 
-### Running BLAT with API
+### Running BLAT
 
 To use BLAT, we have to set up a server, and run it on our own. We can do that following [this link](https://genome.ucsc.edu/FAQ/FAQblat.html). To set our file up, we need to put our sequences into fasta format
 
@@ -847,6 +466,8 @@ fasta_file <- paste0(">", guide_info$`gRNA ID`, "\n", guide_info$`BLAT sequence`
 # Save the concatenated fasta formatted sequences into a file
 writeLines(paste(fasta_file, collapse = "\n"), "to_be_BLAT.fa")
 ```
+
+We can load the output of BLAT.
 
 ```{r}
 # The output file of our BLAT is called "out.psl"
@@ -890,28 +511,6 @@ print(blat_results[blat_results$`Q name` %in% dupes, c("match", "mis-match", "N'
 print(blat_results[blat_results$`Q name` %in% dupes, ])
 print(guide_info[guide_info$`gRNA ID` %in% dupes, c("gRNA ID", "BLAT sequence")])
 ```
-- It seems like the sequences that have a blockSize of 20, don't align with the pam sequence (checked BLAT browser). 
-  - Some just have other mis-alignments
-- Let's remove anything under a blockSize of 23
-- Also remove anything with a mismatch
-
-```{r}
-# Let's make sure that the cases of a smaller block size and of a mismatch are isolated
-temp <- c()
-
-# The `mis-match` > 0 condition doesn't return anything
-#for (ind in which(blat_results$`mis-match` > 0)) {
-for (ind in which(blat_results$`blockSize` < 23)) {
-  temp <- c(temp, blat_results[ind,]$`Q name`)
-}
-
-# Only show the values that are not duplicated
-temp <- setdiff(temp, dupes)
-print(guide_info[guide_info$`gRNA ID` %in% temp, c("gRNA ID", "BLAT sequence")])
-
-# There's one non-duplicated case where the block size is not 23
-print(blat_results[blat_results$`Q name` %in% temp,])
-```
 
 ### Removing bad rows from blat_results
 ```{r}
@@ -919,14 +518,10 @@ print(blat_results[blat_results$`Q name` %in% temp,])
 print(nrow(blat_results))
 blat_results <- blat_results[blat_results$blockSize == "23," & blat_results$`mis-match` == 0, ]
 print(nrow(blat_results))
-length(unique(blat_results$`Q name`)) == 1656
-
-# The result is 1667 -> 1656 rows, which is what we expect with (1) BLAT hit with a blockSize < 20 that isn't in the duplicated set, and all the duplicated reads (10)
 ```
 
 
 ## Add Target Chromosome and Position Information to `guide_info`
-We don't need to do this part, but it'll be nice to know that the BLAT hits align with the proposed SNP location
 ```{r}
 # Let's create two new columns in `guide_info` that separate the SNP-chr and the SNP-pos
 # Split the Target column by "-"
@@ -993,32 +588,18 @@ for (i in seq_len(nrow(all_guide_info))) {
 ```
 
 # Guide Matching with ABC CREs
-No we need to take the genomic coordinates from the `all_guide_info` file and overlap them with the ABC candidate CREs file that we created with the ABC DNAse Seq processing pipeline
+Now we need to take the genomic coordinates from the `all_guide_info` file and overlap them with the ABC candidate CREs file that we created with the ABC DNAse Seq processing pipeline
 
 ## Combining `all_guide_info` and `sample1_candidate_cres.bed`
 ```{r}
 # Import the bed file of DHS sites
-candidate_cres <- read.table("sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
+candidate_cres <- read.table("../../candidate_cre_data/sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
 # Keep the first four columns
 candidate_cres <- candidate_cres[,c(1:4)]
 # Rename the columns
 colnames(candidate_cres) <- c("target_chr", "target_start", "target_end", "target_name")
 ```
 
-Subset the all gudie info dataframe to just keep enhancers
-- remove blat no hits
-- remove one positive control that didn't hit
-  - all_guide_info <- all_guide_info[all_guide_info$`gRNA ID` != "ITGB1-TSS3-3", ]
-- Subset next step
-- remove negative controls and positive controls
-  - remove anything that doesn't start with SNP and save those rows for later
-  
-  
-Select the necessary columns
-  - chr, start, end, name, strand, spacer
-  - T name, T start, T end, gRNA ID, strand, BLAT sequence
-  
-  
 ### Subset `all_guide_info` to retain only BLAT hit SNPs
 ```{r}
 # Create a new table w/o Neg Ctrls because these can't be mapped by overlapping GRanges objects
@@ -1061,8 +642,7 @@ nrow(guide_targets)
 # ensure the results/ directory exists
 if (!dir.exists("results")) dir.create("results", recursive = TRUE)
 
-guide_targets_wo_nt_file_path <- "results/guide_targets_wo_NT.tsv"
-guide_targets_with_nt_file_path <- "results/guide_targets_with_NT.tsv"
+guide_targets_wo_nt_file_path <- "results/guide_targets.tsv"
 counts_matrix_file_path <- 'results/dge.txt.gz'
 perturb_status_file_path <- 'results/perturb_status.txt.gz'
 metadata_file_path <- 'results/metadata.tsv.gz'
@@ -1115,30 +695,6 @@ We want to save the `guide_targets` table into a .tsv
 write_tsv(guide_targets, guide_targets_wo_nt_file_path)
 ```
 
-### Save the guide targets table with NT
-
-```{r}
-# Create a dataframe that can be used to bind to the `guide_targets` dataframe
-nt_rows <- data.frame(matrix(ncol = ncol(guide_targets), 
-                             nrow = sum(all_guide_info$Target == "nt")))
-
-# Format the df with the relevant information
-colnames(nt_rows) <- colnames(guide_targets)
-
-# Subset and assign the 'gRNA ID' and 'BLAT sequence' from `all_guide_info` where `Target` is "nt"
-nt_rows$name <- all_guide_info[all_guide_info$Target == "nt", "gRNA ID", drop=TRUE]
-nt_rows$spacer <- all_guide_info[all_guide_info$Target == "nt", "BLAT sequence", drop=TRUE]
-
-# Bind the rows together based on the computed split index
-guide_targets_w_nt <- rbind(guide_targets, nt_rows)
-
-# It's a good practice to remove row names to avoid confusion
-rownames(guide_targets_w_nt) <- NULL
-
-# Save the file
-write_tsv(guide_targets_w_nt, guide_targets_with_nt_file_path)
-```
-
 ## Counts Matrix
 
 We want to get a txt.gz file of Genes x Cell Barcode
@@ -1173,17 +729,10 @@ df <- df[!is.na(df$VECTOR), ]
 df <- df[,!startsWith(colnames(df), "B")]
 
 # Write the modified data frame to a file
-write.table(df, 
-            gzfile(counts_matrix_file_path), 
-            sep = '\t', 
-            row.names = FALSE, 
-            col.names = TRUE, 
-            quote = FALSE)
+fwrite(df, file = counts_matrix_file_path, sep = "\t", quote = FALSE, compress = "gzip")
 ```
 
 ## Perturb Status
-
-We want a binary txt.gz file of gRNA x Cell Barcode
 
 ```{r}
 # Extract matrix
@@ -1199,13 +748,8 @@ df <- df[, c("VECTOR", colnames(data_matrix))]
 # Remove batch B
 df <- df[,!startsWith(colnames(df), "B")]
 
-# Save to file
-write.table(df,
-            gzfile(perturb_status_file_path),
-            sep = '\t', 
-            row.names = FALSE,
-            col.names = TRUE, 
-            quote = FALSE)
+# Write the modified data frame to a file
+fwrite(df, file = perturb_status_file_path, sep = "\t", quote = FALSE, compress = "gzip")
 ```
 
 ## Create the Metadata file
