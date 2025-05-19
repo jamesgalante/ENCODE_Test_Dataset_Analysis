@@ -13,3 +13,19 @@ ARCHIVE/
 resources/sceptre_setup/*/dge*
 resources/sceptre_setup/*/metatdata*
 resources/sceptre_setup/*/perturb*
+
+# Perturb_Seq_Test_Set_Preprocessing files
+Perturb_Seq_Test_Set_Preprocessing/Klann/data/Final_CRISPRi_Inputs/*
+Perturb_Seq_Test_Set_Preprocessing/Klann/data/Gene_Count_Data/*
+Perturb_Seq_Test_Set_Preprocessing/Klann/data/Guide_Count_Data/*
+
+Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv1/data/*
+Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv1/results/*
+
+Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv2/data/*
+Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv2/results/*
+
+Perturb_Seq_Test_Set_Preprocessing/Xie/Data/filtered_UMIs/*
+Perturb_Seq_Test_Set_Preprocessing/Xie/Data/Final_CRISPRi_Inputs/*
+Perturb_Seq_Test_Set_Preprocessing/Xie/Data/GSE129826/*
+Perturb_Seq_Test_Set_Preprocessing/Xie/Data/raw_h5s/*
