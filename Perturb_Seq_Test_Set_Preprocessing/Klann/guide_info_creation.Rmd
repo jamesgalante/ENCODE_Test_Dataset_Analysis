@@ -1,0 +1,260 @@
+---
+title: "Guide_Info_formatting"
+output: html_document
+date: "2023-11-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# About
+
+Given the genomic coordinates of the guides from the Klann et al. paper, we align these coordinates up with what we've determined as CREs (stored in candidate_cres.bam), get some metrics on the alignment, then format a final table for the CRISPRi pipeline
+
+```{r, message=FALSE}
+library(readxl)
+library(Seurat)
+library(GenomicRanges)
+library(dplyr)
+library(readr)
+library(rtracklayer)
+library(tidyverse)
+```
+
+# Import Files
+
+Import the candidate cres file
+
+```{r}
+# Import the bed file of DHS sites
+candidate_cres <- read.table("data/Guide_Info_Data/sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
+# Keep the first four columns
+candidate_cres <- candidate_cres[,c(1:4)]
+# Rename the columns
+colnames(candidate_cres) <- c("target_chr", "target_start", "target_end", "target_name")
+```
+
+Import the excel file with all of the guide information
+
+```{r}
+klann_guide_info <- read_xlsx("data/Guide_Info_Data/supplementary_table_16_scCERES_library_gRNAs.xlsx")
+```
+
+# Liftover Klann Coordinates
+
+The Klann guide coordinates are currently for hg19, so we have to lift them over to hg38. easylift uses 4.3, and sherlock doesn't have that R version, so I used my local R.
+
+```{r}
+# library(GenomicRanges)
+# library(easylift)
+# library(rtracklayer)
+# library(readxl)
+# library(dplyr)
+# library(stringr)
+# 
+# 
+# # Load the data
+# klann_guide_info <- read_xlsx("../Paper/GSE167890_supplementary_tables/supplementary_table_16_scCERES_library_gRNAs.xlsx")
+# 
+# # Keep the necessary columns
+# klann_guide_info <- klann_guide_info %>%
+#   filter(!is.na(gRNA_start))
+# 
+# # Convert to GRanges
+# # Function to load a BED file into a GRanges object
+# gr_object <- GRanges(
+#   seqnames = klann_guide_info$chrom,
+#   ranges = IRanges(start = klann_guide_info$gRNA_start, end = klann_guide_info$gRNA_end),
+#   mcols = data.frame(chrom = klann_guide_info$chrom,
+#                      DHS_annotation = klann_guide_info$DHS_annotation,
+#                      gRNA_start = klann_guide_info$gRNA_start,
+#                      gRNA_end = klann_guide_info$gRNA_end,
+#                      gRNA_ID = klann_guide_info$gRNA_ID,
+#                      protospacer = klann_guide_info$protospacer,
+#                      gRNA_strand = klann_guide_info$gRNA_strand
+#                      )
+# )
+# 
+# genome(gr_object) <- "hg19"
+# 
+# # LiftOver
+# # Assuming you have already downloaded the chain file for hg19 to hg38 and it's in your working directory
+# chain <- system.file("extdata", "hg19ToHg38.over.chain.gz", package = "easylift")
+# 
+# # LiftOver the GRanges objects from hg19 to hg38 using easylift
+# gr_object_lifted <- easylift(gr_object, to = "hg38", chain)
+# 
+# # Output the lifted GRanges objects
+# gr_object_lifted
+# 
+# # Export the files
+# # First lets remove any guides which have mapped to a shortened sequence
+# gr_object_final_df <- as.data.frame(gr_object_lifted)[as.data.frame(gr_object_lifted)$width == 20,]
+# 
+# # Let's make the column names better
+# new_cols <- c("seqnames", "hg38_start", "hg38_end", "width", "strand", 
+#               "chrom", "DHS_annotation", "gRNA_start", "gRNA_end", 
+#               "gRNA_ID", "protospacer", "gRNA_strand")
+# colnames(gr_object_final_df) <- new_cols
+# 
+# # These are the gRNA IDs that didn't lift over
+# print("These are the gRNA IDs that didn't lift over")
+# setdiff(klann_guide_info$gRNA_ID, as.data.frame(gr_object_lifted)$mcols.gRNA_ID)
+# 
+# print("These are the gRNA IDs that don't have a protospacer width of 20 after liftover")
+# setdiff(as.data.frame(gr_object_lifted)$mcols.gRNA_ID, gr_object_final_df$gRNA_ID)
+# 
+# print("These are the gRNA IDs that don't have a protospacer width of 20 after liftover")
+# as.data.frame(gr_object_lifted)[as.data.frame(gr_object_lifted)$width != 20, "mcols.gRNA_ID"]
+```
+
+```{r}
+# Load in the object
+gr_object_final_df <- read.csv("data/Guide_Info_Data/gr_object_final_df.csv", 
+                               header = TRUE)
+```
+
+# Reformat DF
+
+Need to format the dataframe for the CRISPRi pipeline.
+
+-   Just to note, 5 guides didn't get lifted over, so they were discarded. 2 guides didn't map to a place in the genome that kept the protospacer at a width of 20nt.
+
+## Rename Columns
+
+```{r}
+columns_to_keep <- c("seqnames", "hg38_start", "hg38_end", "DHS_annotation", 
+                     "gRNA_ID", "protospacer", "gRNA_strand")
+guide_info <- gr_object_final_df[,columns_to_keep]
+colnames(guide_info) <- c("chr", "start", "end", "target_type", "name", "spacer", "strand")
+
+# If the target_type begins with "Promoter", label it as TSSCtrl, if not, label it as enh
+guide_info <- guide_info %>%
+  mutate(target_type = ifelse(grepl("^Promoter", target_type, ignore.case = TRUE), "TSSCtrl", "enh"))
+```
+
+I'm not certain on what they decided to use as TSSCtrls, but I'm assuming every guide whose DHS_annotation/target_type begins with "Promoter" is a TSSCtrl. There are 400 of these and 150 nontargeting controls
+
+## Sanity Checks
+
+```{r}
+# Print the number of promoters in the original and filtered datasets
+print("The number of annotations that begin with 'Promoter' in the original dataset")
+length(klann_guide_info$DHS_annotation[grepl("^Promoter", klann_guide_info$DHS_annotation)])
+print("The number of annotations that begin with 'Promoter' in the filtered dataset")
+length(guide_info$target_type[grepl("^TSSCtrl", guide_info$target_type)])
+
+# Print the number of non-targeting guides
+print("The number of non-targeting guides")
+length(klann_guide_info$DHS_annotation[is.na(klann_guide_info$DHS_annotation)])
+
+# Print the number of guides that don't target Promoters
+print("The number of guides targeting enhancer regions in the original dataset")
+length(klann_guide_info$DHS_annotation[!grepl("^Promoter", klann_guide_info$DHS_annotation, ignore.case = TRUE) & !is.na(klann_guide_info$DHS_annotation)])
+print("The number of guides targeting enhancer regions in the filtered dataset")
+length(guide_info$target_type[!grepl("^TSSCtrl", guide_info$target_type, ignore.case = TRUE)])
+
+# Print the total guides
+print("The total number of guides we now have")
+length(guide_info$chr)
+```
+
+This all makes sense because 7 guides were removed.
+
+# Mapping Guides to CREs
+
+```{r}
+# Create the GRanges objects
+guides_gr <- makeGRangesFromDataFrame(
+  guide_info[,c("chr", "start", "end")], 
+  starts.in.df.are.0based = TRUE)
+
+targets_gr <- makeGRangesFromDataFrame(
+  candidate_cres[,c("target_chr", "target_start", "target_end")], 
+  starts.in.df.are.0based = TRUE)
+
+
+# Overlap the GRanges objects and create the `guide_targets` table
+overlaps <- findOverlaps(query = guides_gr, subject = targets_gr, ignore.strand = TRUE)
+guide_targets <- bind_cols(
+  guide_info[queryHits(overlaps), ], 
+  candidate_cres[subjectHits(overlaps), ]
+  )
+
+# Format the guide_targets file
+guide_targets$target_strand <- "."
+guide_targets <- guide_targets[,c("chr", "start", "end", "name", "strand", "spacer", "target_chr", "target_start", "target_end", "target_name", "target_strand", "target_type")]
+
+print(paste0("The proportion of mapped guides are 1833/3044 or ", formatC(1833/3044 * 100, format = "f", digits = 2), "%"))
+```
+
+## Mapped Guides Stats
+
+```{r}
+# Assuming 'guide_info' and 'guide_targets' are your data frames
+
+# Count the number of occurrences
+before_TSSCtrl <- sum(guide_info["target_type"] == "TSSCtrl")
+before_enh <- sum(guide_info["target_type"] == "enh")
+after_TSSCtrl <- sum(guide_targets["target_type"] == "TSSCtrl")
+after_enh <- sum(guide_targets["target_type"] == "enh")
+
+# Create a data frame for plotting
+plot_data <- data.frame(
+  Category = c("TSSCtrl", "TSSCtrl", "Enh", "Enh"),
+  Count = c(before_TSSCtrl, after_TSSCtrl, before_enh, after_enh),
+  Type = c("Before", "After", "Before", "After")
+)
+
+# Load ggplot2 for plotting
+library(ggplot2)
+
+# Create the bar plot with values displayed
+ggplot(plot_data, aes(x = Category, y = Count, fill = Type, label = Count)) +
+  geom_bar(stat = "identity", position = "identity") +
+  geom_text(position = position_identity(), vjust = -0.5) +
+  scale_fill_manual(values = c("Before" = "gray", "After" = "blue")) +
+  theme_minimal() +
+  labs(title = "Guide Counts Before and After Mapping", x = "Category", y = "Count")
+```
+
+# Exporting Guides
+
+```{r}
+# Save the tsv file
+write_tsv(guide_targets, "data/Final_CRISPRi_Inputs/guide_targets.tsv")
+```
+
+## Create the `guide_targets_w_NT` files
+
+```{r}
+guide_targets <- read_tsv("data/Final_CRISPRi_Inputs/guide_targets.tsv")
+klann_guide_info <- read_xlsx("data/Guide_Info_Data/supplementary_table_16_scCERES_library_gRNAs.xlsx")
+
+# Just need to add rows from the `gRNA_ID` column in `klann_guide_info` into the `name` column
+# Everything else can be NA
+klann_guide_info_NTs <- klann_guide_info[is.na(klann_guide_info$chrom), ]
+
+# Step 1: Create an NA-filled dataframe with the same structure as guide_targets
+template_df <- as.data.frame(matrix(ncol = ncol(guide_targets), nrow = nrow(klann_guide_info_NTs)))
+colnames(template_df) <- colnames(guide_targets)
+
+# Step 2: Fill the 'name' column with gRNA_ID from klann_guide_info_NTs
+template_df$name <- klann_guide_info_NTs$gRNA_ID
+
+# Step 3: Combine guide_targets with the template dataframe
+guide_targets_w_NT <- rbind(guide_targets, template_df)
+
+write_tsv(guide_targets_w_NT, "data/Final_CRISPRi_Inputs/guide_targets_w_NT.tsv")
+```
+
+
+
+
+
+
+
+
+
+

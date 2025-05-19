@@ -1,0 +1,1 @@
+This folder includes the raw data analysis / processing for the three perturb-seq datasets used in the held out dataset. All datasets were processed linearly through an R markdown file. Raw data can be found on GEO for each paper.
