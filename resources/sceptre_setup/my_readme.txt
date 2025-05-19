@@ -1,3 +1,1 @@
-Like all the files for Klann, Morrisv1, Morrisv2, and Xie were taken directly from the CRISPRi screens where they were originally run (in same folder that the FDR_01 results are). In each of those folders, can check the resources for the given screen
-
-Also i renamed all "raw_perturb_status" files to "perturb_status"
+All resources for each of these screens are created in the "Perturb_Seq_Test_Set_Preprocessing" folder by taking the raw data from the original study and formatting it for use with SCEPTRE and further processing / analysis.

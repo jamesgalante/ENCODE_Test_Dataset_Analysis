@@ -141,52 +141,6 @@ resolve_merge <- function(pairs) {
   }
 }
 
-# Add this new function to the FUNCTIONS section
-debug_element_merging <- function(elements_before, elements_after, elements_merged) {
-  message("DEBUG - Element merging details:")
-  
-  # For each merged element, show the elements that were merged
-  merge_count <- 0
-  
-  for (i in 1:length(elements_merged)) {
-    merged_element <- elements_merged[i]
-    original_indices <- merged_element$revmap[[1]]
-    
-    # Only print debug info if there was actually merging (more than 1 element)
-    if (length(original_indices) > 1) {
-      merge_count <- merge_count + 1
-      
-      # Get the original elements that were merged
-      original_elements <- elements_before[original_indices]
-      original_df <- original_elements %>%
-        as.data.frame() %>%
-        select(chrom = seqnames, chromStart = start, chromEnd = end, element_uid)
-      
-      # Get the resized elements before merging
-      resized_elements <- elements_after[original_indices]
-      resized_df <- resized_elements %>%
-        as.data.frame() %>%
-        select(chrom = seqnames, chromStart = start, chromEnd = end, element_uid)
-      
-      # Get the merged element
-      merged_df <- merged_element %>%
-        as.data.frame() %>%
-        select(chrom = seqnames, chromStart = start, chromEnd = end)
-      
-      message(paste0("Merged group ", merge_count, " (", merged_df$chrom, ":", merged_df$chromStart, "-", merged_df$chromEnd, ")"))
-      message("Original elements:")
-      print(original_df)
-      message("After resizing:")
-      print(resized_df)
-      message("Final merged element:")
-      print(merged_df)
-      message("------------------------------")
-    }
-  }
-  
-  message(paste0("Total merged groups: ", merge_count))
-}
-
 
 ### DATA PROCESSING ===========================================================
 

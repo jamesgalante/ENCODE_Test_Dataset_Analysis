@@ -140,7 +140,7 @@ rule compute_power_from_simulations:
 # format sceptre output for compatibility with ENCODE pipelines
 rule format_sceptre_output:
   input:
-    power_analysis_results = expand("results/process_validation_datasets/{{sample}}/power_analysis/power_analysis_results_es_{effect_size}.tsv", effect_size = [0.15, 0.25]),
+    power_analysis_results = expand("results/process_validation_datasets/{{sample}}/power_analysis/power_analysis_results_es_{effect_size}.tsv", effect_size = [0.10, 0.15, 0.20, 0.25, 0.5]),
     discovery_results = "results/process_validation_datasets/{sample}/differential_expression/results_run_discovery_analysis.rds",
     gene_gRNA_group_pairs = "results/process_validation_datasets/{sample}/gene_gRNA_group_pairs.rds",
     distances = "results/process_validation_datasets/{sample}/distances.tsv",
