@@ -26,3 +26,7 @@ Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv2/results/*
 
 Perturb_Seq_Test_Set_Preprocessing/Xie/data/*
 Perturb_Seq_Test_Set_Preprocessing/Xie/results/*
+
+Perturb_Seq_Test_Set_Preprocessing/Xie/Global-analysis-K562-enhancers/Notebooks/Data
+
+**/__pycache__/
