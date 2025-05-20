@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # About
 
-Given the genomic coordinates of the guides from the Klann et al. paper, we align these coordinates up with what we've determined as CREs (stored in candidate_cres.bam), get some metrics on the alignment, then format a final table for the CRISPRi pipeline
+Given the genomic coordinates of the guides from the Klann et al. paper, we align these coordinates up with what we've determined as CREs and format a final table for the CRISPRi pipeline
 
 ```{r, message=FALSE}
 library(readxl)
@@ -28,7 +28,7 @@ Import the candidate cres file
 
 ```{r}
 # Import the bed file of DHS sites
-candidate_cres <- read.table("data/Guide_Info_Data/sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
+candidate_cres <- read.table("../candidate_cre_data/sample1_candidate_cres.bed", header=FALSE, sep="\t", stringsAsFactors=FALSE, quote="")
 # Keep the first four columns
 candidate_cres <- candidate_cres[,c(1:4)]
 # Rename the columns
@@ -38,7 +38,7 @@ colnames(candidate_cres) <- c("target_chr", "target_start", "target_end", "targe
 Import the excel file with all of the guide information
 
 ```{r}
-klann_guide_info <- read_xlsx("data/Guide_Info_Data/supplementary_table_16_scCERES_library_gRNAs.xlsx")
+klann_guide_info <- read_xlsx("supplementary_table_16_scCERES_library_gRNAs.xlsx")
 ```
 
 # Liftover Klann Coordinates
@@ -111,15 +111,10 @@ The Klann guide coordinates are currently for hg19, so we have to lift them over
 
 ```{r}
 # Load in the object
-gr_object_final_df <- read.csv("data/Guide_Info_Data/gr_object_final_df.csv", 
-                               header = TRUE)
+gr_object_final_df <- read.csv("gr_object_final_df.csv", header = TRUE)
 ```
 
 # Reformat DF
-
-Need to format the dataframe for the CRISPRi pipeline.
-
--   Just to note, 5 guides didn't get lifted over, so they were discarded. 2 guides didn't map to a place in the genome that kept the protospacer at a width of 20nt.
 
 ## Rename Columns
 
@@ -133,8 +128,6 @@ colnames(guide_info) <- c("chr", "start", "end", "target_type", "name", "spacer"
 guide_info <- guide_info %>%
   mutate(target_type = ifelse(grepl("^Promoter", target_type, ignore.case = TRUE), "TSSCtrl", "enh"))
 ```
-
-I'm not certain on what they decided to use as TSSCtrls, but I'm assuming every guide whose DHS_annotation/target_type begins with "Promoter" is a TSSCtrl. There are 400 of these and 150 nontargeting controls
 
 ## Sanity Checks
 
@@ -192,8 +185,6 @@ print(paste0("The proportion of mapped guides are 1833/3044 or ", formatC(1833/3
 ## Mapped Guides Stats
 
 ```{r}
-# Assuming 'guide_info' and 'guide_targets' are your data frames
-
 # Count the number of occurrences
 before_TSSCtrl <- sum(guide_info["target_type"] == "TSSCtrl")
 before_enh <- sum(guide_info["target_type"] == "enh")
@@ -223,38 +214,6 @@ ggplot(plot_data, aes(x = Category, y = Count, fill = Type, label = Count)) +
 
 ```{r}
 # Save the tsv file
-write_tsv(guide_targets, "data/Final_CRISPRi_Inputs/guide_targets.tsv")
+write_tsv(guide_targets, "results/guide_targets.tsv")
 ```
-
-## Create the `guide_targets_w_NT` files
-
-```{r}
-guide_targets <- read_tsv("data/Final_CRISPRi_Inputs/guide_targets.tsv")
-klann_guide_info <- read_xlsx("data/Guide_Info_Data/supplementary_table_16_scCERES_library_gRNAs.xlsx")
-
-# Just need to add rows from the `gRNA_ID` column in `klann_guide_info` into the `name` column
-# Everything else can be NA
-klann_guide_info_NTs <- klann_guide_info[is.na(klann_guide_info$chrom), ]
-
-# Step 1: Create an NA-filled dataframe with the same structure as guide_targets
-template_df <- as.data.frame(matrix(ncol = ncol(guide_targets), nrow = nrow(klann_guide_info_NTs)))
-colnames(template_df) <- colnames(guide_targets)
-
-# Step 2: Fill the 'name' column with gRNA_ID from klann_guide_info_NTs
-template_df$name <- klann_guide_info_NTs$gRNA_ID
-
-# Step 3: Combine guide_targets with the template dataframe
-guide_targets_w_NT <- rbind(guide_targets, template_df)
-
-write_tsv(guide_targets_w_NT, "data/Final_CRISPRi_Inputs/guide_targets_w_NT.tsv")
-```
-
-
-
-
-
-
-
-
-
 

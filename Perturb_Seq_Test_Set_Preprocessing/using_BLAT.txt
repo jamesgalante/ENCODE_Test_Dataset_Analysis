@@ -1,0 +1,23 @@
+
+This is a brief tutorial on downloading and running UCSCs BLAT on your local network. It involves setting up a local server, which you can then submit jobs to through a client. 
+
+-   Download BLAT executables from: <http://hgdownload.soe.ucsc.edu/admin/exe/> by running the following command. I'm using a mac with arm64 architecture, so I'll download this file:
+    -   `rsync -aP rsync://hgdownload.soe.ucsc.edu/genome/admin/exe/macOSX.arm64/ ./`
+-   Move into the blat directory that you just downloaded and modify executable permissions
+    -   `cd blat`
+    -   `chmod +x gfServer gfClient blat`
+-   Download the appropriate .2bit file depending on what genome build you want to use
+    -   `wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit`
+-   In your blat directory which should contain `blat`, `gfServer`, `gfClient`, `hg##.2bit`
+    -   Make sure the port you want to use is available. Here I'm using port 1234. Check if the port is currently alive with: `lsof -i :1234`. If there is a process running, grab the `<PID>` number returned from `lsof…` and run `kill <PID>`
+    -   Modify the code below to add the specific `hg##.2bit` file name. Here I'm using `hg38.2bit`
+    -   `./gfServer start 127.0.0.1 1234 -stepSize=5 hg38.2bit`
+-   After initializing the server, you can start queueing it with `gfClient` . In this example command my `input.fa` file is in fasta format with the name of the query on line one and the sequence on line two
+    -   Example `input.fa`
+        -   `>query1`
+        -   `ATCGGATCGATACG`
+        -   `>query2`
+        -   `TACTATCTACTACT`
+    -   The input file in this case would be the automatically generated file `v1_sequences_to_BLAT.txt`
+    -   Open a new terminal window, navigate to the `blat` directory and run the following command:
+        -   `./gfClient -minScore=20 -minIdentity=0 127.0.0.1 1234 . to_be_BLAT.fa out.psl
