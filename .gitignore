@@ -27,6 +27,9 @@ Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv2/results/*
 Perturb_Seq_Test_Set_Preprocessing/Xie/data/*
 Perturb_Seq_Test_Set_Preprocessing/Xie/results/*
 
-Perturb_Seq_Test_Set_Preprocessing/Xie/Global-analysis-K562-enhancers/Notebooks/Data
+# Exclude large directories and unnecessary files
+Perturb_Seq_Test_Set_Preprocessing/Xie/Global-analysis-K562-enhancers/Notebooks/
 
+# Fix pycache entry (add a newline before it)
 **/__pycache__/
+*.pyc
