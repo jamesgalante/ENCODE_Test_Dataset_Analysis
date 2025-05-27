@@ -1,7 +1,7 @@
 Loading in packages
 There were 13 warnings (use warnings() to see them)
 Loading input files
-Rows: 4540 Columns: 21
+Rows: 4562 Columns: 21
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "\t"
 chr  (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset

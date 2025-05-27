@@ -1,6 +1,6 @@
 Loading in packages
 Loading input files
-Rows: 4367 Columns: 12
+Rows: 4420 Columns: 12
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "\t"
 chr (8): chr, name, strand, spacer, target_chr, target_name, target_strand, ...
@@ -20038,14 +20038,14 @@ Warning messages:
 1: In obtain_pointer_vector(i = dt$i, dim = n_responses) :
   subscript out of bounds (index 241622991 >= vector size 241622991)
 2: In obtain_pointer_vector(i = dt$i, dim = n_responses) :
-  subscript out of bounds (index 587285 >= vector size 587285)
+  subscript out of bounds (index 593350 >= vector size 593350)
 An object of class sceptre_object.
 
 Attributes of the data:
 	• 106665 cells
 	• 58337 responses
 	• High multiplicity-of-infection 
-	• 4367 targeting gRNAs (distributed across 501 targets) 
+	• 4420 targeting gRNAs (distributed across 506 targets) 
 	• 0 non-targeting gRNAs 
 	• 5 covariates (batch, grna_n_nonzero, grna_n_umis, response_n_nonzero, response_n_umis)
 
@@ -20059,7 +20059,7 @@ Analysis status:
 	✗ run_discovery_analysis()
 
 Analysis parameters: 
-	• Discovery pairs: data frame with 24577 pairs
+	• Discovery pairs: data frame with 24750 pairs
 	• Positive control pairs: data frame with 0 pairs
 	• Sidedness of test: both
 	• Resampling mechanism: conditional resampling

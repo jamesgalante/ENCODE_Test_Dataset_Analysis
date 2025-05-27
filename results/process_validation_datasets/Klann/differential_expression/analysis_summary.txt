@@ -4,7 +4,7 @@ Attributes of the data:
 	• 46606 cells (45364 after cellwise QC)
 	• 32624 responses
 	• High multiplicity-of-infection 
-	• 1596 targeting gRNAs (distributed across 1588 targets) 
+	• 1663 targeting gRNAs (distributed across 1655 targets) 
 	• 0 non-targeting gRNAs 
 	• 5 covariates (batch, grna_n_nonzero, grna_n_umis, response_n_nonzero, response_n_umis)
 
@@ -18,7 +18,7 @@ Analysis status:
 	✓ run_discovery_analysis()
 
 Analysis parameters: 
-	• Discovery pairs: data frame with 58566 pairs (26309 after pairwise QC)
+	• Discovery pairs: data frame with 61764 pairs (27762 after pairwise QC)
 	• Positive control pairs: data frame with 0 pairs
 	• Sidedness of test: both
 	• Resampling mechanism: conditional resampling
@@ -31,9 +31,9 @@ Analysis parameters:
 
 gRNA-to-cell assignment information:
 	• Assignment method: mixture
-	• Mean N cells per gRNA: 115.36
-	• Mean N gRNAs per cell (MOI): 3.95 
+	• Mean N cells per gRNA: 115.24
+	• Mean N gRNAs per cell (MOI): 4.11 
 	• gRNA assignment formula object: log(response_n_nonzero) + log(response_n_umis) + log(grna_n_nonzero + 1) + log(grna_n_umis + 1) + batch
 
 Summary of results:
-	• N discovery pairs called as significant: 109/26309
+	• N discovery pairs called as significant: 114/27762

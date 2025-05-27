@@ -19,12 +19,12 @@ lgl  (3): Significant, ValidConnection, Regulated
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 1387 Columns: 20
+Rows: 1407 Columns: 24
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "\t"
-chr (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset
-dbl (8): chromStart, chromEnd, EffectSize, startTSS, endTSS, pValueAdjusted,...
-lgl (5): Significant, PowerAtEffectSize10, PowerAtEffectSize50, ValidConnect...
+chr  (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset
+dbl (14): chromStart, chromEnd, EffectSize, startTSS, endTSS, pValueAdjusted...
+lgl  (3): Significant, ValidConnection, Regulated
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.

@@ -83,21 +83,12 @@ resize_crispr_elements <- function(crispr, size = 500, filter_valid_connections 
                                        start.field = "chromStart", end.field = "chromEnd",
                                        keep.extra.columns = TRUE, starts.in.df.are.0based = TRUE)
   
-  # NEW: Keep a copy of the original elements for debugging
-  elements_before <- elements
-  
   # Resize elements and merge overlaps
   resize_elements <- width(elements) < size
   elements[resize_elements] <- resize(elements[resize_elements], width = size, fix = "center")
   
-  # NEW: Keep a copy of the resized elements for debugging
-  elements_after <- elements
-  
   # Get merged element uids for each resized element
   elements_merged <- reduce(elements, with.revmap = TRUE)
-  
-  # NEW: Debug step - Show detailed merging information
-  debug_element_merging(elements_before, elements_after, elements_merged)
   
   merged_uids <- lapply(elements_merged$revmap, FUN = function(x) elements[x]$element_uid)
   elements_merged$merged_uid <- merged_uids

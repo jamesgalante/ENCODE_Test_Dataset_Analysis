@@ -1,7 +1,7 @@
 Loading packages
 There were 13 warnings (use warnings() to see them)
 Loading training and validation data
-Rows: 4705 Columns: 21
+Rows: 4725 Columns: 21
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "\t"
 chr  (7): chrom, name, chrTSS, measuredGeneSymbol, CellType, Reference, Dataset
@@ -23,18 +23,18 @@ Creating GRanges objects
 Finding Overlaps
 Summarizing overlaps
 Original Validation Dataset:
-- Total pairs: 4705
-- Positive pairs: 322
-- Negative pairs: 4383
+- Total pairs: 4725
+- Positive pairs: 323
+- Negative pairs: 4402
 
 Filtered Validation Dataset:
-- Total pairs: 4540
-- Positive pairs: 266
-- Negative pairs: 4274
+- Total pairs: 4562
+- Positive pairs: 267
+- Negative pairs: 4295
 
 Changes Due to K562 Filtering:
-- Removed K562 pairs: 165
+- Removed K562 pairs: 163
 - Removed K562 positives: 56
-- Removed K562 negatives: 109
+- Removed K562 negatives: 107
 Saving output files
 Closing log file
