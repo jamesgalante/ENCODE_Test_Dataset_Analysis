@@ -1,4 +1,4 @@
-# ENCODE Validation Dataset Analysis
+# Processing held-out CRISPR enhancer screens for benchmarking ENCODE-rE2G
 
 ## Overview
 This repository processes validation datasets to test ENCODE_rE2G performance on predicting enhancer-gene pairs. The pipeline:

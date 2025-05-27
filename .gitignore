@@ -43,6 +43,7 @@ Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.tsv
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.txt
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.err
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.r
 
 
 # Fix pycache entry (add a newline before it)
