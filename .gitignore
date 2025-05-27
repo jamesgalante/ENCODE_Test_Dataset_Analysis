@@ -32,6 +32,18 @@ Perturb_Seq_Test_Set_Preprocessing/Xie/results/*
 # Exclude large directories and unnecessary files
 Perturb_Seq_Test_Set_Preprocessing/Xie/Global-analysis-K562-enhancers/Notebooks/
 
+# DNase processing intermediate and output files
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.bam
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.bai
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.bed
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.narrowPeak
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.counts
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.xls
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.tsv
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.txt
+Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.err
+
+
 # Fix pycache entry (add a newline before it)
 **/__pycache__/
 *.pyc
