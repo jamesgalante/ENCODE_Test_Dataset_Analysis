@@ -1,0 +1,11 @@
+name: dnase_processing
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bioconda::samtools=1.12
+  - bioconda::bedtools=2.30.0
+  - bioconda::macs2=2.2.7.1
+  - bioconda::sambamba=1.0.1
+  - conda-forge::wget=1.20.3
