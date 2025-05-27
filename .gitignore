@@ -3,9 +3,11 @@ results/process_validation_datasets/*/power_analysis/combined_power*
 results/process_validation_datasets/*/perturb_sce.rds
 results/process_validation_datasets/*/differential_expression/final_sceptre_object.rds
 results/process_validation_datasets/*/differential_expression/sceptre_diffex_input.rds
+results/process_validation_datasets/sceptre_power_analysis/logs/
 
 # Folders to ignore
 results/genome_annotation_files/
+RDA_objects/
 ARCHIVE/
 .snakemake/
 
