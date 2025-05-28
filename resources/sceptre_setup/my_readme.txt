@@ -1,1 +1,0 @@
-All resources for each of these screens are created in the "Perturb_Seq_Test_Set_Preprocessing" folder by taking the raw data from the original study and formatting it for use with SCEPTRE and further processing / analysis.
