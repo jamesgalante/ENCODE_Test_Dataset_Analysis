@@ -45,7 +45,7 @@ checkpoint split_target_response_pairs:
     batches = lambda wildcards: get_n_batches(wildcards)
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/split_target_response_pairs_{sample}.log"
   conda:
-    "../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_env.yml"
   shell:
     """
     # Create the output directory
@@ -90,7 +90,7 @@ rule sceptre_power_analysis:
     guide_sd = config["process_validation_datasets"]["power_simulations"]["guide_sd"]
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/sceptre_power_analysis_es{effect_size}_split{split}_{sample}.log"
   conda:
-    "../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_env.yml"
   resources:
     mem = "32G",
     time = "2:00:00"
@@ -114,7 +114,7 @@ rule combine_sceptre_power_analysis:
     combined_power_analysis_output = "results/process_validation_datasets/{sample}/power_analysis/combined_power_analysis_output_es_{effect_size}.tsv"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/combine_sceptre_power_analysis_es{effect_size}_{sample}.log"
   conda:
-    "../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_env.yml"
   resources:
     mem = "32G",
     time = "2:00:00"
@@ -130,7 +130,7 @@ rule compute_power_from_simulations:
     power_analysis_results = "results/process_validation_datasets/{sample}/power_analysis/power_analysis_results_es_{effect_size}.tsv"
   log: "results/process_validation_datasets/sceptre_power_analysis/logs/compute_power_from_simulations_es{effect_size}_{sample}.log"
   conda:
-    "../envs/sceptre_power_simulations.yml"
+    "../envs/sceptre_env.yml"
   resources:
     mem = "24G",
     time = "1:00:00"

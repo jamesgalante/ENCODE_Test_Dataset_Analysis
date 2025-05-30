@@ -10,7 +10,7 @@
 
 # Activate the conda environment
 echo "Initializing conda..."
-source /oak/stanford/groups/larsms/Users/jgalante/miniforge3/etc/profile.d/conda.sh
+# source /path/to/conda.sh
 echo "Activating conda environment..."
 conda activate dnase_processing
 

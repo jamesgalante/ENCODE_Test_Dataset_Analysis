@@ -21,7 +21,6 @@ message("Loading in packages")
 suppressPackageStartupMessages({
   library(dplyr)
   library(readr)
-  library(BiocParallel)
   library(SingleCellExperiment)
   library(stringr)
   library(sceptre)

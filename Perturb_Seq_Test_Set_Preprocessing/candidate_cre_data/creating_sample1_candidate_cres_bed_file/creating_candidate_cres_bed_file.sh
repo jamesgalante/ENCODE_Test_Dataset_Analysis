@@ -53,3 +53,6 @@ awk 'BEGIN {OFS="\t"} {print $1, $2, $3, $1":"$2"-"$3, "0", "."}' > sample1_cand
 
 echo "Processing completed successfully!"
 echo "Output file: sample1_candidate_cres.bed"
+
+# 8. Copy the final file into the parent directory for easy reference by each Rmd script
+cp sample1_candidate_cres.bed ../

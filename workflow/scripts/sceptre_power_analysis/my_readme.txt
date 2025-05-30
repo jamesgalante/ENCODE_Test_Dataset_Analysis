@@ -1,1 +1,0 @@
-The archived split target response pairs script is the same as the new checkpoint script. However, the checkpoint script is tailored for CLI inputs - see respective rules in snakemake rule set

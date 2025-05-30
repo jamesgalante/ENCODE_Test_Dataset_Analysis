@@ -35,8 +35,6 @@ library(dplyr)
 library(tidyr)
 # # Import to compare overlaps of DHS and guides
 library(GenomicRanges)
-# # Converting the Genomic Ranges file to a bed file
-# library(rtracklayer)
 # # Write table to tsv file
 library(readr)
 ```

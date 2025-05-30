@@ -28,16 +28,8 @@ validation_dataset <- read_tsv(snakemake@input$validation_dataset)
 
 ### COMBINE THE DATASETS ======================================================
 
-# Adding power simulation results for effect sizes 2, 3, and 5 to the dc tap dataset
-mod_formatted_resized_and_merged_dc_tap_output <- formatted_resized_and_merged_dc_tap_output %>%
-  mutate(
-    PowerAtEffectSize2 = NA,
-    PowerAtEffectSize3 = NA,
-    PowerAtEffectSize5 = NA
-  )
-
 # Combine the datasets
-full_validation_dataset_w_dc_tap_seq <- rbind(validation_dataset, mod_formatted_resized_and_merged_dc_tap_output)
+full_validation_dataset_w_dc_tap_seq <- rbind(validation_dataset, formatted_resized_and_merged_dc_tap_output)
 
 
 ### SAVE OUTPUT ===============================================================

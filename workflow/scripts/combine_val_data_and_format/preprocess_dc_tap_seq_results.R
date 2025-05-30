@@ -32,6 +32,13 @@ dc_tap_data <- read_tsv(snakemake@input$dc_tap_data)
 dc_tap_data_formatted <- dc_tap_data %>% 
   mutate(Validation_DistalElement_Gene = (abs(distance_to_gencode_gene_TSS) < 1e6) & (DistalElement_Gene))
 
+# Remove from Validation_DistalElement_Gene any pair that is nonsignificant and underpowered at 15% effect size
+dc_tap_data_formatted <- dc_tap_data_formatted %>%
+  mutate(Validation_DistalElement_Gene = case_when(
+    power_at_effect_size_15 < 0.8 & significant == FALSE ~ FALSE,
+    TRUE ~ Validation_DistalElement_Gene
+  ))
+
 # Format the dc_tap_data to match the validation_data format
 dc_tap_data_formatted <- dc_tap_data_formatted %>%
   filter(Validation_DistalElement_Gene == TRUE) %>%
@@ -53,6 +60,9 @@ dc_tap_data_formatted <- dc_tap_data_formatted %>%
     measuredGeneSymbol = gene_symbol,
     Significant = significant,
     pValueAdjusted = sceptre_adj_p_value,
+    PowerAtEffectSize2 = power_at_effect_size_2,
+    PowerAtEffectSize3 = power_at_effect_size_3,
+    PowerAtEffectSize5 = power_at_effect_size_5,
     PowerAtEffectSize10 = power_at_effect_size_10,
     PowerAtEffectSize15 = power_at_effect_size_15,
     PowerAtEffectSize20 = power_at_effect_size_20,
@@ -60,9 +70,12 @@ dc_tap_data_formatted <- dc_tap_data_formatted %>%
     PowerAtEffectSize50 = power_at_effect_size_50,
     CellType = cell_type
   ) %>%
-  select(chrom, chromStart, chromEnd, name, EffectSize, chrTSS, startTSS, endTSS, measuredGeneSymbol, 
-         Significant, pValueAdjusted, PowerAtEffectSize10, PowerAtEffectSize15, PowerAtEffectSize20, 
-         PowerAtEffectSize25, PowerAtEffectSize50, ValidConnection, CellType, Reference, Regulated, Dataset)
+  select(
+    chrom, chromStart, chromEnd, name, EffectSize, chrTSS, startTSS, endTSS, measuredGeneSymbol,  
+    Significant, pValueAdjusted, PowerAtEffectSize2, PowerAtEffectSize3, PowerAtEffectSize5,  
+    PowerAtEffectSize10, PowerAtEffectSize15, PowerAtEffectSize20, PowerAtEffectSize25, PowerAtEffectSize50,  
+    ValidConnection, CellType, Reference, Regulated, Dataset
+  )
 
 
 ### RESIZE AND MERGE FUNCTIONS ================================================

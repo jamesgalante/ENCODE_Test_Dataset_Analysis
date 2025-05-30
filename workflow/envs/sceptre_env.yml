@@ -13,6 +13,7 @@ dependencies:
   - jgalante::r-sceptre
   - bioconductor-rtracklayer
   - bioconductor-genomicranges
+  - bioconductor-singlecellexperiment
   - conda-forge::r-data.table
   - conda-forge::r-r.utils
   - r-base=4.4
