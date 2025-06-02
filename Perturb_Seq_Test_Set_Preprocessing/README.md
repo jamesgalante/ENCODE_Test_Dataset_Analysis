@@ -1,6 +1,6 @@
 # Perturb-Seq Test Set Preprocessing
 
-This directory contains the raw data processing pipeline for three perturb-seq datasets used in the validation analysis. Each dataset is processed through dedicated R Markdown workflows following the methods from the original published studies. Each converts raw sequencing data into formatted count matrices compatible with SCEPTRE analysis.
+This directory contains the raw data processing for three Perturb-seq datasets used in the held-out dataset. Each Perturb-seq experiment is processed through dedicated R Markdown workflows following the methods from the original published studies. Each converts raw sequencing data into formatted count matrices compatible with analysis with the SCEPTRE package.
 
 NOTE: This is optional as the final results are included on SYNAPSE, detailed in the parent README.md.
 
@@ -8,11 +8,12 @@ NOTE: This is optional as the final results are included on SYNAPSE, detailed in
 
 All datasets follow a standardized processing workflow:
 1. Download raw data from GEO/ENCODE repositories
-  - Raw data is either automatically downloaded or needs to be manually downloaded following R Markdown instructions
-2. Process guide sequences and genomic coordinates using BLAT
-3. Generate gene expression, guide perturbation, and metadata files
+  - Raw data is either automatically downloaded or needs to be manually downloaded following R Markdown instructions, which are also mentioned below.
+2. Process the data according to the original study's methods
+2. Filter out guides that do not map to hg38 or map unambiguously
+3. Generate gene expression, guide expression, guide annotation, and metadata files
 
-## Dataset Structure
+## Directory Structure
 
 ```
 Perturb_Seq_Test_Set_Preprocessing/
@@ -35,7 +36,7 @@ All R Markdowns were run using the following dependencies:
 
 ### Software Versions
 - **R version:** 4.1.2
-- **Python version:** 3.9
+- **Python version:** 3.9 (Analysis of Xie et al. 2019 only)
 
 ### R Packages
 
@@ -43,6 +44,7 @@ All R Markdowns were run using the following dependencies:
 |---------|---------|
 | data.table | 1.16.0 |
 | dplyr | 1.1.4 |
+| easylift | 1.0.0 |
 | GEOquery | 2.62.2 |
 | GenomicRanges | 1.46.1 |
 | ggplot2 | 3.5.1 |
@@ -95,7 +97,7 @@ find data/ -type f \( -name "*BeeSTINGseq*" -o -name "*STINGseq-v1*" -o -name "G
 ## Xie et al. (2019)
 ```
 Xie/
-├── Xie_analysis.Rmd                   # Processing workflow
+├── Xie_analysis.Rmd                     # Processing workflow
 ├── Global-analysis-K562-enhancers/      # Code from the Xie paper used to process the raw counts data
 └── out.psl                              # BLAT alignment results
 ```
@@ -163,20 +165,12 @@ sbatch submit_dnase_processing.sh
    - Follow instructions in the `Candidate CRE Data` section above
    - This creates `sample1_candidate_cres.bed` which is used by all dataset processing workflows
 
-2. **Navigate to each dataset directory**
+2. **Follow R Markdown workflows**:
    - Datasets can be processed in any order
-
-3. **Follow R Markdown workflows in order**:
    - Open the main processing `.Rmd` file
    - Follow data download instructions when prompted
-   - (Optional as output files are provided) Run BLAT when prompted
+   - (Optional as output files are provided) Run guide alignment when prompted
    - Execute code chunks sequentially
-
-4. **Key Processing Steps**:
-   - **Data Download**: Follow GEO/ENCODE download instructions
-   - **Guide Alignment (Optional)**: Run BLAT for guide coordinate mapping
-   - **Matrix Generation**: Create count matrices and metadata
-   - **Quality Control**: Filter and validate processed data
 
 ### Expected Outputs
 
@@ -184,7 +178,7 @@ Each dataset produces standardized outputs in `results/` directories:
 - **Gene expression matrices**: `dge.txt.gz`
 - **Guide perturbation matrices**: `perturb_status.txt.gz`
 - **Guide target annotations**: `guide_targets.tsv`
-- **Cell metadata**: Various format depending on dataset
+- **Cell metadata (STINGv2 and Xie only)**: `metadata.tsv.gz`
 
 ---
 
@@ -218,7 +212,7 @@ Expected files:
 
 ## Integration with Main Pipeline
 
-Once preprocessing is complete, run the following bash commands within the parent directory of `git clone` to copy the results files into the resources of the main pipeline:
+Once preprocessing is complete, run the following bash commands within the parent directory of `git clone` to copy the results files into the resources of the main pipeline. After this is complete, the snakemake pipeline can be run following the instructions in the parent README.md:
 
 ```bash
 cp -r Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv1/results/ resources/sceptre_setup/Morrisv1/
@@ -231,7 +225,7 @@ cp -r Perturb_Seq_Test_Set_Preprocessing/Klann/results/ resources/sceptre_setup/
 
 ## BLAT Setup
 
-All resulting BLAT files are provided, so this step is optional. However, if you need to run BLAT alignment yourself, follow the instructions below.
+All resulting guide alignment files are provided, so this step is optional. However, if you need to run BLAT alignment yourself, follow the instructions below.
 
 ### Installing and Running UCSC BLAT Locally
 

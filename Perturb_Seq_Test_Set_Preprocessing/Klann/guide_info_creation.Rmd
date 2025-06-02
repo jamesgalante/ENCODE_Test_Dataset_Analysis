@@ -43,7 +43,7 @@ klann_guide_info <- read_xlsx("supplementary_table_16_scCERES_library_gRNAs.xlsx
 
 # Liftover Klann Coordinates
 
-The Klann guide coordinates are currently for hg19, so we have to lift them over to hg38. easylift uses 4.3, and sherlock doesn't have that R version, so I used my local R.
+The following is optional as the output is provided as `gr_object_final_df.csv` which is loaded below. The Klann guide coordinates are in hg19, so we lift them over to hg38 using `easylift` (v1.0.0). In line with the other R Markdown files, the analysis of Klann et al. 2021 uses R version 4.1.2, but `easylift` is only compatible with R versions 4.3+, so the following code block was uesd to perform `easylift` in an environment using R version 4.3. The chain file used in this code block can be downloaded from : `https://hgdownload.cse.ucsc.edu/goldenPath/hg19/liftOver/hg19ToHg38.over.chain.gz`
 
 ```{r}
 # library(GenomicRanges)
@@ -79,7 +79,7 @@ The Klann guide coordinates are currently for hg19, so we have to lift them over
 # genome(gr_object) <- "hg19"
 # 
 # # LiftOver
-# # Assuming you have already downloaded the chain file for hg19 to hg38 and it's in your working directory
+# # Assuming the chain file for hg19 to hg38 is in the working directory
 # chain <- system.file("extdata", "hg19ToHg38.over.chain.gz", package = "easylift")
 # 
 # # LiftOver the GRanges objects from hg19 to hg38 using easylift
@@ -92,7 +92,7 @@ The Klann guide coordinates are currently for hg19, so we have to lift them over
 # # First lets remove any guides which have mapped to a shortened sequence
 # gr_object_final_df <- as.data.frame(gr_object_lifted)[as.data.frame(gr_object_lifted)$width == 20,]
 # 
-# # Let's make the column names better
+# # Let's update the column names 
 # new_cols <- c("seqnames", "hg38_start", "hg38_end", "width", "strand", 
 #               "chrom", "DHS_annotation", "gRNA_start", "gRNA_end", 
 #               "gRNA_ID", "protospacer", "gRNA_strand")

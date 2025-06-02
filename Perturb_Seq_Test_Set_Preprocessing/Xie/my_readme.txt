@@ -1,2 +1,0 @@
-The Global-analysis-K562-enhancers was used in the original Xie study to process the data
-I downloaded the folders used for processing so that I could run their sgrna processing script, which formats the UMI reads from GEO 

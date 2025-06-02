@@ -110,32 +110,10 @@ umi_files <- list.files(path = file_path, pattern = "*.txt", full.names = TRUE)
 umi_files <- umi_files[order(sapply(umi_files, extract_batch_numbers))]
 ```
 
-## Read into Seurat Objects and Normalize
+## Read into Seurat Objects
 
 ```{r}
-# Normalization function as per the provided formula
-normalize_meta_cell <- function(seurat_obj) {
-  # Extract the raw counts matrix
-  raw_counts <- GetAssayData(seurat_obj, slot = "counts")
-  total_reads <- sum(raw_counts)
-  
-  # Compute the meta cell
-  meta_cell_cpm = (Matrix::rowSums(raw_counts) + 1) / total_reads * 1e6
-  
-  # CPM normalize the raw_counts matrix
-  normalized_counts = t(t(raw_counts)/colSums(raw_counts)) * 1e6
-  # Divide each CPM normalized cell by the CPM normalized meta-cell
-  normalized_counts = normalized_counts / meta_cell_cpm
-  
-  # Create a new data slot in the Seurat object for the normalized data
-  seurat_obj[['normalized']] <- CreateAssayObject(counts = normalized_counts)
-  
-  return(seurat_obj)
-}
-```
-
-```{r}
-h5_to_seurat <- function(file_names = h5_files, meta_cell_norm = FALSE) {
+h5_to_seurat <- function(file_names = h5_files) {
   
   seurat_objects <- list()
 
@@ -153,11 +131,6 @@ h5_to_seurat <- function(file_names = h5_files, meta_cell_norm = FALSE) {
       # Create a Seurat object
       seurat_object <- CreateSeuratObject(counts = data)
       
-      # Perform Meta-cell normalization (if required)
-      if (meta_cell_norm) {
-        seurat_object <- normalize_meta_cell(seurat_object)
-      }
-      
       # Store in list
       seurat_objects[[basename(file)]] <- seurat_object
   }
@@ -165,7 +138,7 @@ h5_to_seurat <- function(file_names = h5_files, meta_cell_norm = FALSE) {
   return(seurat_objects)
 }
 
-seurat_objects <- h5_to_seurat(file_names = h5_files, meta_cell_norm = FALSE)
+seurat_objects <- h5_to_seurat(file_names = h5_files)
 ```
 
 ## Add UMIs as Assay
