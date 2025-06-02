@@ -1,10 +1,5 @@
-# Specific files in process_validation_datasets
-results/process_validation_datasets/*/power_analysis/combined_power*
-results/process_validation_datasets/*/perturb_sce.rds
-results/process_validation_datasets/*/differential_expression/final_sceptre_object.rds
-results/process_validation_datasets/*/differential_expression/sceptre_diffex_input.rds
-results/process_validation_datasets/*/power_analysis/effect_size_*/
-results/process_validation_datasets/sceptre_power_analysis/logs/
+
+# The files listed here are excluded because they are >50Mb and thus cannot be uploaded to github OR they are files that were created for managing the snakemake pipeline
 
 # Folders to ignore
 results/genome_annotation_files/
@@ -12,28 +7,21 @@ RDA_objects/
 ARCHIVE/
 .snakemake/
 
-# Specific files in sceptre_setup
-resources/sceptre_setup/*/dge*
-resources/sceptre_setup/*/metatdata*
-resources/sceptre_setup/*/perturb*
-
-# Perturb_Seq_Test_Set_Preprocessing files
+# Perturb_Seq_Test_Set_Preprocessing data/ and results/ files - results can be found in SYNAPSE - see README.md 
+# Download instructions for data/ are detailed in the README.md
 Perturb_Seq_Test_Set_Preprocessing/Klann/data/*
 Perturb_Seq_Test_Set_Preprocessing/Klann/results/*
-
 Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv1/data/*
 Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv1/results/*
-
 Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv2/data/*
 Perturb_Seq_Test_Set_Preprocessing/Morris/STINGv2/results/*
-
 Perturb_Seq_Test_Set_Preprocessing/Xie/data/*
 Perturb_Seq_Test_Set_Preprocessing/Xie/results/*
 
-# Exclude large directories and unnecessary files
+# Exclude large directories and unnecessary files from the original Xie et al. 2019 analysis code
 Perturb_Seq_Test_Set_Preprocessing/Xie/Global-analysis-K562-enhancers/Notebooks/
 
-# DNase processing intermediate and output files
+# DNase processing intermediate and output files for `candidate_cre_data`
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.bam
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.bai
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.bed
@@ -45,7 +33,21 @@ Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.err
 Perturb_Seq_Test_Set_Preprocessing/candidate_cre_data/creating_sample1_candidate_cres_bed_file/*.r
 
-
-# Fix pycache entry (add a newline before it)
+# Remove pycache folders from git tracking
 **/__pycache__/
 *.pyc
+
+# These files are often >50Mb or are quite large in number and so are removed from github tracking
+results/process_validation_datasets/*/power_analysis/combined_power*
+results/process_validation_datasets/*/perturb_sce.rds
+results/process_validation_datasets/*/differential_expression/final_sceptre_object.rds
+results/process_validation_datasets/*/differential_expression/sceptre_diffex_input.rds
+results/process_validation_datasets/*/power_analysis/effect_size_*/
+results/process_validation_datasets/sceptre_power_analysis/logs/
+
+# Main mRNA, gRNA, and metadata files used for running the pipeline. 
+# These files are created in the Perturb_Seq_Test_Set_Preprocessing folder, and are available for download via SYNAPSE - see README.md
+resources/sceptre_setup/*/dge*
+resources/sceptre_setup/*/metatdata*
+resources/sceptre_setup/*/perturb*
+

@@ -4,10 +4,12 @@
 
 This pipeline processes validation datasets to test ENCODE_rE2G performance on predicting enhancer-gene pairs through:
 
-1. **Differential Expression Analysis**: Uses SCEPTRE to identify significant enhancer-gene interactions
-2. **Power Analysis**: Simulates perturbation effects at various effect sizes
-3. **Data Integration**: Incorporates various other datasets and applies filtering
-4. **Benchmarking Output**: Produces final validation datasets for enhancer-gene prediction benchmarking
+1. **Differential Expression Analysis**: Uses SCEPTRE to identify significant enhancer-gene interactions in various CRISPRi Perturb-seq datasets
+2. **Power Analysis**: Simulates perturbation effects at various effect sizes to create a high-confidence set of non-significant element-gene pairs
+3. **Data Integration**: Incorporates various other held-out datasets and applies filtering based on genic features to eliminate confounders
+4. **Benchmarking Output**: Produces final held-out dataset for enhancer-gene prediction benchmarking
+
+The final output file used for benchmarking can be found in `results/combine_val_data_and_format/Final_Validation_Dataset.tsv.gz`
 
 ## Repository Structure
 
@@ -30,7 +32,7 @@ ENCODE_Sceptre_Analysis/
 │   └── envs/                      # Conda environment definitions
 ├── resources/                     # Input data and reference files
 ├── results/                       # Pipeline outputs
-├── Perturb_Seq_Test_Set_Preprocessing/  # Pre-processing to create pipeline inputs
+├── Perturb_Seq_Test_Set_Preprocessing/  # Pre-processing to create pipeline inputs - README.md included in this folder
 └── README.md
 ```
 
@@ -41,7 +43,7 @@ ENCODE_Sceptre_Analysis/
 - **Conda**: 24.11.3
 
 ### Environment Management
-Dependencies are managed automatically through conda environments defined in `workflow/envs/`. The pipeline will create and activate the appropriate environments for each step.
+Dependencies are managed automatically through conda environments defined in `workflow/envs/`. Snakemake will create and activate the appropriate environments for each step.
 
 Key environments include:
 - `sceptre_env.yml`: SCEPTRE differential expression analysis
@@ -54,7 +56,7 @@ Key environments include:
 
 1. **Externally processed Enhancer-Gene pairs**
    - DC TAP-seq data: `resources/combine_val_data_and_format/DC_TAP_Seq_data.tsv`
-     - This file was taken from the [DC TAP Seq processing pipeline](https://github.com/jamesgalante/DC_TAP_Paper/blob/main/results/formatted_dc_tap_results/results_with_element_gene_pair_categories_modified.tsv)
+     - [File source](https://github.com/jamesgalante/DC_TAP_Paper/blob/main/results/formatted_dc_tap_results/results_with_element_gene_pair_categories_modified.tsv)
    - ENCODE-rE2G Training dataset: `resources/combine_val_data_and_format/EPCrisprBenchmark_ensemble_data_GRCh38.tsv`
    - Other test datasets: `resources/create_encode_output/ENCODE/EPCrisprBenchmark/`
    
@@ -71,7 +73,7 @@ See the comprehensive guide in: **[Perturb_Seq_Test_Set_Preprocessing/README.md]
 
 This preprocessing step includes:
 - Converting raw sequencing data to count matrices
-- Creating guide assignment matrices
+- Filtering for high-confidence guides and creating a guide annotation file
 - Generating metadata files
 
 ## Running the Pipeline
@@ -80,7 +82,7 @@ This preprocessing step includes:
 
 1. **Clone the repository**:
 ```bash
-git clone <repository-url>
+git clone https://github.com/jamesgalante/ENCODE_Test_Dataset_Analysis.git
 cd ENCODE_Test_Dataset_Analysis
 ```
 
@@ -90,9 +92,9 @@ cd ENCODE_Test_Dataset_Analysis
 3. **Run the complete pipeline**:
 ```bash
 # For HPC with SLURM
-snakemake --profile slurm_profile all
+snakemake all
 
-# For local execution (not recommended due to size of matrices)
+# For local execution (not recommended due to size)
 snakemake --use-conda --cores 8 all
 ```
 
@@ -100,7 +102,7 @@ snakemake --use-conda --cores 8 all
 
 #### SLURM Profile (Recommended for HPC)
 
-Create a profile (e.g., `~/.config/snakemake/slurm_profile/config.yaml`):
+While these configuration parameters can be included via flags (e.g. --use-conda) and are often variable depending on the HPC setup, the profile used to create this pipeline is provided. Store this profile in a Snakemake config file (e.g., `~/.config/snakemake/slurm_profile/config.yaml`):
 
 ```yaml
 jobs: 500
@@ -121,17 +123,11 @@ Then run:
 snakemake --profile slurm_profile all
 ```
 
-#### Local Execution
-
-For local machines or non-SLURM clusters:
-```bash
-snakemake --use-conda --cores <number_of_cores> all
-```
-
 ## Pipeline Stages
 
 ### 1. SCEPTRE Setup (`sceptre_setup.smk`)
-- Downloads genome annotations
+- Downloads genome annotation files
+- Pairs all tested elements to any gene within 1Mb
 - Creates SCEPTRE input objects for each dataset
 
 ### 2. Power Analysis (`sceptre_power_analysis.smk`)
@@ -140,15 +136,14 @@ snakemake --use-conda --cores <number_of_cores> all
 - Estimates statistical power for detecting enhancer-gene interactions
 
 ### 3. ENCODE Formatting (`create_encode_output.smk`)
-- Formats results for ENCODE standards
-- Filters based on distance to TSS and statistical power
-- Integrates Other test datasets from `resources/create_encode_output/ENCODE/EPCrisprBenchmark/`
+- Filters based on genic features
+- Integrates other test datasets from `resources/create_encode_output/ENCODE/EPCrisprBenchmark/`
 
 ### 4. Final Integration (`combine_val_data_and_format.smk`)
 - Integrates DC TAP-seq data
 - Removes training set overlaps
 - Resolves duplicates between datasets
-- Produces final validation dataset
+- Produces final held-out dataset
 
 ## Outputs
 - Final Validation Dataset: `results/combine_val_data_and_format/Final_Validation_Dataset.tsv.gz`
