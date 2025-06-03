@@ -67,7 +67,7 @@ Key environments include:
 
 ### Data Preprocessing
 
-(Optional as these results are included on SYNAPSE) Before running the main pipeline, you must first preprocess the raw CRISPR screen data.
+(Optional as these results are included on **[SYNAPSE](https://www.synapse.org/Synapse:syn68147334)**) Before running the main pipeline, you must first preprocess the raw CRISPR screen data.
 
 See the comprehensive guide in: **[Perturb_Seq_Test_Set_Preprocessing/README.md](Perturb_Seq_Test_Set_Preprocessing/README.md)**
 
